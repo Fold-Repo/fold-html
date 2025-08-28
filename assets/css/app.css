@@ -1,0 +1,303 @@
+/* ================= Google Fonts ================= */
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* ================= Tailwind core ================= */
+@import "tailwindcss";
+
+/* ================= Design Tokens ================= */
+@theme {
+    --font-sans: "Cabin", sans-serif;
+    --font-playfair: "Playfair Display", serif;
+    --font-merriweather: "Merriweather", serif;
+    --font-roboto: "Roboto", sans-serif;
+
+    --text-xs: 0.8rem;
+    --text-sm: 0.875rem;
+    --text-md: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.875rem;
+    --text-4xl: 2.25rem;
+    --text-5xl: 3rem;
+
+    --color-primary: #111827;
+    --color-text: #4B5563;
+    --color-accent: #0EA5E9;
+    --color-brand: #0065EA;
+    --color-border: #D0D5DD;
+    --color-default: #FFFFFF;
+    --color-gray: #F8F8F8;
+
+    --section-sm: 1.5rem;
+    --section-md: 2.5rem;
+    --section-lg: 4rem;
+}
+
+/* ================= Dark Mode Variables ================= */
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f8f8;
+    --bg-tertiary: #f1f5f9;
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+    --text-muted: #6b7280;
+    --border-color: #d1d5db;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* ================= Base ================= */
+body {
+    @apply font-sans font-normal;
+    @apply bg-gray-50 text-gray-900 transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100;
+}
+
+/* ================= Container ================= */
+.container {
+    @apply w-full max-w-screen-sm sm:max-w-screen-md md:max-w-screen-lg lg:max-w-screen-xl xl:max-w-screen-2xl;
+}
+
+/* ================= Sections ================= */
+.section-sm {
+    @apply py-[var(--section-sm)];
+}
+
+.section-md {
+    @apply py-[var(--section-md)];
+}
+
+.section-lg {
+    @apply py-[var(--section-lg)];
+}
+
+/* ================= Buttons ================= */
+.btn {
+    @apply px-4 py-3 flex items-center justify-center gap-2 text-sm font-medium rounded-md border border-transparent transition-all duration-300 ease-in-out cursor-pointer;
+}
+
+.btn:hover {
+    @apply -translate-y-1;
+}
+
+.btn:disabled {
+    @apply opacity-50 pointer-events-none;
+}
+
+/* Variants */
+.btn-primary {
+    @apply bg-primary text-white hover:bg-gray-800 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600;
+}
+
+.btn-accent {
+    @apply bg-accent text-white hover:bg-blue-600 dark:bg-blue-500 dark:text-white dark:hover:bg-blue-600;
+}
+
+.btn-brand {
+    @apply bg-brand text-white hover:bg-blue-700 dark:bg-blue-600 dark:text-white dark:hover:bg-blue-700;
+}
+
+.btn-light {
+    @apply bg-gray text-primary border border-border hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600 dark:hover:bg-gray-600;
+}
+
+.btn-outline {
+    @apply bg-transparent text-gray border border-border hover:bg-border hover:text-white dark:bg-transparent dark:text-gray-300 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white;
+}
+
+.btn-ghost {
+    @apply bg-transparent text-primary hover:bg-primary/5 dark:bg-transparent dark:text-gray-100 dark:hover:bg-gray-700;
+}
+
+.btn-outline-brand {
+    @apply bg-transparent text-brand border border-brand hover:bg-brand hover:text-white dark:bg-transparent dark:text-blue-400 dark:border-blue-400 dark:hover:bg-blue-600 dark:hover:text-white;
+}
+
+.btn-success {
+    @apply bg-green-500 text-white hover:bg-green-600 dark:bg-green-600 dark:text-white dark:hover:bg-green-700;
+}
+
+.btn-warning {
+    @apply bg-yellow-500 text-primary hover:bg-yellow-600 dark:bg-yellow-500 dark:text-gray-900 dark:hover:bg-yellow-600;
+}
+
+.btn-danger {
+    @apply bg-red-500 text-white hover:bg-red-600 dark:bg-red-600 dark:text-white dark:hover:bg-red-700;
+}
+
+/* Sizes */
+.btn-sm {
+    @apply px-3 py-2 text-xs rounded-md;
+}
+
+.btn-lg {
+    @apply px-6 py-3 text-md rounded-xl;
+}
+
+.btn-icon {
+    @apply w-10 h-10 p-0;
+}
+
+/* Loading */
+.btn-loading {
+    @apply relative pointer-events-none opacity-90;
+}
+
+.btn-loading::after {
+    content: "";
+    @apply w-4 h-4 border-2 border-white/60 border-t-white rounded-full animate-spin dark:border-gray-300/60 dark:border-t-gray-100;
+}
+
+/* ================= Forms ================= */
+.form-control {
+    @apply block w-full px-3 py-3 text-sm border border-border bg-white rounded-lg outline-none transition-colors duration-300 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-100;
+}
+
+.form-control::placeholder {
+    @apply text-text/60 dark:text-gray-400;
+}
+
+.form-control:focus {
+    @apply border-accent ring-2 ring-accent/25 dark:border-blue-500 dark:ring-blue-500/25;
+}
+
+.form-control.is-error {
+    @apply border-red-500 ring-2 ring-red-500/15;
+}
+
+.form-control.is-success {
+    @apply border-green-500 ring-2 ring-green-500/15;
+}
+
+[data-otp-container].is-error {
+    @apply border border-red-500 rounded-lg p-2 bg-red-500/5 dark:bg-red-500/10;
+}
+
+/* Labels + helpers */
+.form-label {
+    @apply block mb-1 text-sm font-semibold text-primary dark:text-gray-100;
+}
+
+.form-help {
+    @apply mt-1 text-xs text-text/90 dark:text-gray-400;
+}
+
+.form-error {
+    @apply mt-1 text-xs text-red-500 hidden dark:text-red-400;
+}
+
+.form-error.show {
+    @apply block;
+}
+
+/* Input group */
+.input-group {
+    @apply flex items-stretch;
+}
+
+.input-group .form-control {
+    @apply rounded-r-none;
+}
+
+.input-group-append,
+.input-group-prepend {
+    @apply inline-flex items-center px-3 bg-gray border border-border text-text dark:bg-gray-700 dark:border-gray-600 dark:text-gray-300;
+}
+
+.input-group-append {
+    @apply border-l-0 rounded-r-lg;
+}
+
+.input-group-prepend {
+    @apply border-r-0 rounded-l-lg;
+}
+
+/* Select + textarea */
+select.form-control {
+    @apply appearance-none;
+}
+
+textarea.form-control {
+    @apply min-h-[120px] resize-y;
+}
+
+/* Checkboxes + radios */
+.form-check {
+    @apply flex items-start gap-2;
+}
+
+.form-check input[type="checkbox"],
+.form-check input[type="radio"] {
+    @apply w-[18px] h-[18px] accent-primary rounded-lg dark:accent-gray-300;
+}
+
+.form-check .form-label {
+    @apply m-0 p-0 font-medium;
+}
+
+/* ================= Theme Toggle ================= */
+.theme-toggle {
+    @apply fixed top-1/2 right-1 -translate-y-1/2 z-50;
+}
+
+.theme-toggle-container {
+    @apply relative z-0 inline-grid grid-cols-1 gap-0.5 rounded-full bg-gray-200 p-0.5 text-gray-600 dark:bg-gray-700 dark:text-gray-300;
+}
+
+.theme-toggle-option {
+    @apply relative rounded-full p-1.5 transition-all duration-200;
+}
+
+.theme-toggle-option svg {
+    @apply size-6;
+}
+
+.theme-toggle-option input[type="radio"] {
+    @apply absolute inset-0 appearance-none cursor-pointer;
+}
+
+.theme-toggle-option input[type="radio"]:checked+svg {
+    @apply text-gray-900 dark:text-gray-100;
+}
+
+.theme-toggle-option:has(input[type="radio"]:checked) {
+    @apply bg-white shadow-sm dark:bg-gray-600;
+}
+
+/* ================= Background Colors ================= */
+.bg-gray-50 {
+    @apply bg-gray-50 dark:bg-gray-900;
+}
+
+.bg-gray {
+    @apply bg-gray-100 dark:bg-gray-800;
+}
+
+/* ================= Text Colors ================= */
+.text-gray-500 {
+    @apply text-gray-500 dark:text-gray-400;
+}
+
+.text-gray-600 {
+    @apply text-gray-600 dark:text-gray-300;
+}
+
+.text-gray-900 {
+    @apply text-gray-900 dark:text-gray-100;
+}
+
+/* ================= Border Colors ================= */
+.border-gray-200 {
+    @apply border-gray-200 dark:border-gray-700;
+}
+
+.border-gray-300 {
+    @apply border-gray-300 dark:border-gray-600;
+}
+
+/* ================= Shadow ================= */
+.shadow {
+    @apply shadow dark:shadow-lg dark:shadow-black/20;
+}

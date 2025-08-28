@@ -1,0 +1,14 @@
+# Node dependencies
+node_modules/
+
+# Tailwind build output (ignore if it's generated)
+assets/css/global.css
+
+# Logs
+*.log
+
+
+# Editor settings
+.vscode/
+.idea/
+*.code-workspace

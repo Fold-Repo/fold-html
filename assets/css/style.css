@@ -1,0 +1,51 @@
+/*  ========= Swiper dots =========== */
+.sw-pagination-testimonial .swiper-pagination-bullet-active {
+    background-color: var(--color-accent) !important;
+}
+
+.sw-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.sw-dots.type-circle .swiper-pagination-bullet {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    opacity: 1;
+}
+
+.sw-dots.type-circle .swiper-pagination-bullet::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid var(--color-primary);
+    opacity: 1;
+}
+
+.sw-dots.type-circle .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    border: 1px solid var(--color-primary);
+}
+
+.sw-dots.type-circle .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
+    background-color: var(--color-primary);
+}
+
+/*  ========= Helpers =========== */
+.group:hover .group-hover-bg-primary {
+    background-color: var(--color-primary);
+}
+
+/* Hero dots active state */
+.js-hero-dots .js-dot.is-active {
+    background-color: #fff;
+    width: 3rem;
+}
