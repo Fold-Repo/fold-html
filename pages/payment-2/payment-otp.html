@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
@@ -628,32 +628,110 @@
     </header>
     <!-- ================= HEADER ENDS ================= -->
 
-    <!-- ================= BRRADCRUMBS START ================= -->
-    <div class="bg-gray-200/80 dark:bg-gray-800  py-8 md:py-12">
 
-        <nav class="container flex min-w-0 items-center justify-center gap-2 text-sm/6 whitespace-nowrap">
+    <!-- ================= MAIN START ================= -->
+    <main class="container section-lg space-y-10">
 
-            <div class="group flex items-center gap-2">
-                <a class="text-brand dark:text-blue-500 font-medium" href="/">Home</a>
+        <div class="bg-white dark:bg-gray-800 rounded-xl px-5 md:px-6 py-10 max-w-full md:max-w-5xl mx-auto">
+
+            <div class="max-w-full md:max-w-3xl mx-auto space-y-12">
+
+                <!-- ================= STEPPER ================= -->
+                <ul class="relative flex flex-row gap-x-2">
+
+                    <li class="w-full">
+                        <div class="w-full inline-flex items-center text-xs align-middle">
+                            <span
+                                class="size-6 flex justify-center items-center  bg-[#4BAF47] font-medium text-white rounded-full">
+                                1
+                            </span>
+                            <div class="ms-2 w-full h-px flex-1 bg-gray-200 group-last:hidden dark:bg-neutral-700">
+                            </div>
+                        </div>
+                        <div class="-mx-4 mt-2">
+                            <span class="block text-xs font-medium text-gray-800 dark:text-white">
+                                Check Out
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="w-full">
+                        <div class="w-full inline-flex items-center text-xs align-middle">
+                            <span
+                                class="size-6 flex justify-center items-center shrink-0 bg-[#4BAF47] font-medium text-white rounded-full">
+                                2
+                            </span>
+                            <div class="ms-2 w-full h-px flex-1 bg-gray-200 group-last:hidden dark:bg-neutral-700">
+                            </div>
+                        </div>
+                        <div class="-mx-6 mt-2">
+                            <span class="block text-xs font-medium text-brand dark:text-blue-500">
+                                Payment Method
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="shrink basis-0 flex-1 group">
+                        <div class="w-full inline-flex items-center text-xs align-middle">
+                            <span
+                                class="size-6 flex justify-center items-center shrink-0 bg-gray-100 font-medium text-gray-800 rounded-full dark:bg-neutral-700 dark:text-white">
+                                3
+                            </span>
+                            <div class="ms-2 w-full h-px flex-1 bg-gray-200 group-last:hidden dark:bg-neutral-700">
+                            </div>
+                        </div>
+                        <div class="-mx-6 mt-2">
+                            <span class="block text-xs font-medium text-gray-800 dark:text-white">
+                                Confirmation
+                            </span>
+                        </div>
+                    </li>
+
+                </ul>
+
+                <!-- ================= Form Header ================= -->
+                <header class="max-w-md mx-auto text-center space-y-2 mb-10">
+                    <p class="text-gray-900 text-base lg:text-lg font-medium">
+                        Please enter the OTP sent to your email or phone to complete your order.
+                    </p>
+                </header>
+
+                <!-- ================= Email Form ================= -->
+                <form class="flex flex-col  space-y-6" action="payment-success.html" method="get" data-validate-form>
+
+                    <div class="flex items-center justify-center gap-x-2 px-5" data-otp-container data-otp-length="6">
+
+                        <input type="password" class="form-control size-10 md:!size-12 text-center" placeholder="0"
+                            data-otp-input data-validate="otp">
+                        <input type="password" class="form-control size-10 md:!size-12 text-center" placeholder="0"
+                            data-otp-input data-validate="otp">
+                        <input type="password" class="form-control size-10 md:!size-12 text-center" placeholder="0"
+                            data-otp-input data-validate="otp">
+
+                        <span>-</span>
+
+                        <input type="password" class="form-control size-10 md:!size-12 text-center" placeholder="0"
+                            data-otp-input data-validate="otp">
+                        <input type="password" class="form-control size-10 md:!size-12 text-center" placeholder="0"
+                            data-otp-input data-validate="otp">
+                        <input type="password" class="form-control size-10 md:!size-12 text-center" placeholder="0"
+                            data-otp-input data-validate="otp">
+
+                    </div>
+
+                    <button type="submit" class="btn btn-brand w-full max-w-md mx-auto h-10 !rounded-lg mt-3"
+                        id="verify-otp-btn">Submit
+                        OTP</button>
+
+                </form>
+
             </div>
 
-            <div class="group flex items-center gap-2">
-                <i class="ri-arrow-right-s-line text-gray-600 dark:text-gray-400 text-lg"></i>
-                <a class="text-brand dark:text-blue-500 font-medium"
-                    href="javascript:void(0)">Shopping Cart</a>
-            </div>
+        </div>
 
-            <div class="group flex items-center gap-2">
-                <i class="ri-arrow-right-s-line text-gray-600 dark:text-gray-400 text-lg"></i>
-                <a class="text-gray-500 dark:text-gray-400" href="javascript:void(0)">Cart</a>
-            </div>
+    </main>
+    <!-- ================= MAIN END ================= -->
 
-        </nav>
-
-
-
-    </div>
-    <!-- ================= BRRADCRUMBS END ================= -->
 
     <!-- ================= FOOTER START ================= -->
     <footer class="bg-white dark:bg-gray-900 py-10 relative overflow-hidden border-t border-gray-300 dark:border-gray-700">

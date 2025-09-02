@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
@@ -628,35 +628,39 @@
     </header>
     <!-- ================= HEADER ENDS ================= -->
 
-    <!-- ================= BRRADCRUMBS START ================= -->
-    <div class="bg-gray-200/80 dark:bg-gray-800  py-8 md:py-12">
 
-        <nav class="container flex min-w-0 items-center justify-center gap-2 text-sm/6 whitespace-nowrap">
+    <!-- ================= MAIN START ================= -->
+    <main class="container section-lg space-y-10">
 
-            <div class="group flex items-center gap-2">
-                <a class="text-brand dark:text-blue-500 font-medium" href="/">Home</a>
+        <div class="bg-white dark:bg-gray-800 rounded-xl px-4 sm:px-5 py-10 max-w-2xl mx-auto" data-aos="zoom-in"
+            data-aos-delay="150" data-aos-duration="400">
+
+            <div class="max-w-xl mx-auto space-y-10">
+
+                <header class="text-center space-y-4">
+                    <img width="144" height="144" class="w-22 mx-auto" src="/assets/img/congrats.svg"
+                        alt="Congratulations">
+                    <p class="text-gray-900 text-base lg:text-lg font-medium">
+                        You have successfully made a payment for your order. You can view your order now.
+                    </p>
+                </header>
+
+                <div class="space-y-3">
+                    <button type="button" class="btn btn-brand h-10 w-full !rounded-lg">View Order</button>
+                    <button type="button" class="btn btn-outline-brand h-10 w-full !rounded-lg">Back</button>
+                </div>
+
             </div>
 
-            <div class="group flex items-center gap-2">
-                <i class="ri-arrow-right-s-line text-gray-600 dark:text-gray-400 text-lg"></i>
-                <a class="text-brand dark:text-blue-500 font-medium"
-                    href="javascript:void(0)">Shopping Cart</a>
-            </div>
+        </div>
 
-            <div class="group flex items-center gap-2">
-                <i class="ri-arrow-right-s-line text-gray-600 dark:text-gray-400 text-lg"></i>
-                <a class="text-gray-500 dark:text-gray-400" href="javascript:void(0)">Cart</a>
-            </div>
+    </main>
+    <!-- ================= MAIN END ================= -->
 
-        </nav>
-
-
-
-    </div>
-    <!-- ================= BRRADCRUMBS END ================= -->
 
     <!-- ================= FOOTER START ================= -->
-    <footer class="bg-white dark:bg-gray-900 py-10 relative overflow-hidden border-t border-gray-300 dark:border-gray-700">
+    <footer
+        class="bg-white dark:bg-gray-900 py-10 relative overflow-hidden border-t border-gray-300 dark:border-gray-700">
 
         <div class="container">
 
