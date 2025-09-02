@@ -1,22 +1,27 @@
 /* ================= Google Fonts ================= */
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap'); */
 
 /* ================= Tailwind core ================= */
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* ================= Design Tokens ================= */
 @theme {
+
     --font-sans: "Cabin", sans-serif;
-    --font-playfair: "Playfair Display", serif;
+    --font-inter: "Inter", sans-serif;
+    /* --font-playfair: "Playfair Display", serif;
     --font-merriweather: "Merriweather", serif;
-    --font-roboto: "Roboto", sans-serif;
+    --font-roboto: "Roboto", sans-serif; */
 
     --text-xs: 0.8rem;
     --text-sm: 0.875rem;
-    --text-md: 1rem;
+    --text-base: 15px;
     --text-lg: 1.125rem;
     --text-xl: 1.25rem;
     --text-2xl: 1.5rem;
@@ -51,13 +56,13 @@
 
 /* ================= Base ================= */
 body {
-    @apply font-sans font-normal;
-    @apply bg-gray-50 text-gray-900 transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100;
+    @apply font-sans font-normal text-base;
+    @apply bg-[#f8f8f8] text-gray-900 transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100;
 }
 
 /* ================= Container ================= */
 .container {
-    @apply w-full max-w-screen-sm sm:max-w-screen-md md:max-w-screen-lg lg:max-w-screen-xl xl:max-w-screen-2xl;
+    @apply w-full mx-auto px-5 lg:px-8 max-w-screen-sm sm:max-w-screen-md md:max-w-screen-lg lg:max-w-screen-xl xl:max-w-screen-2xl;
 }
 
 /* ================= Sections ================= */
@@ -75,12 +80,9 @@ body {
 
 /* ================= Buttons ================= */
 .btn {
-    @apply px-4 py-3 flex items-center justify-center gap-2 text-sm font-medium rounded-md border border-transparent transition-all duration-300 ease-in-out cursor-pointer;
+    @apply px-4 py-2.5 flex items-center justify-center gap-2 text-xs font-medium rounded-md border border-transparent transition-all duration-300 ease-in-out cursor-pointer;
 }
 
-.btn:hover {
-    @apply -translate-y-1;
-}
 
 .btn:disabled {
     @apply opacity-50 pointer-events-none;
@@ -104,7 +106,7 @@ body {
 }
 
 .btn-outline {
-    @apply bg-transparent text-gray border border-border hover:bg-border hover:text-white dark:bg-transparent dark:text-gray-300 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white;
+    @apply bg-transparent text-gray border border-border hover:!bg-white hover:!text-brand dark:bg-transparent dark:text-white dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white;
 }
 
 .btn-ghost {
@@ -133,7 +135,7 @@ body {
 }
 
 .btn-lg {
-    @apply px-6 py-3 text-md rounded-xl;
+    @apply px-6 py-3 text-base rounded-xl;
 }
 
 .btn-icon {
@@ -152,11 +154,7 @@ body {
 
 /* ================= Forms ================= */
 .form-control {
-    @apply block w-full px-3 py-3 text-sm border border-border bg-white rounded-lg outline-none transition-colors duration-300 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-100;
-}
-
-.form-control::placeholder {
-    @apply text-text/60 dark:text-gray-400;
+    @apply block w-full px-3 py-2.5 md:py-3 text-sm border border-border bg-white rounded-lg outline-none transition-colors duration-300 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-100;
 }
 
 .form-control:focus {
@@ -177,7 +175,7 @@ body {
 
 /* Labels + helpers */
 .form-label {
-    @apply block mb-1 text-sm font-semibold text-primary dark:text-gray-100;
+    @apply block mb-1 text-sm font-semibold text-gray-700 dark:text-gray-100;
 }
 
 .form-help {

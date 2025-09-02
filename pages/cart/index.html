@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
@@ -639,8 +639,7 @@
 
             <div class="group flex items-center gap-2">
                 <i class="ri-arrow-right-s-line text-gray-600 dark:text-gray-400 text-lg"></i>
-                <a class="text-brand dark:text-blue-500 font-medium"
-                    href="javascript:void(0)">Shopping Cart</a>
+                <a class="text-brand dark:text-blue-500 font-medium" href="javascript:void(0)">Shopping</a>
             </div>
 
             <div class="group flex items-center gap-2">
@@ -655,8 +654,536 @@
     </div>
     <!-- ================= BRRADCRUMBS END ================= -->
 
+
+    <!-- ================= MAIN START ================= -->
+    <main class="container section-md space-y-10">
+
+        <div class="flex flex-col lg:flex-row gap-6">
+
+            <!-- ================= CART LIST ================= -->
+            <div class="w-full lg:w-[60%] 2xl:w-[70%] bg-white dark:bg-gray-800 rounded-xl p-4 sm:p-5"
+                data-aos="fade-right" data-aos-delay="150">
+
+                <div class="flex items-center gap-2 justify-between mb-8">
+
+                    <h2 class="text-base md:text-lg font-semibold">My Cart</h2>
+
+                    <span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-lg 
+                    text-xs font-medium bg-brand/20 text-brand">4 Items</span>
+
+                </div>
+
+                <div class="space-y-2">
+
+                    <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-2 md:p-3 bg-white dark:bg-gray-700 w-full">
+
+                        <!-- ========= CART ITEM WRAPPER ========= -->
+                        <div class="flex gap-3 flex-1">
+
+                            <!-- ========= PRODUCT IMAGE ========= -->
+                            <div class="w-26 md:w-44 h-26 md:h-36 shrink-0 overflow-hidden rounded-md bg-gray-100">
+                                <img class="h-full w-full object-cover" src="/assets/img/cart/1.png"
+                                    alt="Product Image">
+                            </div>
+
+                            <!-- ========= PRODUCT DETAILS & ACTIONS ========= -->
+                            <div class="flex flex-col justify-between flex-1">
+
+                                <!-- ========= TITLE, DESCRIPTION & PRICING ========= -->
+                                <div class="flex flex-wrap items-center justify-between gap-2">
+
+                                    <!-- ========= PRODUCT TITLE & DESCRIPTION ========= -->
+                                    <div class="space-y-1">
+                                        <h2 class="text-sm md:text-base font-semibold text-gray-800 dark:text-gray-300 !line-clamp-1">
+                                            Professional Digital Camera
+                                        </h2>
+                                        <p
+                                            class="text-[12px] md:text-xs text-gray-500 dark:text-gray-400 !line-clamp-1">
+                                            24MP, 4K Recording
+                                        </p>
+                                    </div>
+
+                                    <!-- ========= PRICE & DISCOUNT ========= -->
+                                    <div class="flex flex-col items-end gap-1 font-inter">
+
+                                        <!-- Original Price & Discounted Price -->
+                                        <h2 class="text-sm lg:text-base font-semibold text-gray-900 dark:text-gray-200">
+                                            <span
+                                                class="text-[11px] lg:text-xs font-light text-gray-600 dark:text-gray-300 line-through">
+                                                899.99
+                                            </span>
+                                            $699.99
+                                        </h2>
+
+                                        <!-- Discount Badge -->
+                                        <span class="hidden md:inline-flex items-center gap-x-1.5 py-0.5 px-2 rounded-full font-medium 
+                                            text-[10px] bg-green-100 text-green-600">$30.00</span>
+
+                                    </div>
+
+                                </div>
+                                <!-- ========= END TITLE, DESCRIPTION & PRICING ========= -->
+
+                                <!-- ========= QUANTITY CONTROL & REMOVE BUTTON ========= -->
+                                <div class="flex items-center flex-wrap md:flex-nowrap justify-between gap-1 mt-3">
+
+                                    <!-- Quantity Counter -->
+                                    <div  class="bg-[#E8EBEF] flex items-center justify-between py-1 px-2 rounded-lg w-full max-w-full md:max-w-[120px]">
+
+                                        <!-- Decrease Button -->
+                                        <button class="cursor-pointer text-lg !text-gray-900">
+                                            <i class="ri-subtract-fill"></i>
+                                        </button>
+
+                                        <!-- Current Quantity -->
+                                        <span class="text-brand font-medium text-sm">0</span>
+
+                                        <!-- Increase Button -->
+                                        <button class="cursor-pointer text-lg text-brand">
+                                            <span><i class="ri-add-fill"></i></span>
+                                        </button>
+
+                                    </div>
+
+                                    <!-- Remove Button -->
+                                    <button
+                                        class="btn btn-sm bg-[#FFD7D7] !text-xs text-red-500 !gap-x-1 !py-1.5 w-full md:w-auto">
+                                        <i class="ri-delete-bin-6-line text-base"></i>
+                                        Remove
+                                    </button>
+
+                                </div>
+                                <!-- ========= END QUANTITY CONTROL & REMOVE BUTTON ========= -->
+
+                            </div>
+                            <!-- ========= END PRODUCT DETAILS & ACTIONS ========= -->
+
+                        </div>
+                        <!-- ========= END CART ITEM WRAPPER ========= -->
+
+                    </div>
+
+                    <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-2 md:p-3 bg-white dark:bg-gray-700 w-full">
+
+                        <!-- ========= CART ITEM WRAPPER ========= -->
+                        <div class="flex gap-3 flex-1">
+
+                            <!-- ========= PRODUCT IMAGE ========= -->
+                            <div class="w-26 md:w-44 h-26 md:h-36 shrink-0 overflow-hidden rounded-md bg-gray-100">
+                                <img class="h-full w-full object-cover" src="/assets/img/cart/1.png"
+                                    alt="Product Image">
+                            </div>
+
+                            <!-- ========= PRODUCT DETAILS & ACTIONS ========= -->
+                            <div class="flex flex-col justify-between flex-1">
+
+                                <!-- ========= TITLE, DESCRIPTION & PRICING ========= -->
+                                <div class="flex flex-wrap items-center justify-between gap-2">
+
+                                    <!-- ========= PRODUCT TITLE & DESCRIPTION ========= -->
+                                    <div class="space-y-1">
+                                        <h2
+                                            class="text-sm md:text-base font-semibold text-gray-800 dark:text-gray-300 !line-clamp-1">
+                                            Professional Digital Camera
+                                        </h2>
+                                        <p
+                                            class="text-[12px] md:text-xs text-gray-500 dark:text-gray-400 !line-clamp-1">
+                                            24MP, 4K Recording
+                                        </p>
+                                    </div>
+
+                                    <!-- ========= PRICE & DISCOUNT ========= -->
+                                    <div class="flex flex-col items-end gap-1 font-inter">
+
+                                        <!-- Original Price & Discounted Price -->
+                                        <h2 class="text-sm lg:text-base font-semibold text-gray-900 dark:text-gray-200">
+                                            <span
+                                                class="text-[11px] lg:text-xs font-light text-gray-600 dark:text-gray-300 line-through">
+                                                899.99
+                                            </span>
+                                            $699.99
+                                        </h2>
+
+                                        <!-- Discount Badge -->
+                                        <span class="hidden md:inline-flex items-center gap-x-1.5 py-0.5 px-2 rounded-full font-medium 
+                        text-[10px] bg-green-100 text-green-600">$30.00</span>
+
+                                    </div>
+
+                                </div>
+                                <!-- ========= END TITLE, DESCRIPTION & PRICING ========= -->
+
+                                <!-- ========= QUANTITY CONTROL & REMOVE BUTTON ========= -->
+                                <div class="flex items-center flex-wrap md:flex-nowrap justify-between gap-1 mt-3">
+
+                                    <!-- Quantity Counter -->
+                                    <div class="bg-[#E8EBEF] flex items-center justify-between py-1 px-2 rounded-lg w-full max-w-full md:max-w-[120px]">
+
+                                        <!-- Decrease Button -->
+                                        <button class="cursor-pointer text-lg !text-gray-900">
+                                            <i class="ri-subtract-fill"></i>
+                                        </button>
+
+                                        <!-- Current Quantity -->
+                                        <span class="text-brand font-medium text-sm">0</span>
+
+                                        <!-- Increase Button -->
+                                        <button class="cursor-pointer text-lg text-brand">
+                                            <span><i class="ri-add-fill"></i></span>
+                                        </button>
+
+                                    </div>
+
+                                    <!-- Remove Button -->
+                                    <button
+                                        class="btn btn-sm bg-[#FFD7D7] !text-xs text-red-500 !gap-x-1 !py-1.5 w-full md:w-auto">
+                                        <i class="ri-delete-bin-6-line text-base"></i>
+                                        Remove
+                                    </button>
+
+                                </div>
+                                <!-- ========= END QUANTITY CONTROL & REMOVE BUTTON ========= -->
+
+                            </div>
+                            <!-- ========= END PRODUCT DETAILS & ACTIONS ========= -->
+
+                        </div>
+                        <!-- ========= END CART ITEM WRAPPER ========= -->
+
+                    </div>
+
+                    <div
+                        class="border border-gray-200 dark:border-gray-700 rounded-lg p-2 md:p-3 bg-white dark:bg-gray-700 w-full">
+
+                        <!-- ========= CART ITEM WRAPPER ========= -->
+                        <div class="flex gap-3 flex-1">
+
+                            <!-- ========= PRODUCT IMAGE ========= -->
+                            <div class="w-26 md:w-44 h-26 md:h-36 shrink-0 overflow-hidden rounded-md bg-gray-100">
+                                <img class="h-full w-full object-cover" src="/assets/img/cart/1.png"
+                                    alt="Product Image">
+                            </div>
+
+                            <!-- ========= PRODUCT DETAILS & ACTIONS ========= -->
+                            <div class="flex flex-col justify-between flex-1">
+
+                                <!-- ========= TITLE, DESCRIPTION & PRICING ========= -->
+                                <div class="flex flex-wrap items-center justify-between gap-2">
+
+                                    <!-- ========= PRODUCT TITLE & DESCRIPTION ========= -->
+                                    <div class="space-y-1">
+                                        <h2
+                                            class="text-sm md:text-base font-semibold text-gray-800 dark:text-gray-300 !line-clamp-1">
+                                            Professional Digital Camera
+                                        </h2>
+                                        <p
+                                            class="text-[12px] md:text-xs text-gray-500 dark:text-gray-400 !line-clamp-1">
+                                            24MP, 4K Recording
+                                        </p>
+                                    </div>
+
+                                    <!-- ========= PRICE & DISCOUNT ========= -->
+                                    <div class="flex flex-col items-end gap-1 font-inter">
+
+                                        <!-- Original Price & Discounted Price -->
+                                        <h2 class="text-sm lg:text-base font-semibold text-gray-900 dark:text-gray-200">
+                                            <span
+                                                class="text-[11px] lg:text-xs font-light text-gray-600 dark:text-gray-300 line-through">
+                                                899.99
+                                            </span>
+                                            $699.99
+                                        </h2>
+
+                                        <!-- Discount Badge -->
+                                        <span class="hidden md:inline-flex items-center gap-x-1.5 py-0.5 px-2 rounded-full font-medium 
+                        text-[10px] bg-green-100 text-green-600">$30.00</span>
+
+                                    </div>
+
+                                </div>
+                                <!-- ========= END TITLE, DESCRIPTION & PRICING ========= -->
+
+                                <!-- ========= QUANTITY CONTROL & REMOVE BUTTON ========= -->
+                                <div class="flex items-center flex-wrap md:flex-nowrap justify-between gap-1 mt-3">
+
+                                    <!-- Quantity Counter -->
+                                    <div
+                                        class="bg-[#E8EBEF] flex items-center justify-between py-1 px-2 rounded-lg w-full max-w-full md:max-w-[120px]">
+
+                                        <!-- Decrease Button -->
+                                        <button class="cursor-pointer text-lg !text-gray-900">
+                                            <i class="ri-subtract-fill"></i>
+                                        </button>
+
+                                        <!-- Current Quantity -->
+                                        <span class="text-brand font-medium text-sm">0</span>
+
+                                        <!-- Increase Button -->
+                                        <button class="cursor-pointer text-lg text-brand">
+                                            <span><i class="ri-add-fill"></i></span>
+                                        </button>
+
+                                    </div>
+
+                                    <!-- Remove Button -->
+                                    <button
+                                        class="btn btn-sm bg-[#FFD7D7] !text-xs text-red-500 !gap-x-1 !py-1.5 w-full md:w-auto">
+                                        <i class="ri-delete-bin-6-line text-base"></i>
+                                        Remove
+                                    </button>
+
+                                </div>
+                                <!-- ========= END QUANTITY CONTROL & REMOVE BUTTON ========= -->
+
+                            </div>
+                            <!-- ========= END PRODUCT DETAILS & ACTIONS ========= -->
+
+                        </div>
+                        <!-- ========= END CART ITEM WRAPPER ========= -->
+
+                    </div>
+
+                    <div
+                        class="border border-gray-200 dark:border-gray-700 rounded-lg p-2 md:p-3 bg-white dark:bg-gray-700 w-full">
+
+                        <!-- ========= CART ITEM WRAPPER ========= -->
+                        <div class="flex gap-3 flex-1">
+
+                            <!-- ========= PRODUCT IMAGE ========= -->
+                            <div class="w-26 md:w-44 h-26 md:h-36 shrink-0 overflow-hidden rounded-md bg-gray-100">
+                                <img class="h-full w-full object-cover" src="/assets/img/cart/1.png"
+                                    alt="Product Image">
+                            </div>
+
+                            <!-- ========= PRODUCT DETAILS & ACTIONS ========= -->
+                            <div class="flex flex-col justify-between flex-1">
+
+                                <!-- ========= TITLE, DESCRIPTION & PRICING ========= -->
+                                <div class="flex flex-wrap items-center justify-between gap-2">
+
+                                    <!-- ========= PRODUCT TITLE & DESCRIPTION ========= -->
+                                    <div class="space-y-1">
+                                        <h2
+                                            class="text-sm md:text-base font-semibold text-gray-800 dark:text-gray-300 !line-clamp-1">
+                                            Professional Digital Camera
+                                        </h2>
+                                        <p
+                                            class="text-[12px] md:text-xs text-gray-500 dark:text-gray-400 !line-clamp-1">
+                                            24MP, 4K Recording
+                                        </p>
+                                    </div>
+
+                                    <!-- ========= PRICE & DISCOUNT ========= -->
+                                    <div class="flex flex-col items-end gap-1 font-inter">
+
+                                        <!-- Original Price & Discounted Price -->
+                                        <h2 class="text-sm lg:text-base font-semibold text-gray-900 dark:text-gray-200">
+                                            <span
+                                                class="text-[11px] lg:text-xs font-light text-gray-600 dark:text-gray-300 line-through">
+                                                899.99
+                                            </span>
+                                            $699.99
+                                        </h2>
+
+                                        <!-- Discount Badge -->
+                                        <span class="hidden md:inline-flex items-center gap-x-1.5 py-0.5 px-2 rounded-full font-medium 
+                        text-[10px] bg-green-100 text-green-600">$30.00</span>
+
+                                    </div>
+
+                                </div>
+                                <!-- ========= END TITLE, DESCRIPTION & PRICING ========= -->
+
+                                <!-- ========= QUANTITY CONTROL & REMOVE BUTTON ========= -->
+                                <div class="flex items-center flex-wrap md:flex-nowrap justify-between gap-1 mt-3">
+
+                                    <!-- Quantity Counter -->
+                                    <div
+                                        class="bg-[#E8EBEF] flex items-center justify-between py-1 px-2 rounded-lg w-full max-w-full md:max-w-[120px]">
+
+                                        <!-- Decrease Button -->
+                                        <button class="cursor-pointer text-lg !text-gray-900">
+                                            <i class="ri-subtract-fill"></i>
+                                        </button>
+
+                                        <!-- Current Quantity -->
+                                        <span class="text-brand font-medium text-sm">0</span>
+
+                                        <!-- Increase Button -->
+                                        <button class="cursor-pointer text-lg text-brand">
+                                            <span><i class="ri-add-fill"></i></span>
+                                        </button>
+
+                                    </div>
+
+                                    <!-- Remove Button -->
+                                    <button
+                                        class="btn btn-sm bg-[#FFD7D7] !text-xs text-red-500 !gap-x-1 !py-1.5 w-full md:w-auto">
+                                        <i class="ri-delete-bin-6-line text-base"></i>
+                                        Remove
+                                    </button>
+
+                                </div>
+                                <!-- ========= END QUANTITY CONTROL & REMOVE BUTTON ========= -->
+
+                            </div>
+                            <!-- ========= END PRODUCT DETAILS & ACTIONS ========= -->
+
+                        </div>
+                        <!-- ========= END CART ITEM WRAPPER ========= -->
+
+                    </div>
+
+                    <div
+                        class="border border-gray-200 dark:border-gray-700 rounded-lg p-2 md:p-3 bg-white dark:bg-gray-700 w-full">
+
+                        <!-- ========= CART ITEM WRAPPER ========= -->
+                        <div class="flex gap-3 flex-1">
+
+                            <!-- ========= PRODUCT IMAGE ========= -->
+                            <div class="w-26 md:w-44 h-26 md:h-36 shrink-0 overflow-hidden rounded-md bg-gray-100">
+                                <img class="h-full w-full object-cover" src="/assets/img/cart/1.png"
+                                    alt="Product Image">
+                            </div>
+
+                            <!-- ========= PRODUCT DETAILS & ACTIONS ========= -->
+                            <div class="flex flex-col justify-between flex-1">
+
+                                <!-- ========= TITLE, DESCRIPTION & PRICING ========= -->
+                                <div class="flex flex-wrap items-center justify-between gap-2">
+
+                                    <!-- ========= PRODUCT TITLE & DESCRIPTION ========= -->
+                                    <div class="space-y-1">
+                                        <h2
+                                            class="text-sm md:text-base font-semibold text-gray-800 dark:text-gray-300 !line-clamp-1">
+                                            Professional Digital Camera
+                                        </h2>
+                                        <p
+                                            class="text-[12px] md:text-xs text-gray-500 dark:text-gray-400 !line-clamp-1">
+                                            24MP, 4K Recording
+                                        </p>
+                                    </div>
+
+                                    <!-- ========= PRICE & DISCOUNT ========= -->
+                                    <div class="flex flex-col items-end gap-1 font-inter">
+
+                                        <!-- Original Price & Discounted Price -->
+                                        <h2 class="text-sm lg:text-base font-semibold text-gray-900 dark:text-gray-200">
+                                            <span
+                                                class="text-[11px] lg:text-xs font-light text-gray-600 dark:text-gray-300 line-through">
+                                                899.99
+                                            </span>
+                                            $699.99
+                                        </h2>
+
+                                        <!-- Discount Badge -->
+                                        <span class="hidden md:inline-flex items-center gap-x-1.5 py-0.5 px-2 rounded-full font-medium 
+                        text-[10px] bg-green-100 text-green-600">$30.00</span>
+
+                                    </div>
+
+                                </div>
+                                <!-- ========= END TITLE, DESCRIPTION & PRICING ========= -->
+
+                                <!-- ========= QUANTITY CONTROL & REMOVE BUTTON ========= -->
+                                <div class="flex items-center flex-wrap md:flex-nowrap justify-between gap-1 mt-3">
+
+                                    <!-- Quantity Counter -->
+                                    <div
+                                        class="bg-[#E8EBEF] flex items-center justify-between py-1 px-2 rounded-lg w-full max-w-full md:max-w-[120px]">
+
+                                        <!-- Decrease Button -->
+                                        <button class="cursor-pointer text-lg !text-gray-900">
+                                            <i class="ri-subtract-fill"></i>
+                                        </button>
+
+                                        <!-- Current Quantity -->
+                                        <span class="text-brand font-medium text-sm">0</span>
+
+                                        <!-- Increase Button -->
+                                        <button class="cursor-pointer text-lg text-brand">
+                                            <span><i class="ri-add-fill"></i></span>
+                                        </button>
+
+                                    </div>
+
+                                    <!-- Remove Button -->
+                                    <button
+                                        class="btn btn-sm bg-[#FFD7D7] !text-xs text-red-500 !gap-x-1 !py-1.5 w-full md:w-auto">
+                                        <i class="ri-delete-bin-6-line text-base"></i>
+                                        Remove
+                                    </button>
+
+                                </div>
+                                <!-- ========= END QUANTITY CONTROL & REMOVE BUTTON ========= -->
+
+                            </div>
+                            <!-- ========= END PRODUCT DETAILS & ACTIONS ========= -->
+
+                        </div>
+                        <!-- ========= END CART ITEM WRAPPER ========= -->
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ================= ORDER SUMMARY ================= -->
+            <div class="w-full lg:w-[40%] 2xl:w-[30%] bg-white dark:bg-gray-800 rounded-xl px-5 sm:px-6 py-6 h-max"
+                data-aos="fade-left" data-aos-delay="200">
+
+                <h2 class="text-left text-base md:text-lg font-semibold mb-6">Order Summary</h2>
+
+                <div class="divide-y divide-gray-200 dark:divide-gray-600 space-y-6 mb-10">
+
+                    <div class="flex items-center justify-between pb-1">
+                        <span class="text-sm text-gray-500">Subtotal (5 items)</span>
+                        <span class="text-sm dark:text-gray-300">$1,729.96</span>
+                    </div>
+
+                    <div class="flex items-center justify-between pb-1">
+                        <span class="text-sm text-gray-500">Savings</span>
+                        <span class="text-sm dark:text-gray-300">-$340.00</span>
+                    </div>
+
+                    <div class="flex items-center justify-between pb-1">
+                        <span class="text-sm text-gray-500">Shipping</span>
+                        <span class="text-sm dark:text-gray-300">Free</span>
+                    </div>
+
+                    <div class="flex items-center justify-between pb-1">
+                        <span class="text-sm text-gray-500">Tax</span>
+                        <span class="text-sm dark:text-gray-300">$139.20</span>
+                    </div>
+
+                    <div class="flex items-center justify-between pb-1">
+                        <span class="text-sm text-gray-500">Total</span>
+                        <span class="text-sm dark:text-gray-300 font-bold">$1,529.16</span>
+                    </div>
+
+                </div>
+
+                <!-- ================= PROMO CODE ================= -->
+                <div class="flex items-center gap-x-2 mb-5">
+                    <input type="text" class="form-control !rounded-md h-11" placeholder="Enter Promo Code" required>
+                    <button class="btn bg-brand/20 text text-gray-600 h-11 !px-6">Apply</button>
+                </div>
+
+                <!-- ================= CHECKOUT BUTTON ================= -->
+                <a href="checkout.html" class="btn btn-brand text w-full h-11 !px-6">Processed to checkout</a>
+
+            </div>
+
+        </div>
+
+    </main>
+    <!-- ================= MAIN END ================= -->
+
+
     <!-- ================= FOOTER START ================= -->
-    <footer class="bg-white dark:bg-gray-900 py-10 relative overflow-hidden border-t border-gray-300 dark:border-gray-700">
+    <footer
+        class="bg-white dark:bg-gray-900 py-10 relative overflow-hidden border-t border-gray-300 dark:border-gray-700">
 
         <div class="container">
 

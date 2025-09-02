@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
@@ -628,35 +628,178 @@
     </header>
     <!-- ================= HEADER ENDS ================= -->
 
-    <!-- ================= BRRADCRUMBS START ================= -->
-    <div class="bg-gray-200/80 dark:bg-gray-800  py-8 md:py-12">
 
-        <nav class="container flex min-w-0 items-center justify-center gap-2 text-sm/6 whitespace-nowrap">
 
-            <div class="group flex items-center gap-2">
-                <a class="text-brand dark:text-blue-500 font-medium" href="/">Home</a>
+    <!-- ================= MAIN START ================= -->
+    <main class="container section-lg space-y-10">
+
+        <div class="bg-white dark:bg-gray-800 rounded-xl px-5 md:px-6 py-10 max-w-full md:max-w-5xl mx-auto">
+
+            <div class="max-w-full md:max-w-3xl mx-auto space-y-12">
+
+                <!-- ================= STEPPER ================= -->
+                <ul class="relative flex flex-row gap-x-2">
+
+                    <li class="w-full">
+                        <div class="w-full inline-flex items-center text-xs align-middle">
+                            <span
+                                class="size-6 flex justify-center items-center  bg-[#4BAF47] font-medium text-white rounded-full">
+                                1
+                            </span>
+                            <div class="ms-2 w-full h-px flex-1 bg-gray-200 group-last:hidden dark:bg-neutral-700">
+                            </div>
+                        </div>
+                        <div class="-mx-4 mt-2">
+                            <span class="block text-xs font-medium text-gray-800 dark:text-white">
+                                Check Out
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="w-full">
+                        <div class="w-full inline-flex items-center text-xs align-middle">
+                            <span
+                                class="size-6 flex justify-center items-center shrink-0 bg-[#4BAF47] font-medium text-white rounded-full">
+                                2
+                            </span>
+                            <div class="ms-2 w-full h-px flex-1 bg-gray-200 group-last:hidden dark:bg-neutral-700">
+                            </div>
+                        </div>
+                        <div class="-mx-6 mt-2">
+                            <span class="block text-xs font-medium text-brand dark:text-blue-500">
+                                Payment Method
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="shrink basis-0 flex-1 group">
+                        <div class="w-full inline-flex items-center text-xs align-middle">
+                            <span
+                                class="size-6 flex justify-center items-center shrink-0 bg-gray-100 font-medium text-gray-800 rounded-full dark:bg-neutral-700 dark:text-white">
+                                3
+                            </span>
+                            <div class="ms-2 w-full h-px flex-1 bg-gray-200 group-last:hidden dark:bg-neutral-700">
+                            </div>
+                        </div>
+                        <div class="-mx-6 mt-2">
+                            <span class="block text-xs font-medium text-gray-800 dark:text-white">
+                                Confirmation
+                            </span>
+                        </div>
+                    </li>
+
+                </ul>
+
+                <div class="md:p-5 space-y-8">
+
+                    <h2 class="text-base md:text-lg font-semibold">Select Payment Method</h2>
+
+                    <!-- ================= CARD PAYMENT METHOD LISTS ================= -->
+                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+
+                        <button
+                            class="w-full h-20 bg-[#EDF6FF] dark:bg-gray-700 border border-brand rounded-lg flex flex-col items-center justify-center gap-2 cursor-pointer transition hover:scale-105">
+                            <img class="w-9 object-contain" src="/assets/img/icon/payment/credit-card.png"
+                                alt="Credit card">
+                            <span class="text-sm font-medium text-gray-900 dark:text-gray-100">Credit Card</span>
+                        </button>
+
+                        <button
+                            class="w-full h-20 bg-gray-100 dark:bg-gray-700 rounded-lg flex flex-col items-center justify-center gap-2 cursor-pointer transition hover:scale-105">
+                            <img class="w-8 object-contain" src="/assets/img/icon/payment/paypal.png" alt="Paypal">
+                            <span class="text-sm font-medium text-gray-900 dark:text-gray-100">Paypal</span>
+                        </button>
+
+                        <button
+                            class="w-full h-20 bg-gray-100 dark:bg-gray-700 rounded-lg flex flex-col items-center justify-center gap-2 cursor-pointer transition hover:scale-105">
+                            <img class="w-10 object-contain" src="/assets/img/icon/payment/apple-pay.png"
+                                alt="Apple Pay">
+                            <span class="text-sm font-medium text-gray-900 dark:text-gray-100">Apple Pay</span>
+                        </button>
+
+                        <button
+                            class="w-full h-20 bg-gray-100 dark:bg-gray-700 rounded-lg flex flex-col items-center justify-center gap-2 cursor-pointer transition hover:scale-105">
+                            <img class="w-12 object-contain" src="/assets/img/icon/payment/google-pay.png"
+                                alt="Google Pay">
+                            <span class="text-sm font-medium text-gray-900 dark:text-gray-100">Google Pay</span>
+                        </button>
+
+                    </div>
+
+                    <!-- ================= PAYMENT METHOD CARD ================= -->
+                    <form class="space-y-4 md:space-y-6 mt-12" action="payment-otp.html" method="get"
+                        data-validate-form>
+
+                        <div>
+                            <label class="form-label !text-gray-700 dark:!text-gray-400">Card Number</label>
+                            <input type="text" class="form-control" placeholder="4242 4242 4242 42424"
+                                data-validate="required number" data-min-length="2" data-max-length="50">
+                        </div>
+
+                        <div>
+                            <label class="form-label !text-gray-700 dark:!text-gray-400">Cardholder</label>
+                            <input type="text" class="form-control" placeholder="John Doe"
+                                data-validate="required name">
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4 md:gap-6">
+
+                            <div>
+                                <label class="form-label !text-gray-700 dark:!text-gray-400">Expiry Date </label>
+                                <input type="text" class="form-control" placeholder="12/32"
+                                    data-validate="required date">
+                            </div>
+
+                            <div>
+                                <label class="form-label !text-gray-700 dark:!text-gray-400">CVV </label>
+                                <input type="password" class="form-control" placeholder="***"
+                                    data-validate="required cvv">
+                            </div>
+
+                        </div>
+
+                        <button type="submit" class="btn btn-brand h-10 !text-xs !rounded-lg dark:!text-white w-full mt-8">
+                            Pay Now
+                        </button>
+
+                    </form>
+
+                    <div class="space-y-5 mt-10">
+
+                        <div class="border-y border-gray-500 py-5 space-y-5">
+
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-500">Subtotal (5 items)</span>
+                                <span class="text-sm dark:text-gray-300">$1,729.96</span>
+                            </div>
+
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-500">Home delivery cost</span>
+                                <span class="text-sm dark:text-gray-300">$5.5</span>
+                            </div>
+
+                        </div>
+
+                        <div class="flex items-center justify-between pb-1">
+                            <span class="text-sm text-gray-500">TOTAL AMOUNT</span>
+                            <span class="text-sm dark:text-gray-300 font-bold">$66.30</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="group flex items-center gap-2">
-                <i class="ri-arrow-right-s-line text-gray-600 dark:text-gray-400 text-lg"></i>
-                <a class="text-brand dark:text-blue-500 font-medium"
-                    href="javascript:void(0)">Shopping Cart</a>
-            </div>
+        </div>
 
-            <div class="group flex items-center gap-2">
-                <i class="ri-arrow-right-s-line text-gray-600 dark:text-gray-400 text-lg"></i>
-                <a class="text-gray-500 dark:text-gray-400" href="javascript:void(0)">Cart</a>
-            </div>
+    </main>
+    <!-- ================= MAIN END ================= -->
 
-        </nav>
-
-
-
-    </div>
-    <!-- ================= BRRADCRUMBS END ================= -->
 
     <!-- ================= FOOTER START ================= -->
-    <footer class="bg-white dark:bg-gray-900 py-10 relative overflow-hidden border-t border-gray-300 dark:border-gray-700">
+    <footer
+        class="bg-white dark:bg-gray-900 py-10 relative overflow-hidden border-t border-gray-300 dark:border-gray-700">
 
         <div class="container">
 

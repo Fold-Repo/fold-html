@@ -628,32 +628,201 @@
     </header>
     <!-- ================= HEADER ENDS ================= -->
 
-    <!-- ================= BRRADCRUMBS START ================= -->
-    <div class="bg-gray-200/80 dark:bg-gray-800  py-8 md:py-12">
+    <!-- ================= MAIN START ================= -->
+    <div class="space-y-12 mb-12">
 
-        <nav class="container flex min-w-0 items-center justify-center gap-2 text-sm/6 whitespace-nowrap">
+        <!-- ================= CONNECT WITH US ================= -->
+        <div class="w-full space-y-6 py-8 bg-center bg-no-repeat bg-cover"
+            style="background-image: url('/assets/img/bg/contact_bg_2.png');">
 
-            <div class="group flex items-center gap-2">
-                <a class="text-brand dark:text-blue-500 font-medium" href="/">Home</a>
+            <div class="container !max-w-7xl space-y-12">
+
+                <!-- ======= CONTACT FORM ======== -->
+                <div class="grid md:grid-cols-2 w-full h-full overflow-hidden rounded-lg bg-cover bg-center bg-no-repeat" style="background: url('/assets/img/bg/contact_bg_3.png');">
+
+                    <div class="relaitve bg-brand dark:bg-gray-800 px-5 md:px-6 py-12 space-y-10" data-aos="fade-left"
+                        data-aos-delay="150">
+
+                        <h2 class="text-white dark:text-gray-200 text-xl lg:text-2xl font-semibold text-center">Get In Touch</h2>
+
+                        <form class="space-y-4 md:mb-12" action="#" method="post" data-validate-form>
+
+                            <div>
+                                <label class="form-label !text-white">Name</label>
+                                <input type="text" class="form-control" placeholder="Full name"
+                                    data-validate="required name" data-min-length="2" data-max-length="50">
+                            </div>
+
+                            <div>
+                                <label class="form-label !text-white">Email</label>
+                                <input type="email" class="form-control" placeholder="Email address"
+                                    data-validate="required email">
+                            </div>
+
+                            <div>
+                                <label class="form-label !text-white">Message</label>
+                                <textarea id="message" class="form-control" placeholder="Tell us about yourself..."
+                                    data-validate="required email">
+                        </textarea>
+                            </div>
+
+                            <!-- Submit -->
+                            <button type="submit" class="btn btn-light !text-brand dark:!text-white w-full mt-8">Send
+                                Message</button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+                <!-- ======= CONTACT INFO ======== -->
+                <div class="space-y-3" data-aos="fade-up"
+            data-aos-delay="150">
+
+                    <h2 class="text-lg font-medium text-gray-200">Contact Information</h2>
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-3">
+
+                        <div class="bg-brand/80 dark:bg-gray-800 rounded-md p-2.5 flex items-start gap-2">
+
+                            <i class="ri-map-pin-fill text-gray-200 dark:text-blue-500 text-2xl"></i>
+
+                            <div class="space-y-1.5">
+                                <h2 class="text-sm font-medium text-gray-200">Address</h2>
+                                <p class="text-xs text-gray-200">123 Health Ave, Suite 456, City, State, ZIP
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="bg-brand/80 dark:bg-gray-800 rounded-md p-2.5 flex items-start gap-2">
+
+                            <i class="ri-phone-fill text-gray-200 dark:text-blue-500 text-2xl"></i>
+
+                            <div class="space-y-1.5">
+                                <h2 class="text-sm font-medium text-gray-200">Call Us</h2>
+                                <p class="text-xs text-gray-200">+1 (234) 567-8900</p>
+                            </div>
+
+                        </div>
+
+                        <div class="bg-brand/80 dark:bg-gray-800 rounded-md p-2.5 flex items-start gap-2">
+
+                            <i class="ri-mail-fill text-gray-200 dark:text-blue-500 text-xl"></i>
+
+                            <div class="space-y-1.5">
+                                <h2 class="text-sm font-medium text-gray-200">Email</h2>
+                                <p class="text-xs text-gray-200">fold@example.com</p>
+                            </div>
+
+                        </div>
+
+                        <div class="bg-brand/80 dark:bg-gray-800 rounded-md p-2.5 flex items-start gap-2">
+
+                            <i class="ri-time-fill text-gray-200 dark:text-blue-500 text-2xl"></i>
+
+                            <div class="space-y-1.5">
+                                <h2 class="text-sm font-medium text-gray-200">Business Hours</h2>
+                                <p class="text-xs text-gray-200">Mon-Fri: 9am - 5pm</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="group flex items-center gap-2">
-                <i class="ri-arrow-right-s-line text-gray-600 dark:text-gray-400 text-lg"></i>
-                <a class="text-brand dark:text-blue-500 font-medium"
-                    href="javascript:void(0)">Shopping Cart</a>
+        </div>
+
+        <!-- ================= ALL LOCATIONS ================= -->
+        <div class="container w-full space-y-8">
+
+            <h2 class="text-xl lg:text-2xl font-semibold text-center">All Locations</h2>
+
+            <div class="grid md:grid-cols-2 gap-5 pb-6" data-aos="fade-up"
+            data-aos-delay="200">
+
+                <div class="bg-white dark:bg-gray-800 h-full rounded-xl p-5 space-y-4">
+
+                    <h4 class="text-gray-900 dark:text-gray-400 text-xs md:text-sm font-medium"> Main Office - City
+                        Center </h4>
+
+                    <div class="bg-gray-200 dark:bg-gray-700 rounded-lg h-[200px] md:h-[300px] overflow-hidden">
+                        <iframe class="w-full h-full"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2266.8472464055626!2d-3.4385248228275507!3d55.37812202078751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487d5707775fef9b%3A0x5ee2f35ace142dab!2sAbarth%20Unity%20Kidlington!5e0!3m2!1sen!2sng!4v1756632387493!5m2!1sen!2sng"
+                            style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                    <div class="space-y-1">
+
+                        <div class="flex items-center gap-x-2">
+                            <i class="ri-map-pin-fill text-brand dark:text-blue-500 text-xl"></i>
+                            <p class="text-xs md:text-sm text-gray-500">123 Health Ave, Suite 456, City, State, ZIP</p>
+                        </div>
+
+                        <div class="flex items-center gap-x-2">
+                            <i class="ri-phone-fill text-brand dark:text-blue-500 text-xl"></i>
+                            <p class="text-xs md:text-sm text-gray-500">+1 (234) 567-8900</p>
+                        </div>
+
+                    </div>
+
+                    <a href="http://" target="_blank" rel="noopener noreferrer"
+                        class="flex items-center gap-2 text-base text-brand">
+                        <span class="font-medium">View Larger Map</span>
+                        <i class="ri-arrow-right-up-line"></i>
+                    </a>
+
+                </div>
+
+                <div class="bg-white dark:bg-gray-800 h-full rounded-xl p-5 space-y-4">
+
+                    <h4 class="text-gray-900 dark:text-gray-400 text-xs md:text-sm font-medium"> Branch Office - West
+                        Side </h4>
+
+                    <div class="bg-gray-200 dark:bg-gray-700 rounded-lg h-[200px] md:h-[300px] overflow-hidden">
+                        <iframe class="w-full h-full"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2266.8472464055626!2d-3.4385248228275507!3d55.37812202078751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487d5707775fef9b%3A0x5ee2f35ace142dab!2sAbarth%20Unity%20Kidlington!5e0!3m2!1sen!2sng!4v1756632387493!5m2!1sen!2sng"
+                            style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                    <div class="space-y-1">
+
+                        <div class="flex items-center gap-x-2">
+                            <i class="ri-map-pin-fill text-brand dark:text-blue-500 text-xl"></i>
+                            <p class="text-xs md:text-sm text-gray-500">123 Health Ave, Suite 456, City, State, ZIP</p>
+                        </div>
+
+                        <div class="flex items-center gap-x-2">
+                            <i class="ri-phone-fill text-brand dark:text-blue-500 text-xl"></i>
+                            <p class="text-xs md:text-sm text-gray-500">+1 (234) 567-8900</p>
+                        </div>
+
+                    </div>
+
+                    <a href="http://" target="_blank" rel="noopener noreferrer"
+                        class="flex items-center gap-2 text-base text-brand">
+                        <span class="font-medium">View Larger Map</span>
+                        <i class="ri-arrow-right-up-line"></i>
+                    </a>
+
+                </div>
+
             </div>
 
-            <div class="group flex items-center gap-2">
-                <i class="ri-arrow-right-s-line text-gray-600 dark:text-gray-400 text-lg"></i>
-                <a class="text-gray-500 dark:text-gray-400" href="javascript:void(0)">Cart</a>
-            </div>
+            <button class="btn mx-auto btn-brand btn-sm !px-12 !py-3">
+                View all location on Map
+            </button>
 
-        </nav>
-
-
+        </div>
 
     </div>
-    <!-- ================= BRRADCRUMBS END ================= -->
+    <!-- ================= MAIN END ================= -->
 
     <!-- ================= FOOTER START ================= -->
     <footer class="bg-white dark:bg-gray-900 py-10 relative overflow-hidden border-t border-gray-300 dark:border-gray-700">
@@ -757,8 +926,7 @@
     <!-- ================= FOOTER END ================= -->
 
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="/assets/js/tailwind-plus.js"></script>
     <script src="/assets/js/main.js"></script>
