@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
     <script src="/assets/js/theme.js"></script>
@@ -634,110 +635,240 @@
     </header>
     <!-- ================= HEADER ENDS ================= -->
 
-
     <!-- ================= MAIN START ================= -->
-    <main class="container section-lg space-y-10">
+    <div class="pb-12 space-y-16 md:space-y-20">
 
-        <div class="bg-white dark:bg-gray-800 rounded-xl px-5 md:px-6 py-10 max-w-full md:max-w-5xl mx-auto">
+        <!-- ================= POST BANNER ================= -->
+        <div class="flex flex-col md:flex-row items-center md:items-center gap-5 max-h-auto md:max-h-[600px] 
+            bg-gradient-to-br from-blue-600 to-sky-900 p-4 md:p-0">
 
-            <div class="max-w-full md:max-w-3xl mx-auto space-y-12">
+            <!-- ====== IMAGE ====== -->
+            <img class="w-full md:w-[60%] md:h-[534px] object-cover rounded-lg md:rounded-r-lg md:-ml-4 md:relative md:top-10"
+                src="/assets/img/blog/1.jpg" alt="Blog Image" />
 
-                <!-- ================= STEPPER ================= -->
-                <ul class="relative flex flex-row gap-x-2">
+            <!-- ====== CONTENT ====== -->
+            <div class="md:w-[40%] flex flex-col w-full md:max-w-2xl space-y-4">
 
-                    <li class="w-full">
-                        <div class="w-full inline-flex items-center text-xs align-middle">
-                            <span
-                                class="size-6 flex justify-center items-center  bg-[#4BAF47] font-medium text-white rounded-full">
-                                1
-                            </span>
-                            <div class="ms-2 w-full h-px flex-1 bg-gray-200 group-last:hidden dark:bg-neutral-700">
-                            </div>
-                        </div>
-                        <div class="-mx-4 mt-2">
-                            <span class="block text-xs font-medium text-gray-800 dark:text-white">
-                                Check Out
-                            </span>
-                        </div>
-                    </li>
+                <!-- ====== TITLE ====== -->
+                <h2 class="text-lg lg:text-xl xl:text-2xl font-semibold text-gray-200">
+                    A Journey Back Into Modern Fashion
+                </h2>
 
-                    <li class="w-full">
-                        <div class="w-full inline-flex items-center text-xs align-middle">
-                            <span
-                                class="size-6 flex justify-center items-center shrink-0 bg-[#4BAF47] font-medium text-white rounded-full">
-                                2
-                            </span>
-                            <div class="ms-2 w-full h-px flex-1 bg-gray-200 group-last:hidden dark:bg-neutral-700">
-                            </div>
-                        </div>
-                        <div class="-mx-6 mt-2">
-                            <span class="block text-xs font-medium text-brand dark:text-blue-500">
-                                Payment Method
-                            </span>
-                        </div>
-                    </li>
+                <!-- ====== AUTHOR / DATE ====== -->
+                <div class="inline-flex flex-wrap items-center gap-3 text-xs text-gray-300">
 
-                    <li class="shrink basis-0 flex-1 group">
-                        <div class="w-full inline-flex items-center text-xs align-middle">
-                            <span
-                                class="size-6 flex justify-center items-center shrink-0 bg-gray-100 font-medium text-gray-800 rounded-full dark:bg-neutral-700 dark:text-white">
-                                3
-                            </span>
-                            <div class="ms-2 w-full h-px flex-1 bg-gray-200 group-last:hidden dark:bg-neutral-700">
-                            </div>
-                        </div>
-                        <div class="-mx-6 mt-2">
-                            <span class="block text-xs font-medium text-gray-800 dark:text-white">
-                                Confirmation
-                            </span>
-                        </div>
-                    </li>
-
-                </ul>
-
-                <!-- ================= Form Header ================= -->
-                <header class="max-w-md mx-auto text-center space-y-2 mb-10">
-                    <p class="text-gray-900 text-base lg:text-lg font-medium">
-                        Please enter the OTP sent to your email or phone to complete your order.
-                    </p>
-                </header>
-
-                <!-- ================= Email Form ================= -->
-                <form class="flex flex-col  space-y-6" action="payment-success.html" method="get" data-validate-form>
-
-                    <div class="flex items-center justify-center gap-x-2 px-5" data-otp-container data-otp-length="6">
-
-                        <input type="password" class="form-control size-10 md:!size-12 text-center" placeholder="0"
-                            data-otp-input data-validate="otp">
-                        <input type="password" class="form-control size-10 md:!size-12 text-center" placeholder="0"
-                            data-otp-input data-validate="otp">
-                        <input type="password" class="form-control size-10 md:!size-12 text-center" placeholder="0"
-                            data-otp-input data-validate="otp">
-
-                        <span>-</span>
-
-                        <input type="password" class="form-control size-10 md:!size-12 text-center" placeholder="0"
-                            data-otp-input data-validate="otp">
-                        <input type="password" class="form-control size-10 md:!size-12 text-center" placeholder="0"
-                            data-otp-input data-validate="otp">
-                        <input type="password" class="form-control size-10 md:!size-12 text-center" placeholder="0"
-                            data-otp-input data-validate="otp">
-
+                    <div class="flex items-center gap-2">
+                        <img class="inline-block size-6 rounded-full" src="/assets/img/blog/author.png" alt="Avatar">
+                        <span class="font-normal">Jolina Avila</span>
                     </div>
 
-                    <button type="submit" class="btn btn-brand w-full max-w-md mx-auto h-10 !rounded-lg mt-3"
-                        id="verify-otp-btn">Submit
-                        OTP</button>
+                    <div class="hidden sm:block w-px h-4 bg-gray-200"></div>
 
-                </form>
+                    <span>March 4, 2025</span>
+
+                    <div class="hidden sm:block w-px h-4 bg-gray-200"></div>
+
+                    <span>5 Mins Read</span>
+                </div>
 
             </div>
 
         </div>
 
-    </main>
-    <!-- ================= MAIN END ================= -->
 
+        <!-- ================= POSTS DETAILS /   ================= -->
+        <div class="container space-y-12">
+
+            <p class="text-sm text-gray-700 dark:text-gray-400 leading-7">
+                Lorem ipsum dolor sit amet consectetur. Odio in velit scelerisque diam viverra. Vulputate nibh nibh
+                posuere morbi laoreet faucibus mauris amet. Diam at vitae eget at proin in porta rhoncus. Morbi orci
+                euismod amet sit placerat. Ornare donec et laoreet gravida. Consectetur diam mauris in mattis in
+                pharetra. Aliquam praesent sed sollicitudin condimentum vitae cursus sed a. Sem viverra mattis ipsum id
+                faucibus sagittis at. Tellus vitae augue lobortis viverra sed. Montes feugiat sit leo proin egestas.
+                Lectus dolor donec eget proin nullam semper. Pellentesque tincidunt mattis viverra consectetur gravida.
+                Sit tellus est tempor quis nec commodo faucibus vestibulum. Libero nisi malesuada sit quisque leo leo.
+                Nec condimentum hac potenti gravida urna. Facilisis justo aliquet magna aliquet. Nec feugiat aliquam
+                odio non nunc feugiat vitae. Pretium et id amet faucibus platea malesuada morbi. Consectetur curabitur
+                enim auctor nisi
+                Nec sollicitudin ultrices ipsum ac eget nulla eu. Velit phasellus enim sodales tellus ultricies nascetur
+                velit. Tincidunt a aliquet amet nunc etiam. Vel egestas nec orci mauris proin in mattis interdum. Est id
+                tellus vestibulum sit consectetur faucibus consequat egestas maecenas. Arcu rhoncus quis enim ac nunc.
+                Pellentesque massa quam eu aenean viverra facilisi sit enim nunc. A eu vitae tristique sit. Amet at
+                commodo metus et dui bibendum eu.
+            </p>
+
+            <div class="grid sm:grid-cols-2 gap-4">
+
+                <img src="/assets/img/blog/1.jpg" class="aspect-7/5 object-cover rounded-tr-xl rounded-bl-xl"
+                    alt="Blog">
+
+                <img src="/assets/img/blog/1.jpg" class="aspect-7/5 object-cover rounded-tr-xl rounded-bl-xl"
+                    alt="Blog">
+
+            </div>
+
+            <p class="text-sm text-gray-700 dark:text-gray-400 leading-7">
+                Lorem ipsum dolor sit amet consectetur. Odio in velit scelerisque diam viverra. Vulputate nibh nibh
+                posuere morbi laoreet faucibus mauris amet. Diam at vitae eget at proin in porta rhoncus. Morbi orci
+                euismod amet sit placerat. Ornare donec et laoreet gravida. Consectetur diam mauris in mattis in
+                pharetra. Aliquam praesent sed sollicitudin condimentum vitae cursus sed a. Sem viverra mattis ipsum id
+                faucibus sagittis at. Tellus vitae augue lobortis viverra sed. Montes feugiat sit leo proin egestas.
+                Lectus dolor donec eget proin nullam semper. Pellentesque tincidunt mattis viverra consectetur gravida.
+                Sit tellus est tempor quis nec commodo faucibus vestibulum. Libero nisi malesuada sit quisque leo leo.
+            </p>
+
+            <div class="space-y-8">
+
+                <h2 class="text-left text-sm font-medium uppercase text-gray-500">
+                    Here are some related articles you may find interesting:
+                </h2>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+
+                    <!-- ====== ARTICLE  ====== -->
+                    <div class="max-w-3xl flex flex-col sm:flex-row items-start gap-4">
+
+                        <!-- ====== IMAGE ====== -->
+                        <img src="/assets/img/blog/19.jpg" alt="Preview"
+                            class="w-full sm:w-48 aspect-9/6 object-cover rounded-md" />
+
+                        <!-- ====== TEXT CONTENT ====== -->
+                        <div class="flex-1 flex flex-col gap-2">
+
+                            <!-- Meta -->
+                            <div class="flex items-center gap-2 text-slate-600 dark:text-gray-400 text-[11px] uppercase tracking-wide">
+                                <span>4 Minute Read</span>
+                                <span>-</span>
+                                <span>Product</span>
+                            </div>
+
+                            <!-- Title -->
+                            <a href="blog-details-1.html"
+                                class="text-gray-900 dark:text-gray-100 text-base font-semibold line-clamp-1 hover:!text-brand">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </a>
+
+                            <!-- Description -->
+                            <p class="text-gray-600 dark:text-gray-400 text-xs leading-relaxed line-clamp-3 line-clamp-3">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie,
+                                dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- ====== ARTICLE  ====== -->
+                    <div class="max-w-3xl flex flex-col sm:flex-row items-start gap-4">
+
+                        <!-- ====== IMAGE ====== -->
+                        <img src="/assets/img/blog/20.jpg" alt="Preview"
+                            class="w-full sm:w-48 aspect-9/6 object-cover rounded-md" />
+
+                        <!-- ====== TEXT CONTENT ====== -->
+                        <div class="flex-1 flex flex-col gap-2">
+
+                            <!-- Meta -->
+                            <div
+                                class="flex items-center gap-2 text-slate-600 dark:text-gray-400 text-[11px] uppercase tracking-wide">
+                                <span>4 Minute Read</span>
+                                <span>-</span>
+                                <span>Product</span>
+                            </div>
+
+                            <!-- Title -->
+                            <a href="blog-details-1.html"
+                                class="text-gray-900 dark:text-gray-100 text-base font-semibold line-clamp-1 hover:!text-brand">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </a>
+
+                            <!-- Description -->
+                            <p class="text-gray-600 dark:text-gray-400 text-xs leading-relaxed line-clamp-3">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie,
+                                dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- ====== ARTICLE  ====== -->
+                    <div class="max-w-3xl flex flex-col sm:flex-row items-start gap-4">
+
+                        <!-- ====== IMAGE ====== -->
+                        <img src="/assets/img/blog/21.jpg" alt="Preview"
+                            class="w-full sm:w-48 aspect-9/6 object-cover rounded-md" />
+
+                        <!-- ====== TEXT CONTENT ====== -->
+                        <div class="flex-1 flex flex-col gap-2">
+
+                            <!-- Meta -->
+                            <div
+                                class="flex items-center gap-2 text-slate-600 dark:text-gray-400 text-[11px] uppercase tracking-wide">
+                                <span>4 Minute Read</span>
+                                <span>-</span>
+                                <span>Product</span>
+                            </div>
+
+                            <!-- Title -->
+                            <a href="blog-details-1.html"
+                                class="text-gray-900 dark:text-gray-100 text-base font-semibold line-clamp-1 hover:!text-brand">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </a>
+
+                            <!-- Description -->
+                            <p class="text-gray-600 dark:text-gray-400 text-xs leading-relaxed line-clamp-3">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie,
+                                dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- ====== ARTICLE  ====== -->
+                    <div class="max-w-3xl flex flex-col sm:flex-row items-start gap-4">
+
+                        <!-- ====== IMAGE ====== -->
+                        <img src="/assets/img/blog/22.jpg" alt="Preview"
+                            class="w-full sm:w-48 aspect-9/6 object-cover rounded-md" />
+
+                        <!-- ====== TEXT CONTENT ====== -->
+                        <div class="flex-1 flex flex-col gap-2">
+
+                            <!-- Meta -->
+                            <div
+                                class="flex items-center gap-2 text-slate-600 dark:text-gray-400 text-[11px] uppercase tracking-wide">
+                                <span>4 Minute Read</span>
+                                <span>-</span>
+                                <span>Product</span>
+                            </div>
+
+                            <!-- Title -->
+                            <a href="blog-details-1.html"
+                                class="text-gray-900 dark:text-gray-100 text-base font-semibold line-clamp-1 hover:!text-brand">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </a>
+
+                            <!-- Description -->
+                            <p class="text-gray-600 dark:text-gray-400 text-xs leading-relaxed line-clamp-3">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie,
+                                dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- ================= MAIN ENDS ================= -->
 
     <!-- ================= FOOTER START ================= -->
     <footer class="bg-white dark:bg-gray-900 py-10 relative overflow-hidden border-t border-gray-300 dark:border-gray-700">
@@ -843,8 +974,10 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="/assets/js/tailwind-plus.js"></script>
+    <script src="/assets/js/carousel.js"></script>
     <script src="/assets/js/main.js"></script>
 
 </body>

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
     <script src="/assets/js/theme.js"></script>
@@ -634,110 +635,634 @@
     </header>
     <!-- ================= HEADER ENDS ================= -->
 
-
     <!-- ================= MAIN START ================= -->
-    <main class="container section-lg space-y-10">
+    <div class="mb-12 pt-2 container space-y-12">
 
-        <div class="bg-white dark:bg-gray-800 rounded-xl px-5 md:px-6 py-10 max-w-full md:max-w-5xl mx-auto">
+        <!-- =================TOP POST ================= -->
+        <div class="flex flex-col  gap-5">
 
-            <div class="max-w-full md:max-w-3xl mx-auto space-y-12">
+            <!-- ====== IMAGE ====== -->
+            <div class="relative bg-black rounded-b-3xl w-full aspect-9/7 md:aspect-auto md:h-[533px] overflow-hidden">
+                <img src="/assets/img/blog/1.jpg" class="w-full h-full object-cover" alt="Blog">
+                <div class="absolute inset-0 bg-black/30"></div>
+            </div>
 
-                <!-- ================= STEPPER ================= -->
-                <ul class="relative flex flex-row gap-x-2">
+            <!-- ====== CONTENT ====== -->
+            <div class="flex-1 space-y-3">
 
-                    <li class="w-full">
-                        <div class="w-full inline-flex items-center text-xs align-middle">
-                            <span
-                                class="size-6 flex justify-center items-center  bg-[#4BAF47] font-medium text-white rounded-full">
-                                1
-                            </span>
-                            <div class="ms-2 w-full h-px flex-1 bg-gray-200 group-last:hidden dark:bg-neutral-700">
-                            </div>
-                        </div>
-                        <div class="-mx-4 mt-2">
-                            <span class="block text-xs font-medium text-gray-800 dark:text-white">
-                                Check Out
-                            </span>
-                        </div>
-                    </li>
+                <!-- ====== TITLE ====== -->
+                <a href="blog-details-1.html"
+                    class="block text-lg 2xl:text-xl font-semibold text-gray-900 dark:text-gray-200 hover:text-brand">
+                    A Journey Back Into Modern Fashion
+                </a>
 
-                    <li class="w-full">
-                        <div class="w-full inline-flex items-center text-xs align-middle">
-                            <span
-                                class="size-6 flex justify-center items-center shrink-0 bg-[#4BAF47] font-medium text-white rounded-full">
-                                2
-                            </span>
-                            <div class="ms-2 w-full h-px flex-1 bg-gray-200 group-last:hidden dark:bg-neutral-700">
-                            </div>
-                        </div>
-                        <div class="-mx-6 mt-2">
-                            <span class="block text-xs font-medium text-brand dark:text-blue-500">
-                                Payment Method
-                            </span>
-                        </div>
-                    </li>
+                <!-- ====== AUTHOR / DATE ====== -->
+                <div class="inline-flex items-center gap-3 flex-wrap">
 
-                    <li class="shrink basis-0 flex-1 group">
-                        <div class="w-full inline-flex items-center text-xs align-middle">
-                            <span
-                                class="size-6 flex justify-center items-center shrink-0 bg-gray-100 font-medium text-gray-800 rounded-full dark:bg-neutral-700 dark:text-white">
-                                3
-                            </span>
-                            <div class="ms-2 w-full h-px flex-1 bg-gray-200 group-last:hidden dark:bg-neutral-700">
-                            </div>
-                        </div>
-                        <div class="-mx-6 mt-2">
-                            <span class="block text-xs font-medium text-gray-800 dark:text-white">
-                                Confirmation
-                            </span>
-                        </div>
-                    </li>
-
-                </ul>
-
-                <!-- ================= Form Header ================= -->
-                <header class="max-w-md mx-auto text-center space-y-2 mb-10">
-                    <p class="text-gray-900 text-base lg:text-lg font-medium">
-                        Please enter the OTP sent to your email or phone to complete your order.
-                    </p>
-                </header>
-
-                <!-- ================= Email Form ================= -->
-                <form class="flex flex-col  space-y-6" action="payment-success.html" method="get" data-validate-form>
-
-                    <div class="flex items-center justify-center gap-x-2 px-5" data-otp-container data-otp-length="6">
-
-                        <input type="password" class="form-control size-10 md:!size-12 text-center" placeholder="0"
-                            data-otp-input data-validate="otp">
-                        <input type="password" class="form-control size-10 md:!size-12 text-center" placeholder="0"
-                            data-otp-input data-validate="otp">
-                        <input type="password" class="form-control size-10 md:!size-12 text-center" placeholder="0"
-                            data-otp-input data-validate="otp">
-
-                        <span>-</span>
-
-                        <input type="password" class="form-control size-10 md:!size-12 text-center" placeholder="0"
-                            data-otp-input data-validate="otp">
-                        <input type="password" class="form-control size-10 md:!size-12 text-center" placeholder="0"
-                            data-otp-input data-validate="otp">
-                        <input type="password" class="form-control size-10 md:!size-12 text-center" placeholder="0"
-                            data-otp-input data-validate="otp">
-
+                    <div class="flex items-center gap-3">
+                        <img class="inline-block size-7 rounded-full"
+                            src="/assets/img/blog/author.png" alt="Avatar">
+                        <span class="text-black dark:text-gray-200 text-sm md:text-base font-normal">Jolina Avila</span>
                     </div>
 
-                    <button type="submit" class="btn btn-brand w-full max-w-md mx-auto h-10 !rounded-lg mt-3"
-                        id="verify-otp-btn">Submit
-                        OTP</button>
+                    <div class="w-px h-4 bg-black/25 dark:bg-white/25"></div>
 
-                </form>
+                    <span class="text-neutral-700 dark:text-gray-400 text-sm">March 4, 2025</span>
+
+                </div>
+
+                <!-- ====== DESC ====== -->
+                <p class="max-w-7xl text-sm md:text-base text-gray-500 dark:text-gray-400 leading-6 line-clamp-3">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt maiores
+                    nam quisquam saepe repellendus qui illum, libero officiis corporis veritatis maxime illo vitae
+                    nulla quasi tempora aperiam? Voluptatem deleniti nulla assumenda laborum corporis odio alias
+                    placeat animi veniam voluptate dolorum eum rerum unde hic quam aspernatur, ullam distinctio
+                    atque quae?
+                </p>
+
+                <!-- ====== READ MORE ====== -->
+                <a href="blog-details-1.html" class="flex items-center gap-2 text-blue-600 hover:text-blue-800 text-xs 2xl:text-sm">
+                    Keep reading
+                    <i class="ri-arrow-right-up-line text-lg"></i>
+                </a>
+
 
             </div>
 
         </div>
 
-    </main>
-    <!-- ================= MAIN END ================= -->
 
+        <!-- ================= MAIN POSTS ================= -->
+        <div class="flex flex-col lg:flex-row gap-6 relative">
+
+            <!-- ======= LATEST POSTS ======= -->
+            <div class="w-full lg:w-[70%] 2xl:w-[70%] space-y-7">
+
+                <h2 class="text-left text-base md:text-lg font-semibold">Latest Stories</h2>
+
+                <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-3">
+
+                    <!-- ====== POST CARD ====== -->
+                    <div class="bg-white dark:bg-gray-900 rounded-lg border border-black/10 
+                    dark:border-white/10 overflow-hidden flex flex-col p-2 space-y-2">
+
+                        <!-- ====== IMAGE ====== -->
+                        <img src="/assets/img/blog/11.jpg" alt="Blog Thumbnail"
+                            class="w-full h-64 object-cover rounded-lg" />
+
+                        <!-- ====== CONTENT ====== -->
+                        <div class="p-1 flex flex-col flex-1">
+
+                            <!-- ====== CATEGORY / READ TIME ====== -->
+                            <div class="flex justify-between items-center pb-4">
+                                <span class="py-2 px-4 bg-brand text-white text-[10px] rounded-md">
+                                    LIFESTYLE
+                                </span>
+                                <span class="text-gray-600 dark:text-gray-400 text-xs font-medium">
+                                    5 min read
+                                </span>
+                            </div>
+
+                            <!-- ====== TITLE & DESCRIPTION ====== -->
+                            <div class="flex flex-col gap-2 pb-3">
+                                <h2
+                                    class="text-gray-900 dark:text-gray-100 text-base font-semibold leading-snug font-['Cabin']">
+                                    Working from your home, and making it really feel comfortable
+                                </h2>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm leading-5 !line-clamp-2">
+                                    Discover the must-have apps that can streamline your workflow...
+                                </p>
+                            </div>
+
+                            <!-- ====== READ MORE ====== -->
+                            <a href="#"
+                                class="flex items-center gap-2 text-blue-600 hover:text-blue-800 text-xs 2xl:text-sm font-medium">
+                                Keep reading
+                                <i class="ri-arrow-right-up-line text-lg"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- ====== POST CARD ====== -->
+                    <div class="bg-white dark:bg-gray-900 rounded-lg border border-black/10 
+                    dark:border-white/10 overflow-hidden flex flex-col p-2 space-y-2">
+
+                        <!-- ====== IMAGE ====== -->
+                        <img src="/assets/img/blog/12.jpg" alt="Blog Thumbnail"
+                            class="w-full h-64 object-cover rounded-lg" />
+
+                        <!-- ====== CONTENT ====== -->
+                        <div class="p-1 flex flex-col flex-1">
+
+                            <!-- ====== CATEGORY / READ TIME ====== -->
+                            <div class="flex justify-between items-center pb-4">
+                                <span class="py-2 px-4 bg-brand text-white text-[10px] rounded-md">
+                                    LIFESTYLE
+                                </span>
+                                <span class="text-gray-600 dark:text-gray-400 text-xs font-medium">
+                                    5 min read
+                                </span>
+                            </div>
+
+                            <!-- ====== TITLE & DESCRIPTION ====== -->
+                            <div class="flex flex-col gap-2 pb-3">
+                                <h2
+                                    class="text-gray-900 dark:text-gray-100 text-base font-semibold leading-snug font-['Cabin']">
+                                    Working from your home, and making it really feel comfortable
+                                </h2>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm leading-5 !line-clamp-2">
+                                    Discover the must-have apps that can streamline your workflow...
+                                </p>
+                            </div>
+
+                            <!-- ====== READ MORE ====== -->
+                            <a href="#"
+                                class="flex items-center gap-2 text-blue-600 hover:text-blue-800 text-xs 2xl:text-sm font-medium">
+                                Keep reading
+                                <i class="ri-arrow-right-up-line text-lg"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- ====== POST CARD ====== -->
+                    <div class="bg-white dark:bg-gray-900 rounded-lg border border-black/10 
+                    dark:border-white/10 overflow-hidden flex flex-col p-2 space-y-2">
+
+                        <!-- ====== IMAGE ====== -->
+                        <img src="/assets/img/blog/13.jpg" alt="Blog Thumbnail"
+                            class="w-full h-64 object-cover rounded-lg" />
+
+                        <!-- ====== CONTENT ====== -->
+                        <div class="p-1 flex flex-col flex-1">
+
+                            <!-- ====== CATEGORY / READ TIME ====== -->
+                            <div class="flex justify-between items-center pb-4">
+                                <span class="py-2 px-4 bg-brand text-white text-[10px] rounded-md">
+                                    LIFESTYLE
+                                </span>
+                                <span class="text-gray-600 dark:text-gray-400 text-xs font-medium">
+                                    5 min read
+                                </span>
+                            </div>
+
+                            <!-- ====== TITLE & DESCRIPTION ====== -->
+                            <div class="flex flex-col gap-2 pb-3">
+                                <h2
+                                    class="text-gray-900 dark:text-gray-100 text-base font-semibold leading-snug font-['Cabin']">
+                                    Working from your home, and making it really feel comfortable
+                                </h2>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm leading-5 !line-clamp-2">
+                                    Discover the must-have apps that can streamline your workflow...
+                                </p>
+                            </div>
+
+                            <!-- ====== READ MORE ====== -->
+                            <a href="#"
+                                class="flex items-center gap-2 text-blue-600 hover:text-blue-800 text-xs 2xl:text-sm font-medium">
+                                Keep reading
+                                <i class="ri-arrow-right-up-line text-lg"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- ====== POST CARD ====== -->
+                    <div class="bg-white dark:bg-gray-900 rounded-lg border border-black/10 
+                    dark:border-white/10 overflow-hidden flex flex-col p-2 space-y-2">
+
+                        <!-- ====== IMAGE ====== -->
+                        <img src="/assets/img/blog/14.jpg" alt="Blog Thumbnail"
+                            class="w-full h-64 object-cover rounded-lg" />
+
+                        <!-- ====== CONTENT ====== -->
+                        <div class="p-1 flex flex-col flex-1">
+
+                            <!-- ====== CATEGORY / READ TIME ====== -->
+                            <div class="flex justify-between items-center pb-4">
+                                <span class="py-2 px-4 bg-brand text-white text-[10px] rounded-md">
+                                    LIFESTYLE
+                                </span>
+                                <span class="text-gray-600 dark:text-gray-400 text-xs font-medium">
+                                    5 min read
+                                </span>
+                            </div>
+
+                            <!-- ====== TITLE & DESCRIPTION ====== -->
+                            <div class="flex flex-col gap-2 pb-3">
+                                <h2
+                                    class="text-gray-900 dark:text-gray-100 text-base font-semibold leading-snug font-['Cabin']">
+                                    Working from your home, and making it really feel comfortable
+                                </h2>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm leading-5 !line-clamp-2">
+                                    Discover the must-have apps that can streamline your workflow...
+                                </p>
+                            </div>
+
+                            <!-- ====== READ MORE ====== -->
+                            <a href="#"
+                                class="flex items-center gap-2 text-blue-600 hover:text-blue-800 text-xs 2xl:text-sm font-medium">
+                                Keep reading
+                                <i class="ri-arrow-right-up-line text-lg"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- ====== POST CARD ====== -->
+                    <div class="bg-white dark:bg-gray-900 rounded-lg border border-black/10 
+                    dark:border-white/10 overflow-hidden flex flex-col p-2 space-y-2">
+
+                        <!-- ====== IMAGE ====== -->
+                        <img src="/assets/img/blog/11.jpg" alt="Blog Thumbnail"
+                            class="w-full h-64 object-cover rounded-lg" />
+
+                        <!-- ====== CONTENT ====== -->
+                        <div class="p-1 flex flex-col flex-1">
+
+                            <!-- ====== CATEGORY / READ TIME ====== -->
+                            <div class="flex justify-between items-center pb-4">
+                                <span class="py-2 px-4 bg-brand text-white text-[10px] rounded-md">
+                                    LIFESTYLE
+                                </span>
+                                <span class="text-gray-600 dark:text-gray-400 text-xs font-medium">
+                                    5 min read
+                                </span>
+                            </div>
+
+                            <!-- ====== TITLE & DESCRIPTION ====== -->
+                            <div class="flex flex-col gap-2 pb-3">
+                                <h2
+                                    class="text-gray-900 dark:text-gray-100 text-base font-semibold leading-snug font-['Cabin']">
+                                    Working from your home, and making it really feel comfortable
+                                </h2>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm leading-5 !line-clamp-2">
+                                    Discover the must-have apps that can streamline your workflow...
+                                </p>
+                            </div>
+
+                            <!-- ====== READ MORE ====== -->
+                            <a href="#"
+                                class="flex items-center gap-2 text-blue-600 hover:text-blue-800 text-xs 2xl:text-sm font-medium">
+                                Keep reading
+                                <i class="ri-arrow-right-up-line text-lg"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- ====== POST CARD ====== -->
+                    <div class="bg-white dark:bg-gray-900 rounded-lg border border-black/10 
+                    dark:border-white/10 overflow-hidden flex flex-col p-2 space-y-2">
+
+                        <!-- ====== IMAGE ====== -->
+                        <img src="/assets/img/blog/12.jpg" alt="Blog Thumbnail"
+                            class="w-full h-64 object-cover rounded-lg" />
+
+                        <!-- ====== CONTENT ====== -->
+                        <div class="p-1 flex flex-col flex-1">
+
+                            <!-- ====== CATEGORY / READ TIME ====== -->
+                            <div class="flex justify-between items-center pb-4">
+                                <span class="py-2 px-4 bg-brand text-white text-[10px] rounded-md">
+                                    LIFESTYLE
+                                </span>
+                                <span class="text-gray-600 dark:text-gray-400 text-xs font-medium">
+                                    5 min read
+                                </span>
+                            </div>
+
+                            <!-- ====== TITLE & DESCRIPTION ====== -->
+                            <div class="flex flex-col gap-2 pb-3">
+                                <h2
+                                    class="text-gray-900 dark:text-gray-100 text-base font-semibold leading-snug font-['Cabin']">
+                                    Working from your home, and making it really feel comfortable
+                                </h2>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm leading-5 !line-clamp-2">
+                                    Discover the must-have apps that can streamline your workflow...
+                                </p>
+                            </div>
+
+                            <!-- ====== READ MORE ====== -->
+                            <a href="#"
+                                class="flex items-center gap-2 text-blue-600 hover:text-blue-800 text-xs 2xl:text-sm font-medium">
+                                Keep reading
+                                <i class="ri-arrow-right-up-line text-lg"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ======= TRENDING POSTS / CATEGORIES / STAY UPDATED ======= -->
+            <div class="w-full lg:w-[30%] 2xl:w-[30%] lg:pt-10">
+
+                <div class="space-y-3 sticky top-3">
+
+                    <!-- ==== TRENDING POSTS ==== -->
+                    <div class="bg-white dark:bg-gray-800 rounded-xl p-4 space-y-6">
+
+                        <h2 class="text-left text-base md:text-lg font-semibold">Trending Now</h2>
+
+                        <div class="divide-y divide-gray-300 dark:divide-gray-600">
+
+                            <div class="flex justify-start items-center gap-5 py-3">
+
+                                <!-- ====== IMAGE ====== -->
+                                <div class="relative w-22 aspect-square rounded-lg overflow-hidden">
+                                    <img src="/assets/img/blog/8.jpg" alt="Blog Thumbnail"
+                                        class="absolute inset-0 w-full h-full object-cover" />
+                                </div>
+
+                                <!-- ====== CONTENT ====== -->
+                                <div class="flex-1 min-w-0 flex flex-col gap-2">
+
+                                    <a href="blog-details-1.html"
+                                        class="text-black dark:text-gray-100 hover:text-brand text-base font-medium !line-clamp-1">
+                                        Summer fashion trends that are taking over
+                                    </a>
+
+                                    <div class="text-black/60 dark:text-gray-400 text-sm">
+                                        2 min ago
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="flex justify-start items-center gap-5 py-3">
+
+                                <!-- ====== IMAGE ====== -->
+                                <div class="relative w-22 aspect-square rounded-lg overflow-hidden">
+                                    <img src="/assets/img/blog/9.jpg" alt="Blog Thumbnail"
+                                        class="absolute inset-0 w-full h-full object-cover" />
+                                </div>
+
+                                <!-- ====== CONTENT ====== -->
+                                <div class="flex-1 min-w-0 flex flex-col gap-2">
+
+                                    <a href="blog-details-1.html"
+                                        class="text-black dark:text-gray-100 hover:text-brand text-base font-medium !line-clamp-1">
+                                        Digital minimalism in a connected world
+                                    </a>
+
+                                    <div class="text-black/60 dark:text-gray-400 text-sm">
+                                        2 min ago
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="flex justify-start items-center gap-5 py-3">
+
+                                <!-- ====== IMAGE ====== -->
+                                <div class="relative w-22 aspect-square rounded-lg overflow-hidden">
+                                    <img src="/assets/img/blog/10.jpg" alt="Blog Thumbnail"
+                                        class="absolute inset-0 w-full h-full object-cover" />
+                                </div>
+
+                                <!-- ====== CONTENT ====== -->
+                                <div class="flex-1 min-w-0 flex flex-col gap-2">
+
+                                    <a href="blog-details-1.html"
+                                        class="text-black dark:text-gray-100 hover:text-brand text-base font-medium !line-clamp-1">
+                                        Sustainable living tips for modern families
+                                    </a>
+
+                                    <div class="text-black/60 dark:text-gray-400 text-sm">
+                                        2 min ago
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- ==== CATEGORIES==== -->
+                    <div class="bg-white dark:bg-gray-800 rounded-xl p-4 space-y-6">
+
+                        <h2 class="text-left text-base md:text-lg font-semibold">Categories</h2>
+
+                        <div class="divide-y divide-gray-200 dark:divide-gray-600">
+
+                            <div class="flex items-center justify-between py-4">
+
+                                <span class="text-sm font-semibold text-black dark:text-gray-400">Travel</span>
+
+                                <div class="flex items-center justify-center text-[12px] font-medium text-black dark:text-gray-200
+                                bg-gray-100 dark:bg-gray-600 size-7 p-0.5 rounded-full">
+                                    20
+                                </div>
+
+                            </div>
+
+                            <div class="flex items-center justify-between py-4">
+
+                                <span class="text-sm font-semibold text-black dark:text-gray-400">Fashion</span>
+
+                                <div class="flex items-center justify-center text-[12px] font-medium text-black dark:text-gray-200
+                                bg-gray-100 dark:bg-gray-600 size-7 p-0.5 rounded-full">
+                                    20
+                                </div>
+
+                            </div>
+
+                            <div class="flex items-center justify-between py-4">
+
+                                <span class="text-sm font-semibold text-black dark:text-gray-400">Lifestyle</span>
+
+                                <div class="flex items-center justify-center text-[12px] font-medium text-black dark:text-gray-200
+                                bg-gray-100 dark:bg-gray-600 size-7 p-0.5 rounded-full">
+                                    20
+                                </div>
+
+                            </div>
+
+                            <div class="flex items-center justify-between py-4">
+
+                                <span class="text-sm font-semibold text-black dark:text-gray-400">Beauty</span>
+
+                                <div class="flex items-center justify-center text-[12px] font-medium text-black dark:text-gray-200
+                                bg-gray-100 dark:bg-gray-600 size-7 p-0.5 rounded-full">
+                                    20
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- ==== Stay Updated==== -->
+                    <div class="bg-white dark:bg-gray-800 rounded-xl p-4 space-y-6">
+
+                        <div class="text-center space-y-2">
+                            <h2 class="text-base md:text-lg font-semibold">Stay Updated</h2>
+                            <p class="text-sm text-gray-600">Get the latest Stories delivered to your inbox</p>
+                        </div>
+
+                        <form class="space-y-4" action="#" method="post" data-validate-form>
+
+                            <div>
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" placeholder="Email address"
+                                    data-validate="required email">
+                            </div>
+
+                            <button type="submit" class="btn btn-brand w-full">Subscribe</button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ================= OTHER NEWS ================= -->
+        <div class="space-y-6">
+
+            <div class="space-y-2">
+                <h2 class="text-left text-base md:text-lg font-semibold">Other News </h2>
+                <p class="text-sm leading-6">
+                    Details about the product in question goes here. You have the option to now select and buy. Details
+                    about the product in question goes here. You have the option to now select and buy.Details about the
+                    product in question goes here. You have the option to now select and buy.
+                </p>
+            </div>
+
+            <div dir="ltr" class="swiper" data-swiper data-preview="4" data-tablet="3" data-mobile="1"
+                data-space-lg="10" data-space-md="10" data-space="10" data-loop="false" data-autoplay="true"
+                data-pagination-el=".pagination" data-pagination-md="2" data-pagination-lg="2">
+
+                <div class="swiper-wrapper">
+
+                    <div
+                        class="swiper-slide p-1.5 bg-white dark:bg-gray-800 rounded-md overflow-hidden flex flex-col space-y-1">
+
+                        <!-- ====== IMAGE ====== -->
+                        <img src="/assets/img/blog/6.jpg" alt="Product" class="w-full h-56 object-cover rounded-lg" />
+
+                        <!-- ====== CONTENT ====== -->
+                        <div class="p-2 flex flex-col gap-2">
+
+                            <a href="blog-details-1.html" class="font-semibold text-base hover:text-brand">Name of Deal
+                                goes here.</a>
+
+                            <p class="text-gray-600 dark:text-gray-300 text-sm leading-5 !line-clamp-3">
+                                Details about the product in question goes here. You have the option to now select
+                                and buy.
+                            </p>
+
+                            <span class="text-gray-500 dark:text-gray-400 text-[11px]">
+                                4 min | April 10, 2025
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="swiper-slide p-1.5 bg-white dark:bg-gray-800 rounded-md overflow-hidden flex flex-col space-y-1">
+
+                        <!-- ====== IMAGE ====== -->
+                        <img src="/assets/img/blog/7.jpg" alt="Product" class="w-full h-56 object-cover rounded-lg" />
+
+                        <!-- ====== CONTENT ====== -->
+                        <div class="p-2 flex flex-col gap-2">
+
+                            <a href="blog-details-1.html" class="font-semibold text-base hover:text-brand">Name of Deal
+                                goes here.</a>
+
+                            <p class="text-gray-600 dark:text-gray-300 text-sm leading-5 !line-clamp-3">
+                                Details about the product in question goes here. You have the option to now select
+                                and buy.
+                            </p>
+
+                            <span class="text-gray-500 dark:text-gray-400 text-[11px]">
+                                4 min | April 10, 2025
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="swiper-slide p-1.5 bg-white dark:bg-gray-800 rounded-md overflow-hidden flex flex-col space-y-1">
+
+                        <!-- ====== IMAGE ====== -->
+                        <img src="/assets/img/blog/8.jpg" alt="Product" class="w-full h-56 object-cover rounded-lg" />
+
+                        <!-- ====== CONTENT ====== -->
+                        <div class="p-2 flex flex-col gap-2">
+
+                            <a href="blog-details-1.html" class="font-semibold text-base hover:text-brand">Name of Deal
+                                goes here.</a>
+
+                            <p class="text-gray-600 dark:text-gray-300 text-sm leading-5 !line-clamp-3">
+                                Details about the product in question goes here. You have the option to now select
+                                and buy.
+                            </p>
+
+                            <span class="text-gray-500 dark:text-gray-400 text-[11px]">
+                                4 min | April 10, 2025
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="swiper-slide p-1.5 bg-white dark:bg-gray-800 rounded-md overflow-hidden flex flex-col space-y-1">
+
+                        <!-- ====== IMAGE ====== -->
+                        <img src="/assets/img/blog/9.jpg" alt="Product" class="w-full h-56 object-cover rounded-lg" />
+
+                        <!-- ====== CONTENT ====== -->
+                        <div class="p-2 flex flex-col gap-2">
+
+                            <a href="blog-details-1.html" class="font-semibold text-base hover:text-brand">Name of Deal
+                                goes here.</a>
+
+                            <p class="text-gray-600 dark:text-gray-300 text-sm leading-5 !line-clamp-3">
+                                Details about the product in question goes here. You have the option to now select
+                                and buy.
+                            </p>
+
+                            <span class="text-gray-500 dark:text-gray-400 text-[11px]">
+                                4 min | April 10, 2025
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="pagination sw-dots type-circle mt-5 justify-center"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- ================= MAIN ENDS ================= -->
 
     <!-- ================= FOOTER START ================= -->
     <footer class="bg-white dark:bg-gray-900 py-10 relative overflow-hidden border-t border-gray-300 dark:border-gray-700">
@@ -843,8 +1368,10 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="/assets/js/tailwind-plus.js"></script>
+    <script src="/assets/js/carousel.js"></script>
     <script src="/assets/js/main.js"></script>
 
 </body>
