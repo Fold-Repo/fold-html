@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
     <script src="/assets/js/theme.js"></script>
@@ -634,113 +635,584 @@
     </header>
     <!-- ================= HEADER ENDS ================= -->
 
-
     <!-- ================= MAIN START ================= -->
-    <main class="container section-lg space-y-10">
+    <div class="section-lg container space-y-12">
 
-        <div class="bg-white dark:bg-gray-800 rounded-xl px-5 md:px-6 py-10 max-w-full md:max-w-5xl mx-auto">
+        <!-- =================TOP POST ================= -->
+        <div class="flex flex-col md:flex-row items-center gap-6 md:gap-12">
 
-            <div class="max-w-full md:max-w-3xl mx-auto space-y-12">
+            <!-- ====== IMAGE ====== -->
+            <div class="relative bg-black rounded-tr-3xl rounded-bl-3xl w-full md:w-1/2 aspect-9/7 md:aspect-auto md:h-[533px] overflow-hidden">
+                <img src="/assets/img/blog/1.jpg" class="w-full h-full object-cover" alt="Blog">
+                <div class="absolute inset-0 bg-black/30"></div>
+            </div>
 
-                <!-- ================= STEPPER ================= -->
-                <ul class="relative flex flex-row gap-x-2">
+            <!-- ====== CONTENT ====== -->
+            <div class="flex-1 space-y-4">
 
-                    <li class="w-full">
-                        <div class="w-full inline-flex items-center text-xs align-middle">
-                            <span
-                                class="size-6 flex justify-center items-center  bg-[#4BAF47] font-medium text-white rounded-full">
-                                1
-                            </span>
-                            <div class="ms-2 w-full h-px flex-1 bg-gray-200 group-last:hidden dark:bg-neutral-700">
-                            </div>
-                        </div>
-                        <div class="-mx-4 mt-2">
-                            <span class="block text-xs font-medium text-gray-800 dark:text-white">
-                                Check Out
-                            </span>
-                        </div>
-                    </li>
+                <h6 class="text-sm font-medium text-brand uppercase mb-4 md:mb-8">The Basics</h6>
 
-                    <li class="w-full">
-                        <div class="w-full inline-flex items-center text-xs align-middle">
-                            <span
-                                class="size-6 flex justify-center items-center shrink-0 bg-[#4BAF47] font-medium text-white rounded-full">
-                                2
-                            </span>
-                            <div class="ms-2 w-full h-px flex-1 bg-gray-200 group-last:hidden dark:bg-neutral-700">
-                            </div>
-                        </div>
-                        <div class="-mx-6 mt-2">
-                            <span class="block text-xs font-medium text-brand dark:text-blue-500">
-                                Payment Method
-                            </span>
-                        </div>
-                    </li>
+                <!-- ====== TITLE ====== -->
+                <a href="blog-details-1.html"
+                    class="block text-lg 2xl:text-xl font-semibold text-gray-900 dark:text-gray-200 hover:text-brand">
+                    A Journey Back Into Modern Fashion
+                </a>
 
-                    <li class="shrink basis-0 flex-1 group">
-                        <div class="w-full inline-flex items-center text-xs align-middle">
-                            <span
-                                class="size-6 flex justify-center items-center shrink-0 bg-gray-100 font-medium text-gray-800 rounded-full dark:bg-neutral-700 dark:text-white">
-                                3
-                            </span>
-                            <div class="ms-2 w-full h-px flex-1 bg-gray-200 group-last:hidden dark:bg-neutral-700">
-                            </div>
-                        </div>
-                        <div class="-mx-6 mt-2">
-                            <span class="block text-xs font-medium text-gray-800 dark:text-white">
-                                Confirmation
-                            </span>
-                        </div>
-                    </li>
+                <!-- ====== AUTHOR / DATE ====== -->
+                <div class="inline-flex items-center gap-3 flex-wrap">
 
-                </ul>
-
-                <!-- ================= Form Header ================= -->
-                <header class="max-w-md mx-auto text-center space-y-2 mb-10">
-                    <p class="text-gray-900 text-base lg:text-lg font-medium">
-                        Please enter the OTP sent to your email or phone to complete your order.
-                    </p>
-                </header>
-
-                <!-- ================= Email Form ================= -->
-                <form class="flex flex-col  space-y-6" action="payment-success.html" method="get" data-validate-form>
-
-                    <div class="flex items-center justify-center gap-x-2 px-5" data-otp-container data-otp-length="6">
-
-                        <input type="password" class="form-control size-10 md:!size-12 text-center" placeholder="0"
-                            data-otp-input data-validate="otp">
-                        <input type="password" class="form-control size-10 md:!size-12 text-center" placeholder="0"
-                            data-otp-input data-validate="otp">
-                        <input type="password" class="form-control size-10 md:!size-12 text-center" placeholder="0"
-                            data-otp-input data-validate="otp">
-
-                        <span>-</span>
-
-                        <input type="password" class="form-control size-10 md:!size-12 text-center" placeholder="0"
-                            data-otp-input data-validate="otp">
-                        <input type="password" class="form-control size-10 md:!size-12 text-center" placeholder="0"
-                            data-otp-input data-validate="otp">
-                        <input type="password" class="form-control size-10 md:!size-12 text-center" placeholder="0"
-                            data-otp-input data-validate="otp">
-
+                    <div class="flex items-center gap-3">
+                        <img class="inline-block size-8 border border-brand rounded-full"
+                            src="/assets/img/blog/author.png" alt="Avatar">
+                        <span class="text-black dark:text-gray-200 text-sm md:text-base font-normal">Jolina Avila</span>
                     </div>
 
-                    <button type="submit" class="btn btn-brand w-full max-w-md mx-auto h-10 !rounded-lg mt-3"
-                        id="verify-otp-btn">Submit
-                        OTP</button>
+                    <div class="w-px h-4 bg-black/25 dark:bg-white/25"></div>
 
-                </form>
+                    <span class="text-neutral-700 dark:text-gray-400 text-sm">March 4, 2025</span>
+
+                </div>
+
+                <!-- ====== DESC ====== -->
+                <p class="text-sm md:text-base text-gray-500 dark:text-gray-400 leading-7 line-clamp-4">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt maiores
+                    nam quisquam saepe repellendus qui illum, libero officiis corporis veritatis maxime illo vitae
+                    nulla quasi tempora aperiam? Voluptatem deleniti nulla assumenda laborum corporis odio alias
+                    placeat animi veniam voluptate dolorum eum rerum unde hic quam aspernatur, ullam distinctio
+                    atque quae?
+                </p>
 
             </div>
 
         </div>
 
-    </main>
-    <!-- ================= MAIN END ================= -->
 
+        <!-- ================= MAIN POSTS ================= -->
+        <div class="flex flex-col lg:flex-row gap-6 relative">
+
+            <!-- ======= LATEST POSTS ======= -->
+            <div class="w-full lg:w-[70%] 2xl:w-[70%] space-y-7">
+
+                <h2 class="text-left text-base md:text-lg font-semibold">The Latest</h2>
+
+                <div class="divide-y divide-gray-300 dark:divide-gray-600 space-y-1">
+
+                    <!-- ================= POST ITEM ================= -->
+                    <div class="flex flex-col md:flex-row items-start gap-7 py-5">
+
+                        <!-- ====== CONTENT ====== -->
+                        <div class="flex-1 flex flex-col gap-4">
+
+                            <!-- ====== AUTHOR / DATE ====== -->
+                            <div class="flex items-center gap-3">
+
+                                <img src="/assets/img/blog/author.png" alt="Author"
+                                    class="size-9 rounded-full object-cover" />
+
+                                <span class="text-black dark:text-gray-100 text-sm">
+                                    Success Sam
+                                </span>
+
+                                <span class="text-gray-600 dark:text-gray-400 text-sm">
+                                    April 8, 2025
+                                </span>
+
+                            </div>
+
+                            <!-- ====== TITLE & DESCRIPTION ====== -->
+                            <div class="flex flex-col gap-2">
+
+                                <a href="blog-details-1.html"
+                                    class="text-lg 2xl:text-xl font-semibold text-gray-900 dark:text-gray-200 hover:text-brand">
+                                    The Complete Guide to Modern Fashion
+                                </a>
+
+                                <p class="text-neutral-700 dark:text-gray-400 text-sm leading-6 !line-clamp-3">
+                                    Lorem ipsum dolor sit amet consectetur. Nunc pellentesque gravida diam arcu
+                                    pellentesque risus id faucibus convallis.
+                                    Cursus at adipiscing urna facilisi venenatis posuere blandit dictum.
+                                </p>
+
+                            </div>
+
+                            <!-- ====== READ MORE ====== -->
+                            <a href="#"
+                                class="flex items-center gap-2 text-blue-600 hover:text-blue-800 text-xs 2xl:text-sm">
+                                Read More
+                                <i class="ri-arrow-right-up-line text-lg"></i>
+                            </a>
+
+                        </div>
+
+                        <!-- ====== IMAGE ====== -->
+                        <div class="flex-1 max-h-60 md:max-h-70 overflow-hidden rounded-lg">
+                            <img src="/assets/img/blog/2.jpg" alt="Blog Image" class="w-full h-full object-cover" />
+                        </div>
+
+                    </div>
+
+                    <!-- ================= POST ITEM ================= -->
+                    <div class="flex flex-col md:flex-row items-start gap-7 py-5">
+
+                        <!-- ====== CONTENT ====== -->
+                        <div class="flex-1 flex flex-col gap-4">
+
+                            <!-- ====== AUTHOR / DATE ====== -->
+                            <div class="flex items-center gap-3">
+
+                                <img src="/assets/img/blog/author.png" alt="Author"
+                                    class="size-9 rounded-full object-cover" />
+
+                                <span class="text-black dark:text-gray-100 text-sm">
+                                    Success Sam
+                                </span>
+
+                                <span class="text-gray-600 dark:text-gray-400 text-sm">
+                                    April 8, 2025
+                                </span>
+
+                            </div>
+
+                            <!-- ====== TITLE & DESCRIPTION ====== -->
+                            <div class="flex flex-col gap-2">
+
+                                <a href="blog-details-1.html"
+                                    class="text-lg 2xl:text-xl font-semibold text-gray-900 dark:text-gray-200 hover:text-brand">
+                                    The Complete Guide to Modern Fashion
+                                </a>
+
+                                <p class="text-neutral-700 dark:text-gray-400 text-sm leading-6 !line-clamp-3">
+                                    Lorem ipsum dolor sit amet consectetur. Nunc pellentesque gravida diam arcu
+                                    pellentesque risus id faucibus convallis.
+                                    Cursus at adipiscing urna facilisi venenatis posuere blandit dictum.
+                                </p>
+
+                            </div>
+
+                            <!-- ====== READ MORE ====== -->
+                            <a href="#"
+                                class="flex items-center gap-2 text-blue-600 hover:text-blue-800 text-xs 2xl:text-sm">
+                                Read More
+                                <i class="ri-arrow-right-up-line text-lg"></i>
+                            </a>
+
+                        </div>
+
+                        <!-- ====== IMAGE ====== -->
+                        <div class="flex-1 max-h-60 md:max-h-70 overflow-hidden rounded-lg">
+                            <img src="/assets/img/blog/3.jpg" alt="Blog Image" class="w-full h-full object-cover" />
+                        </div>
+
+                    </div>
+
+                    <!-- ================= POST ITEM ================= -->
+                    <div class="flex flex-col md:flex-row items-start gap-7 py-5">
+
+                        <!-- ====== CONTENT ====== -->
+                        <div class="flex-1 flex flex-col gap-4">
+
+                            <!-- ====== AUTHOR / DATE ====== -->
+                            <div class="flex items-center gap-3">
+
+                                <img src="/assets/img/blog/author.png" alt="Author"
+                                    class="size-9 rounded-full object-cover" />
+
+                                <span class="text-black dark:text-gray-100 text-sm">
+                                    Success Sam
+                                </span>
+
+                                <span class="text-gray-600 dark:text-gray-400 text-sm">
+                                    April 8, 2025
+                                </span>
+
+                            </div>
+
+                            <!-- ====== TITLE & DESCRIPTION ====== -->
+                            <div class="flex flex-col gap-2">
+
+                                <a href="blog-details-1.html"
+                                    class="text-lg 2xl:text-xl font-semibold text-gray-900 dark:text-gray-200 hover:text-brand">
+                                    The Complete Guide to Modern Fashion
+                                </a>
+
+                                <p class="text-neutral-700 dark:text-gray-400 text-sm leading-6 !line-clamp-3">
+                                    Lorem ipsum dolor sit amet consectetur. Nunc pellentesque gravida diam arcu
+                                    pellentesque risus id faucibus convallis.
+                                    Cursus at adipiscing urna facilisi venenatis posuere blandit dictum.
+                                </p>
+
+                            </div>
+
+                            <!-- ====== READ MORE ====== -->
+                            <a href="#"
+                                class="flex items-center gap-2 text-blue-600 hover:text-blue-800 text-xs 2xl:text-sm">
+                                Read More
+                                <i class="ri-arrow-right-up-line text-lg"></i>
+                            </a>
+
+                        </div>
+
+                        <!-- ====== IMAGE ====== -->
+                        <div class="flex-1 max-h-60 md:max-h-70 overflow-hidden rounded-lg">
+                            <img src="/assets/img/blog/4.jpg" alt="Blog Image" class="w-full h-full object-cover" />
+                        </div>
+
+                    </div>
+
+                    <!-- ================= POST ITEM ================= -->
+                    <div class="flex flex-col md:flex-row items-start gap-7 py-5">
+
+                        <!-- ====== CONTENT ====== -->
+                        <div class="flex-1 flex flex-col gap-4">
+
+                            <!-- ====== AUTHOR / DATE ====== -->
+                            <div class="flex items-center gap-3">
+
+                                <img src="/assets/img/blog/author.png" alt="Author"
+                                    class="size-9 rounded-full object-cover" />
+
+                                <span class="text-black dark:text-gray-100 text-sm">
+                                    Success Sam
+                                </span>
+
+                                <span class="text-gray-600 dark:text-gray-400 text-sm">
+                                    April 8, 2025
+                                </span>
+
+                            </div>
+
+                            <!-- ====== TITLE & DESCRIPTION ====== -->
+                            <div class="flex flex-col gap-2">
+
+                                <a href="blog-details-1.html"
+                                    class="text-lg 2xl:text-xl font-semibold text-gray-900 dark:text-gray-200 hover:text-brand">
+                                    The Complete Guide to Modern Fashion
+                                </a>
+
+                                <p class="text-neutral-700 dark:text-gray-400 text-sm leading-6 !line-clamp-3">
+                                    Lorem ipsum dolor sit amet consectetur. Nunc pellentesque gravida diam arcu
+                                    pellentesque risus id faucibus convallis.
+                                    Cursus at adipiscing urna facilisi venenatis posuere blandit dictum.
+                                </p>
+
+                            </div>
+
+                            <!-- ====== READ MORE ====== -->
+                            <a href="#"
+                                class="flex items-center gap-2 text-blue-600 hover:text-blue-800 text-xs 2xl:text-sm">
+                                Read More
+                                <i class="ri-arrow-right-up-line text-lg"></i>
+                            </a>
+
+                        </div>
+
+                        <!-- ====== IMAGE ====== -->
+                        <div class="flex-1 max-h-60 md:max-h-70 overflow-hidden rounded-lg">
+                            <img src="/assets/img/blog/5.jpg" alt="Blog Image" class="w-full h-full object-cover" />
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ======= TRENDING POSTS / CATEGORIES / STAY UPDATED ======= -->
+            <div class="w-full lg:w-[30%] 2xl:w-[30%] lg:pt-10">
+
+                <div class="space-y-3 sticky top-3">
+
+                    <!-- ==== TRENDING POSTS ==== -->
+                    <div class="bg-white dark:bg-gray-800 rounded-xl p-4 space-y-6">
+
+                        <h2 class="text-left text-base md:text-lg font-semibold">Trending Now</h2>
+
+                        <div class="divide-y divide-gray-300 dark:divide-gray-600">
+
+                            <div class="flex justify-start items-center gap-5 py-3">
+
+                                <!-- ====== IMAGE ====== -->
+                                <div class="relative w-22 aspect-square rounded-lg overflow-hidden">
+                                    <img src="/assets/img/blog/8.jpg" alt="Blog Thumbnail"
+                                        class="absolute inset-0 w-full h-full object-cover" />
+                                </div>
+
+                                <!-- ====== CONTENT ====== -->
+                                <div class="flex-1 min-w-0 flex flex-col gap-2">
+
+                                    <a href="blog-details-1.html"
+                                        class="text-black dark:text-gray-100 hover:text-brand text-base font-medium !line-clamp-1">
+                                        Summer fashion trends that are taking over
+                                    </a>
+
+                                    <div class="text-black/60 dark:text-gray-400 text-sm">
+                                        2 min ago
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="flex justify-start items-center gap-5 py-3">
+
+                                <!-- ====== IMAGE ====== -->
+                                <div class="relative w-22 aspect-square rounded-lg overflow-hidden">
+                                    <img src="/assets/img/blog/9.jpg" alt="Blog Thumbnail"
+                                        class="absolute inset-0 w-full h-full object-cover" />
+                                </div>
+
+                                <!-- ====== CONTENT ====== -->
+                                <div class="flex-1 min-w-0 flex flex-col gap-2">
+
+                                    <a href="blog-details-1.html"
+                                        class="text-black dark:text-gray-100 hover:text-brand text-base font-medium !line-clamp-1">
+                                        Digital minimalism in a connected world
+                                    </a>
+
+                                    <div class="text-black/60 dark:text-gray-400 text-sm">
+                                        2 min ago
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="flex justify-start items-center gap-5 py-3">
+
+                                <!-- ====== IMAGE ====== -->
+                                <div class="relative w-22 aspect-square rounded-lg overflow-hidden">
+                                    <img src="/assets/img/blog/10.jpg" alt="Blog Thumbnail"
+                                        class="absolute inset-0 w-full h-full object-cover" />
+                                </div>
+
+                                <!-- ====== CONTENT ====== -->
+                                <div class="flex-1 min-w-0 flex flex-col gap-2">
+
+                                    <a href="blog-details-1.html"
+                                        class="text-black dark:text-gray-100 hover:text-brand text-base font-medium !line-clamp-1">
+                                        Sustainable living tips for modern families
+                                    </a>
+
+                                    <div class="text-black/60 dark:text-gray-400 text-sm">
+                                        2 min ago
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- ==== CATEGORIES==== -->
+                    <div class="bg-white dark:bg-gray-800 rounded-xl p-4 space-y-6">
+
+                        <h2 class="text-left text-base md:text-lg font-semibold">Categories</h2>
+
+                        <div class="divide-y divide-gray-200 dark:divide-gray-600">
+
+                            <div class="flex items-center justify-between py-4">
+
+                                <span class="text-sm font-semibold text-black dark:text-gray-400">Travel</span>
+
+                                <div class="flex items-center justify-center text-[12px] font-medium text-black dark:text-gray-200
+                                bg-gray-100 dark:bg-gray-600 size-7 p-0.5 rounded-full">
+                                    20
+                                </div>
+
+                            </div>
+
+                            <div class="flex items-center justify-between py-4">
+
+                                <span class="text-sm font-semibold text-black dark:text-gray-400">Fashion</span>
+
+                                <div class="flex items-center justify-center text-[12px] font-medium text-black dark:text-gray-200
+                                bg-gray-100 dark:bg-gray-600 size-7 p-0.5 rounded-full">
+                                    20
+                                </div>
+
+                            </div>
+
+                            <div class="flex items-center justify-between py-4">
+
+                                <span class="text-sm font-semibold text-black dark:text-gray-400">Lifestyle</span>
+
+                                <div class="flex items-center justify-center text-[12px] font-medium text-black dark:text-gray-200
+                                bg-gray-100 dark:bg-gray-600 size-7 p-0.5 rounded-full">
+                                    20
+                                </div>
+
+                            </div>
+
+                            <div class="flex items-center justify-between py-4">
+
+                                <span class="text-sm font-semibold text-black dark:text-gray-400">Beauty</span>
+
+                                <div class="flex items-center justify-center text-[12px] font-medium text-black dark:text-gray-200
+                                bg-gray-100 dark:bg-gray-600 size-7 p-0.5 rounded-full">
+                                    20
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- ==== Stay Updated==== -->
+                    <div class="bg-white dark:bg-gray-800 rounded-xl p-4 space-y-6">
+
+                        <div class="text-center space-y-2">
+                            <h2 class="text-base md:text-lg font-semibold">Stay Updated</h2>
+                            <p class="text-sm text-gray-600">Get the latest Stories delivered to your inbox</p>
+                        </div>
+
+                        <form class="space-y-4" action="#" method="post" data-validate-form>
+
+                            <div>
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" placeholder="Email address"
+                                    data-validate="required email">
+                            </div>
+
+                            <button type="submit" class="btn btn-brand w-full">Subscribe</button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ================= OTHER NEWS ================= -->
+        <div class="space-y-6">
+
+            <h2 class="text-left text-base md:text-lg font-semibold">Other News </h2>
+
+            <div dir="ltr" class="swiper" data-swiper data-preview="4" data-tablet="3" data-mobile="1"
+                data-space-lg="10" data-space-md="10" data-space="10" data-loop="false" data-autoplay="true"
+                data-pagination-el=".pagination" data-pagination-md="2" data-pagination-lg="2">
+
+                <div class="swiper-wrapper">
+
+                    <div
+                        class="swiper-slide p-1.5 bg-white dark:bg-gray-800 rounded-md overflow-hidden flex flex-col space-y-1">
+
+                        <!-- ====== IMAGE ====== -->
+                        <img src="/assets/img/blog/6.jpg" alt="Product" class="w-full h-56 object-cover rounded-lg" />
+
+                        <!-- ====== CONTENT ====== -->
+                        <div class="p-2 flex flex-col gap-2">
+
+                            <a href="blog-details-1.html" class="font-semibold text-base hover:text-brand">Name of Deal
+                                goes here.</a>
+
+                            <p class="text-gray-600 dark:text-gray-300 text-sm leading-5 !line-clamp-3">
+                                Details about the product in question goes here. You have the option to now select
+                                and buy.
+                            </p>
+
+                            <span class="text-gray-500 dark:text-gray-400 text-xs">
+                                4 min | April 10, 2025
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="swiper-slide p-1.5 bg-white dark:bg-gray-800 rounded-md overflow-hidden flex flex-col space-y-1">
+
+                        <!-- ====== IMAGE ====== -->
+                        <img src="/assets/img/blog/7.jpg" alt="Product" class="w-full h-56 object-cover rounded-lg" />
+
+                        <!-- ====== CONTENT ====== -->
+                        <div class="p-2 flex flex-col gap-2">
+
+                            <a href="blog-details-1.html" class="font-semibold text-base hover:text-brand">Name of Deal
+                                goes here.</a>
+
+                            <p class="text-gray-600 dark:text-gray-300 text-sm leading-5 !line-clamp-3">
+                                Details about the product in question goes here. You have the option to now select
+                                and buy.
+                            </p>
+
+                            <span class="text-gray-500 dark:text-gray-400 text-xs">
+                                4 min | April 10, 2025
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="swiper-slide p-1.5 bg-white dark:bg-gray-800 rounded-md overflow-hidden flex flex-col space-y-1">
+
+                        <!-- ====== IMAGE ====== -->
+                        <img src="/assets/img/blog/8.jpg" alt="Product" class="w-full h-56 object-cover rounded-lg" />
+
+                        <!-- ====== CONTENT ====== -->
+                        <div class="p-2 flex flex-col gap-2">
+
+                            <a href="blog-details-1.html" class="font-semibold text-base hover:text-brand">Name of Deal
+                                goes here.</a>
+
+                            <p class="text-gray-600 dark:text-gray-300 text-sm leading-5 !line-clamp-3">
+                                Details about the product in question goes here. You have the option to now select
+                                and buy.
+                            </p>
+
+                            <span class="text-gray-500 dark:text-gray-400 text-xs">
+                                4 min | April 10, 2025
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="swiper-slide p-1.5 bg-white dark:bg-gray-800 rounded-md overflow-hidden flex flex-col space-y-1">
+
+                        <!-- ====== IMAGE ====== -->
+                        <img src="/assets/img/blog/9.jpg" alt="Product" class="w-full h-56 object-cover rounded-lg" />
+
+                        <!-- ====== CONTENT ====== -->
+                        <div class="p-2 flex flex-col gap-2">
+
+                            <a href="blog-details-1.html" class="font-semibold text-base hover:text-brand">Name of Deal
+                                goes here.</a>
+
+                            <p class="text-gray-600 dark:text-gray-300 text-sm leading-5 !line-clamp-3">
+                                Details about the product in question goes here. You have the option to now select
+                                and buy.
+                            </p>
+
+                            <span class="text-gray-500 dark:text-gray-400 text-xs">
+                                4 min | April 10, 2025
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="pagination sw-dots type-circle mt-5 justify-center"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- ================= MAIN ENDS ================= -->
 
     <!-- ================= FOOTER START ================= -->
-    <footer class="bg-white dark:bg-gray-900 py-10 relative overflow-hidden border-t border-gray-300 dark:border-gray-700">
+    <footer
+        class="bg-white dark:bg-gray-900 py-10 relative overflow-hidden border-t border-gray-300 dark:border-gray-700">
 
         <div class="container">
 
@@ -843,8 +1315,10 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="/assets/js/tailwind-plus.js"></script>
+    <script src="/assets/js/carousel.js"></script>
     <script src="/assets/js/main.js"></script>
 
 </body>

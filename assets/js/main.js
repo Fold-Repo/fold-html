@@ -219,6 +219,7 @@ if (window.AOS) {
     };
 })(jQuery);
 
+
 // ================= REUSABLE VALIDATION SYSTEM =================
 /*
  * VALIDATION SYSTEM USAGE:
@@ -614,4 +615,79 @@ if (window.AOS) {
 
 })(jQuery);
 
+
+// ================= CART QTY CONTROL =================
+(function ($) {
+    'use strict';
+
+    class CartQuantity {
+        constructor(container, options = {}) {
+            this.$container = $(container);
+            this.$decrease = this.$container.find('[data-cart-decrease]');
+            this.$increase = this.$container.find('[data-cart-increase]');
+            this.$value = this.$container.find('[data-cart-value]');
+            this.min = options.min || 0;
+            this.max = options.max || Infinity;
+            this.step = options.step || 1;
+
+            // Initialize value
+            this.value = parseInt(this.$value.text(), 10) || 0;
+
+            this.bindEvents();
+        }
+
+        bindEvents() {
+            this.$decrease.on('click', () => this.decrement());
+            this.$increase.on('click', () => this.increment());
+        }
+
+        updateDisplay() {
+            this.$value.text(this.value);
+            this.$container.trigger('cart:change', [this.value]); 
+        }
+
+        increment() {
+            if (this.value < this.max) {
+                this.value += this.step;
+                this.updateDisplay();
+            }
+        }
+
+        decrement() {
+            if (this.value > this.min) {
+                this.value -= this.step;
+                this.updateDisplay();
+            }
+        }
+
+        setValue(val) {
+            this.value = Math.min(Math.max(val, this.min), this.max);
+            this.updateDisplay();
+        }
+
+        getValue() {
+            return this.value;
+        }
+    }
+
+    // jQuery plugin wrapper
+    $.fn.cartQuantity = function (options) {
+        return this.each(function () {
+            if (!this._cartQuantity) {
+                this._cartQuantity = new CartQuantity(this, options);
+            }
+        });
+    };
+
+    // Helper to get instance
+    $.fn.getCartQuantity = function () {
+        return this[0]?._cartQuantity || null;
+    };
+
+    // Auto-init
+    $(function () {
+        $('[data-cart]').cartQuantity();
+    });
+
+})(jQuery);
 

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
     <script src="/assets/js/theme.js"></script>
@@ -634,113 +635,331 @@
     </header>
     <!-- ================= HEADER ENDS ================= -->
 
-
     <!-- ================= MAIN START ================= -->
-    <main class="container section-lg space-y-10">
+    <div class="pb-12 space-y-16 md:space-y-20">
 
-        <div class="bg-white dark:bg-gray-800 rounded-xl px-5 md:px-6 py-10 max-w-full md:max-w-5xl mx-auto">
+        <!-- ================= POST BANNER ================= -->
+        <div class="bg-brand pt-12 pb-5 relative overflow-hidden">
 
-            <div class="max-w-full md:max-w-3xl mx-auto space-y-12">
+            <div
+                class="relative container lg:!max-w-[90%] mx-auto flex flex-col md:flex-row gap-10 md:items-center justify-center z-5">
 
-                <!-- ================= STEPPER ================= -->
-                <ul class="relative flex flex-row gap-x-2">
+                <!-- ====== CONTENT ====== -->
+                <div class="max-w-md space-y-5 lg:space-y-8">
 
-                    <li class="w-full">
-                        <div class="w-full inline-flex items-center text-xs align-middle">
-                            <span
-                                class="size-6 flex justify-center items-center  bg-[#4BAF47] font-medium text-white rounded-full">
-                                1
-                            </span>
-                            <div class="ms-2 w-full h-px flex-1 bg-gray-200 group-last:hidden dark:bg-neutral-700">
+                    <!-- ====== TITLE ====== -->
+                    <h2 class="text-xl xl:text-3xl font-semibold text-gray-100 leading-8 lg:leading-10">
+                        Common Issues That Hurt Your Sales Team - And The Secret To Avoiding Them
+                    </h2>
+
+                    <button class="btn btn-sm h-10 btn-outline !border-gray-200 !px-4">
+                        Read More
+                        <i class="ri-arrow-right-up-line text-lg"></i>
+                    </button>
+
+                </div>
+
+                <!-- ====== IMAGE ====== -->
+                <img class="w-full md:w-[50%] object-cover rounded-lg md:rounded-r-lg" src="/assets/img/blog/23.jpg"
+                    alt="Blog Image" />
+
+            </div>
+
+            <img class="absolute bottom-0 w-full" src="/assets/img/rect_clip.svg" alt="Clip">
+
+        </div>
+
+        <div class="container space-y-12">
+
+            <!-- ================= OTHER POSTS  ================= -->
+            <div class="space-y-7">
+
+                <h2 class="text-center text-base md:text-lg font-semibold">Latest News</h2>
+
+                <div dir="ltr" class="swiper" data-swiper data-preview="4" data-tablet="3" data-mobile="1"
+                    data-space-lg="10" data-space-md="10" data-space="10" data-loop="false" data-autoplay="true"
+                    data-pagination-el=".pagination" data-pagination-md="2" data-pagination-lg="2">
+
+                    <div class="swiper-wrapper">
+
+                        <div
+                            class="swiper-slide p-1.5 bg-white dark:bg-gray-800 rounded-md overflow-hidden flex flex-col space-y-1">
+
+                            <!-- ====== IMAGE ====== -->
+                            <img src="/assets/img/blog/6.jpg" alt="Product"
+                                class="w-full h-56 object-cover rounded-lg" />
+
+                            <!-- ====== CONTENT ====== -->
+                            <div class="p-2 flex flex-col gap-2">
+
+                                <span class="text-gray-500 dark:text-gray-400 text-[11px]">
+                                    4 min | April 10, 2025
+                                </span>
+
+                                <a href="blog-details-1.html" class="font-semibold text-base hover:text-brand">
+                                    Name of Deal goes here.
+                                </a>
+
+                                <p class="text-gray-600 dark:text-gray-300 text-sm leading-5 !line-clamp-3">
+                                    Details about the product in question goes here. You have the option to now select
+                                    and buy.
+                                </p>
+
+                                <!-- ====== READ MORE ====== -->
+                                <a href="blog-details-1.html"
+                                    class="flex items-center gap-2 text-blue-600 hover:text-blue-800 text-xs 2xl:text-sm font-medium">
+                                    Read More
+                                    <i class="ri-arrow-right-up-line text-lg"></i>
+                                </a>
+
                             </div>
-                        </div>
-                        <div class="-mx-4 mt-2">
-                            <span class="block text-xs font-medium text-gray-800 dark:text-white">
-                                Check Out
-                            </span>
-                        </div>
-                    </li>
 
-                    <li class="w-full">
-                        <div class="w-full inline-flex items-center text-xs align-middle">
-                            <span
-                                class="size-6 flex justify-center items-center shrink-0 bg-[#4BAF47] font-medium text-white rounded-full">
-                                2
-                            </span>
-                            <div class="ms-2 w-full h-px flex-1 bg-gray-200 group-last:hidden dark:bg-neutral-700">
+                        </div>
+
+                        <div
+                            class="swiper-slide p-1.5 bg-white dark:bg-gray-800 rounded-md overflow-hidden flex flex-col space-y-1">
+
+                            <!-- ====== IMAGE ====== -->
+                            <img src="/assets/img/blog/7.jpg" alt="Product"
+                                class="w-full h-56 object-cover rounded-lg" />
+
+                            <!-- ====== CONTENT ====== -->
+                            <div class="p-2 flex flex-col gap-2">
+
+                                <span class="text-gray-500 dark:text-gray-400 text-[11px]">
+                                    4 min | April 10, 2025
+                                </span>
+
+                                <a href="blog-details-1.html" class="font-semibold text-base hover:text-brand">
+                                    Name of Deal goes here.
+                                </a>
+
+                                <p class="text-gray-600 dark:text-gray-300 text-sm leading-5 !line-clamp-3">
+                                    Details about the product in question goes here. You have the option to now select
+                                    and buy.
+                                </p>
+
+                                <!-- ====== READ MORE ====== -->
+                                <a href="blog-details-1.html"
+                                    class="flex items-center gap-2 text-blue-600 hover:text-blue-800 text-xs 2xl:text-sm font-medium">
+                                    Read More
+                                    <i class="ri-arrow-right-up-line text-lg"></i>
+                                </a>
+
                             </div>
-                        </div>
-                        <div class="-mx-6 mt-2">
-                            <span class="block text-xs font-medium text-brand dark:text-blue-500">
-                                Payment Method
-                            </span>
-                        </div>
-                    </li>
 
-                    <li class="shrink basis-0 flex-1 group">
-                        <div class="w-full inline-flex items-center text-xs align-middle">
-                            <span
-                                class="size-6 flex justify-center items-center shrink-0 bg-gray-100 font-medium text-gray-800 rounded-full dark:bg-neutral-700 dark:text-white">
-                                3
-                            </span>
-                            <div class="ms-2 w-full h-px flex-1 bg-gray-200 group-last:hidden dark:bg-neutral-700">
+                        </div>
+
+                        <div
+                            class="swiper-slide p-1.5 bg-white dark:bg-gray-800 rounded-md overflow-hidden flex flex-col space-y-1">
+
+                            <!-- ====== IMAGE ====== -->
+                            <img src="/assets/img/blog/8.jpg" alt="Product"
+                                class="w-full h-56 object-cover rounded-lg" />
+
+                            <!-- ====== CONTENT ====== -->
+                            <div class="p-2 flex flex-col gap-2">
+
+                                <span class="text-gray-500 dark:text-gray-400 text-[11px]">
+                                    4 min | April 10, 2025
+                                </span>
+
+                                <a href="blog-details-1.html" class="font-semibold text-base hover:text-brand">
+                                    Name of Deal goes here.
+                                </a>
+
+                                <p class="text-gray-600 dark:text-gray-300 text-sm leading-5 !line-clamp-3">
+                                    Details about the product in question goes here. You have the option to now select
+                                    and buy.
+                                </p>
+
+                                <!-- ====== READ MORE ====== -->
+                                <a href="blog-details-1.html"
+                                    class="flex items-center gap-2 text-blue-600 hover:text-blue-800 text-xs 2xl:text-sm font-medium">
+                                    Read More
+                                    <i class="ri-arrow-right-up-line text-lg"></i>
+                                </a>
+
                             </div>
+
                         </div>
-                        <div class="-mx-6 mt-2">
-                            <span class="block text-xs font-medium text-gray-800 dark:text-white">
-                                Confirmation
-                            </span>
+
+                        <div
+                            class="swiper-slide p-1.5 bg-white dark:bg-gray-800 rounded-md overflow-hidden flex flex-col space-y-1">
+
+                            <!-- ====== IMAGE ====== -->
+                            <img src="/assets/img/blog/9.jpg" alt="Product"
+                                class="w-full h-56 object-cover rounded-lg" />
+
+                            <!-- ====== CONTENT ====== -->
+                            <div class="p-2 flex flex-col gap-2">
+
+                                <span class="text-gray-500 dark:text-gray-400 text-[11px]">
+                                    4 min | April 10, 2025
+                                </span>
+
+                                <a href="blog-details-1.html" class="font-semibold text-base hover:text-brand">
+                                    Name of Deal goes here.
+                                </a>
+
+                                <p class="text-gray-600 dark:text-gray-300 text-sm leading-5 !line-clamp-3">
+                                    Details about the product in question goes here. You have the option to now select
+                                    and buy.
+                                </p>
+
+                                <!-- ====== READ MORE ====== -->
+                                <a href="blog-details-1.html"
+                                    class="flex items-center gap-2 text-blue-600 hover:text-blue-800 text-xs 2xl:text-sm font-medium">
+                                    Read More
+                                    <i class="ri-arrow-right-up-line text-lg"></i>
+                                </a>
+
+                            </div>
+
                         </div>
-                    </li>
-
-                </ul>
-
-                <!-- ================= Form Header ================= -->
-                <header class="max-w-md mx-auto text-center space-y-2 mb-10">
-                    <p class="text-gray-900 text-base lg:text-lg font-medium">
-                        Please enter the OTP sent to your email or phone to complete your order.
-                    </p>
-                </header>
-
-                <!-- ================= Email Form ================= -->
-                <form class="flex flex-col  space-y-6" action="payment-success.html" method="get" data-validate-form>
-
-                    <div class="flex items-center justify-center gap-x-2 px-5" data-otp-container data-otp-length="6">
-
-                        <input type="password" class="form-control size-10 md:!size-12 text-center" placeholder="0"
-                            data-otp-input data-validate="otp">
-                        <input type="password" class="form-control size-10 md:!size-12 text-center" placeholder="0"
-                            data-otp-input data-validate="otp">
-                        <input type="password" class="form-control size-10 md:!size-12 text-center" placeholder="0"
-                            data-otp-input data-validate="otp">
-
-                        <span>-</span>
-
-                        <input type="password" class="form-control size-10 md:!size-12 text-center" placeholder="0"
-                            data-otp-input data-validate="otp">
-                        <input type="password" class="form-control size-10 md:!size-12 text-center" placeholder="0"
-                            data-otp-input data-validate="otp">
-                        <input type="password" class="form-control size-10 md:!size-12 text-center" placeholder="0"
-                            data-otp-input data-validate="otp">
 
                     </div>
 
-                    <button type="submit" class="btn btn-brand w-full max-w-md mx-auto h-10 !rounded-lg mt-3"
-                        id="verify-otp-btn">Submit
-                        OTP</button>
+                    <div class="pagination sw-dots type-circle mt-5 justify-center"></div>
 
-                </form>
+                </div>
+
+            </div>
+
+            <!-- ================= POSTS DETAILS  ================= -->
+            <div class="flex flex-col lg:flex-row gap-6 relative">
+
+                <div class="w-full lg:w-[70%] 2xl:w-[70%] space-y-7">
+
+                    <h2 class="text-lg font-semibold leading-8">
+                        Optimizing your sales team is key to company-wide success. However, even the highest-performing
+                        sales teams sometimes experience common issues that hinder their relationships. Successfully
+                        overcoming sales challenges is what a successful company that is just drifting along apart from
+                        a successful one.
+                    </h2>
+
+                    <img src="/assets/img/blog/1.jpg" class="aspect-7/4 object-cover rounded-xl" alt="Blog">
+
+                    <p class="text-sm text-gray-700 dark:text-gray-400 leading-7">
+                        Lorem ipsum dolor sit amet consectetur. Odio in velit scelerisque diam viverra. Vulputate nibh
+                        nibh posuere morbi laoreet faucibus mauris amet. Diam at vitae eget at proin in porta rhoncus.
+                        Morbi orci euismod amet sit placerat. Ornare donec et laoreet gravida. Consectetur diam mauris
+                        in mattis in pharetra. Aliquam praesent sed sollicitudin condimentum vitae cursus sed a. Sem
+                        viverra mattis ipsum id faucibus sagittis at. Tellus vitae augue lobortis viverra sed. Montes
+                        feugiat sit leo proin egestas. Lectus dolor donec eget proin nullam semper. Pellentesque
+                        tincidunt mattis viverra consectetur gravida. Sit tellus est tempor quis nec commodo faucibus
+                        vestibulum. Libero nisi malesuada sit quisque leo leo.
+                    </p>
+
+                    <p class="text-sm text-gray-700 dark:text-gray-400 leading-7">
+                        Lorem ipsum dolor sit amet consectetur. Odio in velit scelerisque diam viverra. Vulputate nibh
+                        nibh posuere morbi laoreet faucibus mauris amet. Diam at vitae eget at proin in porta rhoncus.
+                        Morbi orci euismod amet sit placerat. Ornare donec et laoreet gravida. Consectetur diam mauris
+                        in mattis in pharetra. Aliquam praesent sed sollicitudin condimentum vitae cursus sed a. Sem
+                        viverra mattis ipsum id faucibus sagittis at. Tellus vitae augue lobortis viverra sed. Montes
+                        feugiat sit leo proin egestas. Lectus dolor donec eget proin nullam semper. Pellentesque
+                        tincidunt mattis viverra consectetur gravida. Sit tellus est tempor quis nec commodo faucibus
+                        vestibulum. Libero nisi malesuada sit quisque leo leo.
+                    </p>
+
+                </div>
+
+                <div class="w-full lg:w-[30%] 2xl:w-[30%]">
+
+                    <div class="bg-white dark:bg-gray-800 rounded-xl p-5 space-y-4 sticky top-4">
+
+                        <h2 class="text-left text-base font-semibold border-b border-gray-300 pb-2">Related Articles</h2>
+
+                        <div class="w-full space-y-1">
+
+                            <div class="flex-1 min-w-0 flex flex-col gap-y-1.5 py-2">
+
+                                <a href="blog-details-1.html" class="capitalize text-brand text-base underline font-semibold !line-clamp-1">
+                                    Summer fashion trends that are taking over
+                                </a>
+
+                                <div class="text-black/60 dark:text-gray-400 text-sm line-clamp-2">
+                                    Discover how automation can boost your team's efficiency.
+                                </div>
+
+                            </div>
+
+                            <div class="flex-1 min-w-0 flex flex-col gap-y-1.5 py-2">
+
+                                <a href="blog-details-1.html" class="capitalize text-brand text-base underline font-semibold !line-clamp-1">
+                                    Summer fashion trends that are taking over
+                                </a>
+
+                                <div class="text-black/60 dark:text-gray-400 text-sm line-clamp-2">
+                                    Discover how automation can boost your team's efficiency.
+                                </div>
+
+                            </div>
+
+                            <div class="flex-1 min-w-0 flex flex-col gap-y-1.5 py-2">
+
+                                <a href="blog-details-1.html" class="capitalize text-brand text-base underline font-semibold !line-clamp-1">
+                                    Summer fashion trends that are taking over
+                                </a>
+
+                                <div class="text-black/60 dark:text-gray-400 text-sm line-clamp-2">
+                                    Discover how automation can boost your team's efficiency.
+                                </div>
+
+                            </div>
+
+                            <div class="flex-1 min-w-0 flex flex-col gap-y-1.5 py-2">
+
+                                <a href="blog-details-1.html" class="capitalize text-brand text-base underline font-semibold !line-clamp-1">
+                                    Summer fashion trends that are taking over
+                                </a>
+
+                                <div class="text-black/60 dark:text-gray-400 text-sm line-clamp-2">
+                                    Discover how automation can boost your team's efficiency.
+                                </div>
+
+                            </div>
+
+                            <div class="flex-1 min-w-0 flex flex-col gap-y-1.5 py-2">
+
+                                <a href="blog-details-1.html" class="capitalize text-brand text-base underline font-semibold !line-clamp-1">
+                                    Summer fashion trends that are taking over
+                                </a>
+
+                                <div class="text-black/60 dark:text-gray-400 text-sm line-clamp-2">
+                                    Discover how automation can boost your team's efficiency.
+                                </div>
+
+                            </div>
+
+                            <div class="flex-1 min-w-0 flex flex-col gap-y-1.5 py-2">
+
+                                <a href="blog-details-1.html" class="capitalize text-brand text-base underline font-semibold !line-clamp-1">
+                                    Summer fashion trends that are taking over
+                                </a>
+
+                                <div class="text-black/60 dark:text-gray-400 text-sm line-clamp-2">
+                                    Discover how automation can boost your team's efficiency.
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
 
         </div>
 
-    </main>
-    <!-- ================= MAIN END ================= -->
-
+    </div>
+    <!-- ================= MAIN ENDS ================= -->
 
     <!-- ================= FOOTER START ================= -->
-    <footer class="bg-white dark:bg-gray-900 py-10 relative overflow-hidden border-t border-gray-300 dark:border-gray-700">
+    <footer
+        class="bg-white dark:bg-gray-900 py-10 relative overflow-hidden border-t border-gray-300 dark:border-gray-700">
 
         <div class="container">
 
@@ -843,8 +1062,10 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="/assets/js/tailwind-plus.js"></script>
+    <script src="/assets/js/carousel.js"></script>
     <script src="/assets/js/main.js"></script>
 
 </body>

@@ -292,6 +292,10 @@
                             text-gray-900 dark:text-white">
                             Blog Details 3
                         </a>
+                        <a href="/blog/blog-details-4.html" class="block rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5 
+                            text-gray-900 dark:text-white">
+                            Blog Details 4
+                        </a>
 
                     </el-popover>
 
@@ -570,6 +574,8 @@
                                                 class="dark:text-white dark:hover:bg-white/5">Blog Details 2</a>
                                             <a href="/blog/blog-details-3.html"
                                                 class="dark:text-white dark:hover:bg-white/5">Blog Details 3</a>
+                                            <a href="/blog/blog-details-4.html"
+                                                class="dark:text-white dark:hover:bg-white/5">Blog Details 4</a>
                                         </el-disclosure>
 
                                     </div>
@@ -694,7 +700,8 @@
 
                                     <!-- ========= PRODUCT TITLE & DESCRIPTION ========= -->
                                     <div class="space-y-1">
-                                        <h2 class="text-sm md:text-base font-semibold text-gray-800 dark:text-gray-300 !line-clamp-1">
+                                        <h2
+                                            class="text-sm md:text-base font-semibold text-gray-800 dark:text-gray-300 !line-clamp-1">
                                             Professional Digital Camera
                                         </h2>
                                         <p
@@ -728,18 +735,19 @@
                                 <div class="flex items-center flex-wrap md:flex-nowrap justify-between gap-1 mt-3">
 
                                     <!-- Quantity Counter -->
-                                    <div  class="bg-[#E8EBEF] flex items-center justify-between py-1 px-2 rounded-lg w-full max-w-full md:max-w-[120px]">
+                                    <div class="bg-[#E8EBEF] flex items-center justify-between py-1 px-2 rounded-lg w-full max-w-full md:max-w-[120px]"
+                                        data-cart>
 
                                         <!-- Decrease Button -->
-                                        <button class="cursor-pointer text-lg !text-gray-900">
+                                        <button class="cursor-pointer text-lg !text-gray-900" data-cart-decrease>
                                             <i class="ri-subtract-fill"></i>
                                         </button>
 
                                         <!-- Current Quantity -->
-                                        <span class="text-brand font-medium text-sm">0</span>
+                                        <span class="text-brand font-medium text-sm" data-cart-value>0</span>
 
                                         <!-- Increase Button -->
-                                        <button class="cursor-pointer text-lg text-brand">
+                                        <button class="cursor-pointer text-lg text-brand" data-cart-increase>
                                             <span><i class="ri-add-fill"></i></span>
                                         </button>
 
@@ -817,18 +825,19 @@
                                 <div class="flex items-center flex-wrap md:flex-nowrap justify-between gap-1 mt-3">
 
                                     <!-- Quantity Counter -->
-                                    <div class="bg-[#E8EBEF] flex items-center justify-between py-1 px-2 rounded-lg w-full max-w-full md:max-w-[120px]">
+                                    <div class="bg-[#E8EBEF] flex items-center justify-between py-1 px-2 rounded-lg w-full max-w-full md:max-w-[120px]"
+                                        data-cart>
 
                                         <!-- Decrease Button -->
-                                        <button class="cursor-pointer text-lg !text-gray-900">
+                                        <button class="cursor-pointer text-lg !text-gray-900" data-cart-decrease>
                                             <i class="ri-subtract-fill"></i>
                                         </button>
 
                                         <!-- Current Quantity -->
-                                        <span class="text-brand font-medium text-sm">0</span>
+                                        <span class="text-brand font-medium text-sm" data-cart-value>0</span>
 
                                         <!-- Increase Button -->
-                                        <button class="cursor-pointer text-lg text-brand">
+                                        <button class="cursor-pointer text-lg text-brand" data-cart-increase>
                                             <span><i class="ri-add-fill"></i></span>
                                         </button>
 
@@ -852,8 +861,7 @@
 
                     </div>
 
-                    <div
-                        class="border border-gray-200 dark:border-gray-700 rounded-lg p-2 md:p-3 bg-white dark:bg-gray-700 w-full">
+                    <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-2 md:p-3 bg-white dark:bg-gray-700 w-full">
 
                         <!-- ========= CART ITEM WRAPPER ========= -->
                         <div class="flex gap-3 flex-1">
@@ -907,19 +915,19 @@
                                 <div class="flex items-center flex-wrap md:flex-nowrap justify-between gap-1 mt-3">
 
                                     <!-- Quantity Counter -->
-                                    <div
-                                        class="bg-[#E8EBEF] flex items-center justify-between py-1 px-2 rounded-lg w-full max-w-full md:max-w-[120px]">
+                                    <div class="bg-[#E8EBEF] flex items-center justify-between py-1 px-2 rounded-lg w-full max-w-full md:max-w-[120px]"
+                                        data-cart>
 
                                         <!-- Decrease Button -->
-                                        <button class="cursor-pointer text-lg !text-gray-900">
+                                        <button class="cursor-pointer text-lg !text-gray-900" data-cart-decrease>
                                             <i class="ri-subtract-fill"></i>
                                         </button>
 
                                         <!-- Current Quantity -->
-                                        <span class="text-brand font-medium text-sm">0</span>
+                                        <span class="text-brand font-medium text-sm" data-cart-value>0</span>
 
                                         <!-- Increase Button -->
-                                        <button class="cursor-pointer text-lg text-brand">
+                                        <button class="cursor-pointer text-lg text-brand" data-cart-increase>
                                             <span><i class="ri-add-fill"></i></span>
                                         </button>
 
@@ -943,8 +951,7 @@
 
                     </div>
 
-                    <div
-                        class="border border-gray-200 dark:border-gray-700 rounded-lg p-2 md:p-3 bg-white dark:bg-gray-700 w-full">
+                    <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-2 md:p-3 bg-white dark:bg-gray-700 w-full">
 
                         <!-- ========= CART ITEM WRAPPER ========= -->
                         <div class="flex gap-3 flex-1">
@@ -998,19 +1005,19 @@
                                 <div class="flex items-center flex-wrap md:flex-nowrap justify-between gap-1 mt-3">
 
                                     <!-- Quantity Counter -->
-                                    <div
-                                        class="bg-[#E8EBEF] flex items-center justify-between py-1 px-2 rounded-lg w-full max-w-full md:max-w-[120px]">
+                                    <div class="bg-[#E8EBEF] flex items-center justify-between py-1 px-2 rounded-lg w-full max-w-full md:max-w-[120px]"
+                                        data-cart>
 
                                         <!-- Decrease Button -->
-                                        <button class="cursor-pointer text-lg !text-gray-900">
+                                        <button class="cursor-pointer text-lg !text-gray-900" data-cart-decrease>
                                             <i class="ri-subtract-fill"></i>
                                         </button>
 
                                         <!-- Current Quantity -->
-                                        <span class="text-brand font-medium text-sm">0</span>
+                                        <span class="text-brand font-medium text-sm" data-cart-value>0</span>
 
                                         <!-- Increase Button -->
-                                        <button class="cursor-pointer text-lg text-brand">
+                                        <button class="cursor-pointer text-lg text-brand" data-cart-increase>
                                             <span><i class="ri-add-fill"></i></span>
                                         </button>
 
@@ -1034,8 +1041,7 @@
 
                     </div>
 
-                    <div
-                        class="border border-gray-200 dark:border-gray-700 rounded-lg p-2 md:p-3 bg-white dark:bg-gray-700 w-full">
+                    <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-2 md:p-3 bg-white dark:bg-gray-700 w-full">
 
                         <!-- ========= CART ITEM WRAPPER ========= -->
                         <div class="flex gap-3 flex-1">
@@ -1089,19 +1095,19 @@
                                 <div class="flex items-center flex-wrap md:flex-nowrap justify-between gap-1 mt-3">
 
                                     <!-- Quantity Counter -->
-                                    <div
-                                        class="bg-[#E8EBEF] flex items-center justify-between py-1 px-2 rounded-lg w-full max-w-full md:max-w-[120px]">
+                                    <div class="bg-[#E8EBEF] flex items-center justify-between py-1 px-2 rounded-lg w-full max-w-full md:max-w-[120px]"
+                                        data-cart>
 
                                         <!-- Decrease Button -->
-                                        <button class="cursor-pointer text-lg !text-gray-900">
+                                        <button class="cursor-pointer text-lg !text-gray-900" data-cart-decrease>
                                             <i class="ri-subtract-fill"></i>
                                         </button>
 
                                         <!-- Current Quantity -->
-                                        <span class="text-brand font-medium text-sm">0</span>
+                                        <span class="text-brand font-medium text-sm" data-cart-value>0</span>
 
                                         <!-- Increase Button -->
-                                        <button class="cursor-pointer text-lg text-brand">
+                                        <button class="cursor-pointer text-lg text-brand" data-cart-increase>
                                             <span><i class="ri-add-fill"></i></span>
                                         </button>
 
@@ -1182,8 +1188,7 @@
 
 
     <!-- ================= FOOTER START ================= -->
-    <footer
-        class="bg-white dark:bg-gray-900 py-10 relative overflow-hidden border-t border-gray-300 dark:border-gray-700">
+    <footer class="bg-white dark:bg-gray-900 py-10 relative overflow-hidden border-t border-gray-300 dark:border-gray-700">
 
         <div class="container">
 

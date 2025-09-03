@@ -1,6 +1,5 @@
-/*  ========= Swiper dots =========== */
 .sw-pagination-testimonial .swiper-pagination-bullet-active {
-    background-color: var(--color-accent) !important;
+    background-color: var(--color-primary) !important;
 }
 
 .sw-dots {
@@ -39,13 +38,48 @@
     background-color: var(--color-primary);
 }
 
-/*  ========= Helpers =========== */
-.group:hover .group-hover-bg-primary {
-    background-color: var(--color-primary);
+/* DOT PRIMARY */
+.sw-dots.type-circle.brand .swiper-pagination-bullet::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid var(--color-brand);
+    opacity: 1;
 }
 
-/* Hero dots active state */
-.js-hero-dots .js-dot.is-active {
-    background-color: #fff;
-    width: 3rem;
+.sw-dots.type-circle.primary .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    border: 1px solid var(--color-brand);
+}
+
+.sw-dots.type-circle.primary .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
+    background-color: var(--color-brand);
+}
+
+/* DOT WHITE */
+.sw-dots.type-circle.white .swiper-pagination-bullet::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid var(--color-bg-white-smoke);
+    opacity: 1;
+}
+
+.sw-dots.type-circle.white .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    border: 1px solid var(--color-bg-white-smoke);
+}
+
+.sw-dots.type-circle.white .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
+    background-color: var(--color-bg-white-smoke);
 }
