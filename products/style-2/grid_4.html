@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
     <script src="/assets/js/theme.js"></script>
@@ -637,7 +638,7 @@
     <!-- ================= BRRADCRUMBS START ================= -->
     <div class="bg-gray-200/80 dark:bg-gray-800  py-8 md:py-12">
 
-        <nav class="container flex min-w-0 items-center justify-center gap-2 text-sm/6 whitespace-nowrap">
+        <nav class="container flex min-w-0 items-center justify-left gap-2 text-sm/6 whitespace-nowrap">
 
             <div class="group flex items-center gap-2">
                 <a class="text-brand dark:text-blue-500 font-medium" href="/">Home</a>
@@ -645,228 +646,536 @@
 
             <div class="group flex items-center gap-2">
                 <i class="ri-arrow-right-s-line text-gray-600 dark:text-gray-400 text-lg"></i>
-                <a class="text-brand dark:text-blue-500 font-medium" href="javascript:void(0)">Shopping</a>
+                <a class="text-brand dark:text-blue-500 font-medium" href="javascript:void(0)">Category</a>
             </div>
 
             <div class="group flex items-center gap-2">
                 <i class="ri-arrow-right-s-line text-gray-600 dark:text-gray-400 text-lg"></i>
-                <a class="text-gray-500 dark:text-gray-400" href="javascript:void(0)">Cart</a>
+                <a class="text-gray-500 dark:text-gray-400" href="javascript:void(0)">Lifestyle</a>
             </div>
 
         </nav>
 
-
-
     </div>
     <!-- ================= BRRADCRUMBS END ================= -->
 
-
     <!-- ================= MAIN START ================= -->
-    <main class="container section-md space-y-6">
+    <div class="container section-lg">
 
-        <!-- ================= CART ================= -->
-        <div class="bg-white dark:bg-gray-800 rounded-xl space-y-6">
+        <div class="flex flex-col lg:flex-row gap-x-6 gap-y-10 relative">
 
-            <div class="flex items-center justify-between gap-2 p-5">
-                <h2 class="text-center text-base md:text-lg font-semibold">My Cart</h2>
-                <a href="/products/style-1/" class="btn btn-sm btn-brand">
-                    <i class="ri-arrow-left-line"></i>
-                    Continue Shopping
-                </a>
+            <!-- ======= PRODUCTS AND PPRODUCT TOP BAR  ======= -->
+            <div class="w-full lg:w-[70%] 2xl:w-[75%] space-y-8">
+
+                <!-- ======= PRODUCTS TOP BAR  ======= -->
+                <div class="flex flex-wrap items-center justify-between gap-x-8 gap-y-5 border-b border-gray-300 pb-3">
+
+                    <p class="text-gray-500 text-sm">Showing 1 - 9 of 76 products</p>
+
+                    <div class="inline-flex items-center gap-x-3">
+
+                        <span class="text-gray-500 text-sm">View:</span>
+
+                        <div class="inline-flex items-center gap-1">
+                            <a href="index.html" class="bg-transparent p-1.5 rounded flex items-center justify-center">
+                                <img class="h-4" src="/assets/img/icon/grid_1.svg" alt="Grid One">
+                            </a>
+                            <a href="grid_2.html" class="bg-transparent p-1.5 rounded flex items-center justify-center">
+                                <img class="h-4" src="/assets/img/icon/grid_2.svg" alt="Grid Two">
+                            </a>
+                            <a href="grid_3.html" class="bg-transparent p-1.5 rounded hidden md:flex items-center justify-center">
+                                <img class="h-4" src="/assets/img/icon/grid_3.svg" alt="Grid Three">
+                            </a>
+                            <a href="grid_4.html" class="bg-brand p-1.5 rounded hidden xl:flex items-center justify-center">
+                                <img class="h-4 filter brightness-1 invert" src="/assets/img/icon/grid_4.svg"
+                                    alt="Grid Four">
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="inline-flex items-center gap-x-3">
+
+                        <span class="text-gray-500 text-sm">Sort By:</span>
+
+                        <!-- ====== DROPDOWN ====== -->
+                        <select class="inline-flex justify-center gap-x-1.5 rounded-md bg-white border border-gray-200 px-2 py-2 text-xs
+                        text-gray-900 shadow-xs hover:bg-gray-50 min-w-[120px]
+                        dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-700">
+
+                            <option value="" selected disabled class="dark:bg-gray-800 dark:text-gray-400">
+                                Sort by
+                            </option>
+                            <option value="popularity" class="dark:bg-gray-800 dark:text-gray-200">Popularity</option>
+                            <option value="price" class="dark:bg-gray-800 dark:text-gray-200">Price</option>
+                            <option value="rating" class="dark:bg-gray-800 dark:text-gray-200">Ratings</option>
+                        </select>
+
+
+
+                    </div>
+
+                </div>
+
+                <!-- ======= PRODUCTS LIST ========= -->
+                <div class="space-y-14">
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2 w-full">
+
+                        <!-- ======= PRODUCT ========= -->
+                        <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 
+                            dark:border-gray-700 overflow-hidden p-1.5 md:p-3 ">
+
+                            <img class="w-full aspect-9/7 object-cover rounded-lg" src="/assets/img/products/1.jpg"
+                                alt="Product">
+
+                            <div class="space-y-2 pt-3">
+
+                                <div class="flex justify-between gap-2 flex-wrap items-center text-xs text-gray-500 dark:text-gray-400">
+                                    <span>Digital Camera</span>
+                                    <div class="flex items-center gap-1">
+                                        <i class="ri-star-fill text-yellow-400 text-base"></i>
+                                        <span class="font-medium">95 ratings</span>
+                                    </div>
+                                </div>
+
+                                <a href="/products/detail/" class="text-sm font-normal text-gray-800 dark:text-gray-200 hover:text-brand 
+                                        leading-snug !line-clamp-1 block">
+                                    Sony Alpha A7 III Mirrorless Digital Camera
+                                </a>
+
+                                <p class="text-sm font-semibold text-gray-900 dark:text-gray-100 font-inter">$120.23</p>
+
+                                <button class="btn btn-brand btn-sm w-full text-white !text-xs ">
+                                    <i class="ri-shopping-cart-2-line text-sm"></i>
+                                    Add to Cart
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <!-- ======= PRODUCT ========= -->
+                        <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 
+                            dark:border-gray-700 overflow-hidden p-1.5 md:p-3 ">
+
+                            <img class="w-full aspect-9/7 object-cover rounded-lg" src="/assets/img/products/2.jpg"
+                                alt="Phone">
+
+                            <div class="space-y-2 pt-3">
+
+                                <div class="flex justify-between gap-2 flex-wrap items-center text-xs text-gray-500 dark:text-gray-400">
+                                    <span>Smartphone</span>
+                                    <div class="flex items-center gap-1">
+                                        <i class="ri-star-fill text-yellow-400 text-base"></i>
+                                        <span class="font-medium">95 ratings</span>
+                                    </div>
+                                </div>
+
+                                <a href="/products/detail/" class="text-sm font-normal text-gray-800 dark:text-gray-200 hover:text-brand 
+                                        leading-snug !line-clamp-1 block">
+                                    Google Pixel 6 Pro - Stormy Black
+                                </a>
+
+                                <p class="text-sm font-semibold text-gray-900 dark:text-gray-100 font-inter">$120.23</p>
+
+                                <button class="btn btn-brand btn-sm w-full text-white !text-xs ">
+                                    <i class="ri-shopping-cart-2-line text-sm"></i>
+                                    Add to Cart
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <!-- ======= PRODUCT ========= -->
+                        <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 
+                            dark:border-gray-700 overflow-hidden p-1.5 md:p-3 ">
+
+                            <img class="w-full aspect-9/7 object-cover rounded-lg" src="/assets/img/products/3.jpg"
+                                alt="Phone">
+
+                            <div class="space-y-2 pt-3">
+
+                                <div class="flex justify-between gap-2 flex-wrap items-center text-xs text-gray-500 dark:text-gray-400">
+                                    <span>Audio</span>
+                                    <div class="flex items-center gap-1">
+                                        <i class="ri-star-fill text-yellow-400 text-base"></i>
+                                        <span class="font-medium">95 ratings</span>
+                                    </div>
+                                </div>
+
+                                <a href="/products/detail/" class="text-sm font-normal text-gray-800 dark:text-gray-200 hover:text-brand 
+                                        leading-snug !line-clamp-1 block">
+                                    Sony WH-1000XM4 Wireless Noise Cancelling Headphones
+                                </a>
+
+                                <p class="text-sm font-semibold text-gray-900 dark:text-gray-100 font-inter">$120.23</p>
+
+                                <button class="btn btn-brand btn-sm w-full text-white !text-xs ">
+                                    <i class="ri-shopping-cart-2-line text-sm"></i>
+                                    Add to Cart
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <!-- ======= PRODUCT ========= -->
+                        <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 
+                            dark:border-gray-700 overflow-hidden p-1.5 md:p-3 ">
+
+                            <img class="w-full aspect-9/7 object-cover rounded-lg" src="/assets/img/products/4.jpg"
+                                alt="Phone">
+
+                            <div class="space-y-2 pt-3">
+
+                                <div class="flex justify-between gap-2 flex-wrap items-center text-xs text-gray-500 dark:text-gray-400">
+                                    <span>Digital Camera</span>
+                                    <div class="flex items-center gap-1">
+                                        <i class="ri-star-fill text-yellow-400 text-base"></i>
+                                        <span class="font-medium">95 ratings</span>
+                                    </div>
+                                </div>
+
+                                <a href="/products/detail/" class="text-sm font-normal text-gray-800 dark:text-gray-200 hover:text-brand 
+                                        leading-snug !line-clamp-1 block">
+                                    Sony Alpha Camera Lens
+                                </a>
+
+                                <p class="text-sm font-semibold text-gray-900 dark:text-gray-100 font-inter">$120.23</p>
+
+                                <button class="btn btn-brand btn-sm w-full text-white !text-xs ">
+                                    <i class="ri-shopping-cart-2-line text-sm"></i>
+                                    Add to Cart
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <!-- ======= PRODUCT ========= -->
+                        <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 
+                            dark:border-gray-700 overflow-hidden p-1.5 md:p-3 ">
+
+                            <img class="w-full aspect-9/7 object-cover rounded-lg" src="/assets/img/products/5.jpg"
+                                alt="Phone">
+
+                            <div class="space-y-2 pt-3">
+
+                                <div class="flex justify-between gap-2 flex-wrap items-center text-xs text-gray-500 dark:text-gray-400">
+                                    <span>Audio</span>
+                                    <div class="flex items-center gap-1">
+                                        <i class="ri-star-fill text-yellow-400 text-base"></i>
+                                        <span class="font-medium">95 ratings</span>
+                                    </div>
+                                </div>
+
+                                <a href="/products/detail/" class="text-sm font-normal text-gray-800 dark:text-gray-200 hover:text-brand 
+                                        leading-snug !line-clamp-1 block">
+                                    Samsung Galaxy Buds Pro - Phantom Black
+                                </a>
+
+                                <p class="text-sm font-semibold text-gray-900 dark:text-gray-100 font-inter">$120.23</p>
+
+                                <button class="btn btn-brand btn-sm w-full text-white !text-xs ">
+                                    <i class="ri-shopping-cart-2-line text-sm"></i>
+                                    Add to Cart
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <!-- ======= PRODUCT ========= -->
+                        <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 
+                            dark:border-gray-700 overflow-hidden p-1.5 md:p-3 ">
+
+                            <img class="w-full aspect-9/7 object-cover rounded-lg" src="/assets/img/products/6.jpg"
+                                alt="Phone">
+
+                            <div class="space-y-2 pt-3">
+
+                                <div class="flex justify-between gap-2 flex-wrap items-center text-xs text-gray-500 dark:text-gray-400">
+                                    <span>Smartphone</span>
+                                    <div class="flex items-center gap-1">
+                                        <i class="ri-star-fill text-yellow-400 text-base"></i>
+                                        <span class="font-medium">95 ratings</span>
+                                    </div>
+                                </div>
+
+                                <a href="/products/detail/" class="text-sm font-normal text-gray-800 dark:text-gray-200 hover:text-brand 
+                                        leading-snug !line-clamp-1 block">
+                                    Premium Wireless Gaming Console
+                                </a>
+
+                                <p class="text-sm font-semibold text-gray-900 dark:text-gray-100 font-inter">$120.23</p>
+
+                                <button class="btn btn-brand btn-sm w-full text-white !text-xs ">
+                                    <i class="ri-shopping-cart-2-line text-sm"></i>
+                                    Add to Cart
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <!-- ======= PRODUCT ========= -->
+                        <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 
+                            dark:border-gray-700 overflow-hidden p-1.5 md:p-3 ">
+
+                            <img class="w-full aspect-9/7 object-cover rounded-lg" src="/assets/img/products/1.jpg"
+                                alt="Product">
+
+                            <div class="space-y-2 pt-3">
+
+                                <div class="flex justify-between gap-2 flex-wrap items-center text-xs text-gray-500 dark:text-gray-400">
+                                    <span>Digital Camera</span>
+                                    <div class="flex items-center gap-1">
+                                        <i class="ri-star-fill text-yellow-400 text-base"></i>
+                                        <span class="font-medium">95 ratings</span>
+                                    </div>
+                                </div>
+
+                                <a href="/products/detail/" class="text-sm font-normal text-gray-800 dark:text-gray-200 hover:text-brand 
+                                        leading-snug !line-clamp-1 block">
+                                    Sony Alpha A7 III Mirrorless Digital Camera
+                                </a>
+
+                                <p class="text-sm font-semibold text-gray-900 dark:text-gray-100 font-inter">$120.23</p>
+
+                                <button class="btn btn-brand btn-sm w-full text-white !text-xs ">
+                                    <i class="ri-shopping-cart-2-line text-sm"></i>
+                                    Add to Cart
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <!-- ======= PRODUCT ========= -->
+                        <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 
+                            dark:border-gray-700 overflow-hidden p-1.5 md:p-3 ">
+
+                            <img class="w-full aspect-9/7 object-cover rounded-lg" src="/assets/img/products/2.jpg"
+                                alt="Phone">
+
+                            <div class="space-y-2 pt-3">
+
+                                <div class="flex justify-between gap-2 flex-wrap items-center text-xs text-gray-500 dark:text-gray-400">
+                                    <span>Smartphone</span>
+                                    <div class="flex items-center gap-1">
+                                        <i class="ri-star-fill text-yellow-400 text-base"></i>
+                                        <span class="font-medium">95 ratings</span>
+                                    </div>
+                                </div>
+
+                                <a href="/products/detail/" class="text-sm font-normal text-gray-800 dark:text-gray-200 hover:text-brand 
+                                        leading-snug !line-clamp-1 block">
+                                    Google Pixel 6 Pro - Stormy Black
+                                </a>
+
+                                <p class="text-sm font-semibold text-gray-900 dark:text-gray-100 font-inter">$120.23</p>
+
+                                <button class="btn btn-brand btn-sm w-full text-white !text-xs ">
+                                    <i class="ri-shopping-cart-2-line text-sm"></i>
+                                    Add to Cart
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- ============ PAGINATION ============ -->
+                    <nav class="flex items-center justify-center gap-1 text-xs font-inter" aria-label="Pagination">
+
+                        <!-- Previous Button -->
+                        <button type="button"
+                            class="size-7 flex items-center justify-center rounded-md text-gray-700 hover:bg-gray-100 dark:text-white dark:hover:bg-white/10">
+                            <i class="ri-arrow-left-s-line text-xs"></i>
+                            <span class="sr-only">Previous</span>
+                        </button>
+
+                        <!-- Page Numbers -->
+                        <div class="flex items-center gap-1">
+                            <button type="button"
+                                class="size-7 rounded-md bg-gray-200 text-gray-800 dark:bg-neutral-600 dark:text-white">1</button>
+                            <button type="button"
+                                class="size-7 rounded-md text-gray-700 hover:bg-gray-100 dark:text-white dark:hover:bg-white/10">2</button>
+                            <button type="button"
+                                class="size-7 rounded-md text-gray-700 hover:bg-gray-100 dark:text-white dark:hover:bg-white/10">3</button>
+                            <button type="button"
+                                class="px-2 py-1 rounded-md text-gray-400 hover:text-blue-600 dark:text-neutral-500 dark:hover:text-blue-500">
+                                <i class="ri-more-fill text-sm"></i>
+                            </button>
+                            <button type="button"
+                                class="size-7 rounded-md text-gray-700 hover:bg-gray-100 dark:text-white dark:hover:bg-white/10">8</button>
+                        </div>
+
+                        <!-- Next Button -->
+                        <button type="button"
+                            class="size-7 flex items-center justify-center rounded-md text-gray-700 hover:bg-gray-100 dark:text-white dark:hover:bg-white/10">
+                            <span class="sr-only">Next</span>
+                            <i class="ri-arrow-right-s-line text-xs"></i>
+                        </button>
+
+                    </nav>
+
+                </div>
+
             </div>
 
-            <div class="w-full">
+            <!-- ======= RATINGS / BRAND / PRICE / AVAILABLITY ======= -->
+            <div class="w-full lg:w-[30%] 2xl:w-[25%] space-y-8 lg:pt-3">
 
-                <!-- ====== CART HEADER ===== -->
-                <div class="hidden lg:grid grid-cols-2 py-2.5 font-semibold text-sm text-gray-900 bg-gray-100 dark:bg-gray-700 px-5">
-                    <div>Product</div>
-                    <div class="flex items-center justify-between">
-                        <span class="w-full max-w-[200px] text-center">Price</span>
-                        <span class="w-full max-w-[260px] text-center">Quantity</span>
-                        <span class="w-full max-w-[200px] text-center">Total</span>
-                        <span class="w-full max-w-[200px] text-center">Action</span>
-                    </div>
-                </div>
+                <h2 class="text-left text-base font-semibold border-b border-gray-300 pb-3">Lifestyle</h2>
 
-                <!-- ================= OCART LISTS ================= -->
-                <div class="grid grid-cols-1 gap-y-2 divide-y divide-gray-300 dark:divide-gray-700 py-2">
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-xl px-5 py-2 divide-y divide-gray-200 dark:divide-gray-600 sticky top-3">
 
-                    <!-- ====== CART ITEM ========= -->
-                    <div class="grid grid-cols-1 lg:grid-cols-2 py-2 gap-4 px-5">
+                    <!-- Category -->
+                    <div class="py-3" data-accordion>
 
-                        <div class="flex items-start gap-4">
+                        <button type="button" data-accordion-toggle data-accordion-default class="cursor-pointer w-full flex items-center 
+                            justify-between font-medium text-left text-gray-600 text-sm">
+                            <span>Category</span>
+                            <i class="ri-arrow-down-s-line text-xl transition-transform duration-200"></i>
+                        </button>
 
-                            <img src="/assets/img/cart/1.png" class="object-cover aspect-square size-24 rounded-lg"
-                                alt="Cart Image">
+                        <div data-accordion-content class="hidden py-4 px-1 space-y-3">
 
-                            <div class="space-y-2">
-
-                                <h3 class="text-base font-semibold text-gray-900 pb-1 !line-clamp-1">Professional
-                                    Digital
-                                    Camera</h3>
-                                <div class="text-xs text-gray-600 pb-0.5">24MP, 4K Recording, Wireless</div>
-
-                                <!-- ==== COLOR ==== -->
-                                <div class="flex items-center gap-x-2 font-inter">
-                                    <h6 class="text-xs text-gray-900">Color:</h6>
-
-                                    <div class="inline-flex items-center gap-x-1">
-                                        <div class="bg-red-600 size-4 rounded-full"></div>
-                                        <p class="text-gray-900 text-xs">Red</p>
-                                    </div>
-
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex gap-2 shrink-0 items-center">
+                                    <input id="filter-category-1" type="checkbox" value="fashion" class="size-4 appearance-none rounded-sm border 
+                                    border-gray-300 bg-white checked:border-brand checked:bg-brand bg-tras" />
+                                    <label for="filter-category-1"
+                                        class="text-gray-600 text-[13px] cursor-pointer">Fashion & Accessories</label>
                                 </div>
-
+                                <span class="text-gray-600 text-[13px]">(120)</span>
                             </div>
 
-                        </div>
-
-                        <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 lg:gap-2 w-full pt-2 divide-y 
-                        lg:divide-y-0 divide-gray-200 dark:divide-gray-700 lg:pt-0">
-
-                            <div class="flex items-center justify-between lg:justify-center text-sm lg:text-base w-full lg:max-w-[150px] text-left 
-                            sm:text-center pb-2 lg:pb-0">
-
-                                <span class="block lg:hidden">Price</span>
-
-                                <div class="flex flex-col gap-y-0.5 text-right font-inter">
-                                    <span class="font-semibold text-base lg:text-[16px]">$699.99</span>
-                                    <span class="text-[12px] line-through text-gray-600">$899.00</span>
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex gap-2 shrink-0 items-center">
+                                    <input id="filter-category-2" type="checkbox" value="electronics" class="size-4 appearance-none rounded-sm border 
+                                    border-gray-300 bg-white checked:border-brand checked:bg-brand" />
+                                    <label for="filter-category-2"
+                                        class="text-gray-600 text-[13px] cursor-pointer">Electronics & Gadgets</label>
                                 </div>
-
+                                <span class="text-gray-600 text-[13px]">(98)</span>
                             </div>
 
-                            <div class="flex items-center justify-between w-full lg:justify-center text-sm lg:text-base pb-3 lg:pb-0">
-
-                                <span class="block lg:hidden">Quantity</span>
-
-                                <div class="flex items-center justify-center border border-gray-300 text-xs rounded-lg p-1"
-                                    data-cart>
-
-                                    <button data-cart-decrease class="cursor-pointer rounded-md py-0.5 px-2 disabled:opacity-50 disabled:cursor-not-allowed 
-                                    bg-gray-200 !text-gray-900">
-                                        <i class="ri-subtract-line"></i>
-                                    </button>
-
-                                    <span class="w-12 text-center bg-transparent outline-none font-semibold"
-                                        data-cart-value>0</span>
-
-                                    <button data-cart-increase
-                                        class="cursor-pointer rounded-md py-0.5 px-2 disabled:opacity-50 disabled:cursor-not-allowed text-white bg-red-500">
-                                        <i class="ri-add-line"></i>
-                                    </button>
-
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex gap-2 shrink-0 items-center">
+                                    <input id="filter-category-3" type="checkbox" value="home" class="size-4 appearance-none rounded-sm border 
+                                    border-gray-300 bg-white checked:border-brand checked:bg-brand" />
+                                    <label for="filter-category-3" class="text-gray-600 text-[13px] cursor-pointer">Home
+                                        & Living</label>
                                 </div>
-
+                                <span class="text-gray-600 text-[13px]">(75)</span>
                             </div>
 
-                            <div
-                                class="flex items-center justify-between lg:justify-center text-sm lg:text-base w-full lg:max-w-[200px] text-right pb-2 lg:pb-0">
-                                <span class="block lg:hidden">Total</span>
-                                <h3 class="font-semibold text-base lg:text-[16px] font-inter">$669.99</h3>
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex gap-2 shrink-0 items-center">
+                                    <input id="filter-category-4" type="checkbox" value="beauty" class="size-4 appearance-none rounded-sm border 
+                                    border-gray-300 bg-white checked:border-brand checked:bg-brand" />
+                                    <label for="filter-category-4"
+                                        class="text-gray-600 text-[13px] cursor-pointer">Beauty & Wellness</label>
+                                </div>
+                                <span class="text-gray-600 text-[13px]">(64)</span>
                             </div>
 
-                            <div
-                                class="flex items-center justify-between lg:justify-center text-sm lg:text-base w-full lg:max-w-[200px] text-right">
-
-                                <span class="block lg:hidden">Action</span>
-
-                                <button type="button" class="cursor-pointer bg-[#FFD7D7] text-red-600 size-6 rounded-md 
-                                flex items-center justify-center gap-1">
-                                    <i class="ri-delete-bin-6-line text-sm"></i>
-                                </button>
-
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex gap-2 shrink-0 items-center">
+                                    <input id="filter-category-5" type="checkbox" value="sports" class="size-4 appearance-none rounded-sm border 
+                                    border-gray-300 bg-white checked:border-brand checked:bg-brand" />
+                                    <label for="filter-category-5"
+                                        class="text-gray-600 text-[13px] cursor-pointer">Sports & Outdoors</label>
+                                </div>
+                                <span class="text-gray-600 text-[13px]">(42)</span>
                             </div>
+
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex gap-2 shrink-0 items-center">
+                                    <input id="filter-category-6" type="checkbox" value="kids" class="size-4 appearance-none rounded-sm border 
+                                border-gray-300 bg-white checked:border-brand checked:bg-brand" />
+                                    <label for="filter-category-6"
+                                        class="text-gray-600 text-[13px] cursor-pointer">Kids, Baby & Toys</label>
+                                </div>
+                                <span class="text-gray-600 text-[13px]">(36)</span>
+                            </div>
+
 
                         </div>
 
                     </div>
 
-                    <!-- ====== CART ITEM ========= -->
-                    <div class="grid grid-cols-1 lg:grid-cols-2 py-2 gap-4 px-5">
+                    <!-- Rating -->
+                    <div class="py-3" data-accordion>
+                        <button type="button" data-accordion-toggle data-accordion-default
+                            class="cursor-pointer w-full flex items-center justify-between font-medium text-left text-gray-600 text-sm">
+                            <span>Rating</span>
+                            <i class="ri-arrow-down-s-line text-xl transition-transform duration-200"></i>
+                        </button>
 
-                        <div class="flex items-start gap-4">
-
-                            <img src="/assets/img/cart/1.png" class="object-cover aspect-square size-24 rounded-lg"
-                                alt="Cart Image">
-
-                            <div class="space-y-2">
-
-                                <h3 class="text-base font-semibold text-gray-900 pb-1 !line-clamp-1">Professional
-                                    Digital
-                                    Camera</h3>
-                                <div class="text-xs text-gray-600 pb-0.5">24MP, 4K Recording, Wireless</div>
-
-                                <!-- ==== COLOR ==== -->
-                                <div class="flex items-center gap-x-2 font-inter">
-                                    <h6 class="text-xs text-gray-900">Color:</h6>
-
-                                    <div class="inline-flex items-center gap-x-1">
-                                        <div class="bg-red-600 size-4 rounded-full"></div>
-                                        <p class="text-gray-900 text-xs">Red</p>
-                                    </div>
-
-                                </div>
-
+                        <div data-accordion-content class="hidden py-4 px-1 space-y-3">
+                            <div class="flex items-center gap-2">
+                                <input id="filter-rating-5" type="checkbox" value="5" class="size-4 appearance-none rounded-sm border 
+                                    border-gray-300 bg-white checked:border-brand checked:bg-brand" />
+                                <label for="filter-rating-5" class="text-gray-600 text-[13px] cursor-pointer">★★★★★ &
+                                    Up</label>
                             </div>
-
+                            <div class="flex items-center gap-2">
+                                <input id="filter-rating-4" type="checkbox" value="4" class="size-4 appearance-none rounded-sm border 
+                                    border-gray-300 bg-white checked:border-brand checked:bg-brand" />
+                                <label for="filter-rating-4" class="text-gray-600 text-[13px] cursor-pointer">★★★★ &
+                                    Up</label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <input id="filter-rating-3" type="checkbox" value="3" class="size-4 appearance-none rounded-sm border 
+                                    border-gray-300 bg-white checked:border-brand checked:bg-brand" />
+                                <label for="filter-rating-3" class="text-gray-600 text-[13px] cursor-pointer">★★★ &
+                                    Up</label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <input id="filter-rating-2" type="checkbox" value="2" class="size-4 appearance-none rounded-sm border 
+                                    border-gray-300 bg-white checked:border-brand checked:bg-brand" />
+                                <label for="filter-rating-2" class="text-gray-600 text-[13px] cursor-pointer">★★ &
+                                    Up</label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <input id="filter-rating-1" type="checkbox" value="1" class="size-4 appearance-none rounded-sm border 
+                                    border-gray-300 bg-white checked:border-brand checked:bg-brand" />
+                                <label for="filter-rating-1" class="text-gray-600 text-[13px] cursor-pointer">★ &
+                                    Up</label>
+                            </div>
                         </div>
+                    </div>
 
-                        <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 lg:gap-2 w-full pt-2 divide-y 
-                        lg:divide-y-0 divide-gray-200 dark:divide-gray-700 lg:pt-0">
+                    <!-- PRICE -->
+                    <div class="py-3" data-accordion>
+                        <button type="button" data-accordion-toggle
+                            class="cursor-pointer w-full flex items-center justify-between font-medium text-left text-gray-600 text-sm">
+                            <span>Price Range</span>
+                            <i class="ri-arrow-down-s-line text-xl transition-transform duration-200"></i>
+                        </button>
 
-                            <div class="flex items-center justify-between lg:justify-center text-sm lg:text-base w-full lg:max-w-[150px] text-left 
-                            sm:text-center pb-2 lg:pb-0">
+                        <div data-accordion-content class="hidden py-4 px-1 space-y-3">
 
-                                <span class="block lg:hidden">Price</span>
+                            <div class="flex items-center gap-3">
 
-                                <div class="flex flex-col gap-y-0.5 text-right font-inter">
-                                    <span class="font-semibold text-base lg:text-[16px]">$699.99</span>
-                                    <span class="text-[12px] line-through text-gray-600">$899.00</span>
+                                <div>
+                                    <label class="form-label !text-xs">Min </label>
+                                    <input type="number" class="form-control h-10" value="100">
                                 </div>
 
-                            </div>
+                                <span>-</span>
 
-                            <div
-                                class="flex items-center justify-between w-full lg:justify-center text-sm lg:text-base pb-3 lg:pb-0">
-
-                                <span class="block lg:hidden">Quantity</span>
-
-                                <div class="flex items-center justify-center border border-gray-300 text-xs rounded-lg p-1"
-                                    data-cart>
-
-                                    <button data-cart-decrease class="cursor-pointer rounded-md py-0.5 px-2 disabled:opacity-50 disabled:cursor-not-allowed 
-                                    bg-gray-200 !text-gray-900">
-                                        <i class="ri-subtract-line"></i>
-                                    </button>
-
-                                    <span class="w-12 text-center bg-transparent outline-none font-semibold"
-                                        data-cart-value>0</span>
-
-                                    <button data-cart-increase
-                                        class="cursor-pointer rounded-md py-0.5 px-2 disabled:opacity-50 disabled:cursor-not-allowed text-white bg-red-500">
-                                        <i class="ri-add-line"></i>
-                                    </button>
-
+                                <div>
+                                    <label class="form-label !text-xs">Max</label>
+                                    <input type="number" class="form-control h-10" value="100000">
                                 </div>
-
-                            </div>
-
-                            <div
-                                class="flex items-center justify-between lg:justify-center text-sm lg:text-base w-full lg:max-w-[200px] text-right pb-2 lg:pb-0">
-                                <span class="block lg:hidden">Total</span>
-                                <h3 class="font-semibold text-base lg:text-[16px] font-inter">$669.99</h3>
-                            </div>
-
-                            <div
-                                class="flex items-center justify-between lg:justify-center text-sm lg:text-base w-full lg:max-w-[200px] text-right">
-
-                                <span class="block lg:hidden">Action</span>
-
-                                <button type="button" class="cursor-pointer bg-[#FFD7D7] text-red-600 size-6 rounded-md 
-                                flex items-center justify-center gap-1">
-                                    <i class="ri-delete-bin-6-line text-sm"></i>
-                                </button>
 
                             </div>
 
@@ -874,180 +1183,96 @@
 
                     </div>
 
-                    <!-- ====== CART ITEM ========= -->
-                    <div class="grid grid-cols-1 lg:grid-cols-2 py-2 gap-4 px-5">
+                    <!-- Brand -->
+                    <div class="py-3" data-accordion>
+                        <button type="button" data-accordion-toggle
+                            class="cursor-pointer w-full flex items-center justify-between font-medium text-left text-gray-600 text-sm">
+                            <span>Brand</span>
+                            <i class="ri-arrow-down-s-line text-xl transition-transform duration-200"></i>
+                        </button>
 
-                        <div class="flex items-start gap-4">
-
-                            <img src="/assets/img/cart/1.png" class="object-cover aspect-square size-24 rounded-lg"
-                                alt="Cart Image">
-
-                            <div class="space-y-2">
-
-                                <h3 class="text-base font-semibold text-gray-900 pb-1 !line-clamp-1">Professional
-                                    Digital
-                                    Camera</h3>
-                                <div class="text-xs text-gray-600 pb-0.5">24MP, 4K Recording, Wireless</div>
-
-                                <!-- ==== COLOR ==== -->
-                                <div class="flex items-center gap-x-2 font-inter">
-                                    <h6 class="text-xs text-gray-900">Color:</h6>
-
-                                    <div class="inline-flex items-center gap-x-1">
-                                        <div class="bg-red-600 size-4 rounded-full"></div>
-                                        <p class="text-gray-900 text-xs">Red</p>
-                                    </div>
-
+                        <div data-accordion-content class="hidden py-4 px-1 space-y-3">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex gap-2 items-center">
+                                    <input id="filter-brand-1" type="checkbox" value="nike" class="size-4 appearance-none rounded-sm border 
+                                        border-gray-300 bg-white checked:border-brand checked:bg-brand" />
+                                    <label for="filter-brand-1"
+                                        class="text-gray-600 text-[13px] cursor-pointer">Nike</label>
                                 </div>
-
+                                <span class="text-gray-600 text-[13px]">(54)</span>
                             </div>
-
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex gap-2 items-center">
+                                    <input id="filter-brand-2" type="checkbox" value="apple" class="size-4 appearance-none rounded-sm border 
+                                        border-gray-300 bg-white checked:border-brand checked:bg-brand" />
+                                    <label for="filter-brand-2"
+                                        class="text-gray-600 text-[13px] cursor-pointer">Apple</label>
+                                </div>
+                                <span class="text-gray-600 text-[13px]">(32)</span>
+                            </div>
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex gap-2 items-center">
+                                    <input id="filter-brand-3" type="checkbox" value="adidas" class="size-4 appearance-none rounded-sm border 
+                                        border-gray-300 bg-white checked:border-brand checked:bg-brand" />
+                                    <label for="filter-brand-3"
+                                        class="text-gray-600 text-[13px] cursor-pointer">Adidas</label>
+                                </div>
+                                <span class="text-gray-600 text-[13px]">(27)</span>
+                            </div>
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex gap-2 items-center">
+                                    <input id="filter-brand-4" type="checkbox" value="samsung" class="size-4 appearance-none rounded-sm border 
+                                        border-gray-300 bg-white checked:border-brand checked:bg-brand" />
+                                    <label for="filter-brand-4"
+                                        class="text-gray-600 text-[13px] cursor-pointer">Samsung</label>
+                                </div>
+                                <span class="text-gray-600 text-[13px]">(19)</span>
+                            </div>
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex gap-2 items-center">
+                                    <input id="filter-brand-5" type="checkbox" value="sony" class="size-4 appearance-none rounded-sm border 
+                                        border-gray-300 bg-white checked:border-brand checked:bg-brand" />
+                                    <label for="filter-brand-5"
+                                        class="text-gray-600 text-[13px] cursor-pointer">Sony</label>
+                                </div>
+                                <span class="text-gray-600 text-[13px]">(15)</span>
+                            </div>
                         </div>
+                    </div>
 
-                        <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 lg:gap-2 w-full pt-2 divide-y 
-                        lg:divide-y-0 divide-gray-200 dark:divide-gray-700 lg:pt-0">
+                    <!-- Availability -->
+                    <div class="py-3" data-accordion>
+                        <button type="button" data-accordion-toggle
+                            class="cursor-pointer w-full flex items-center justify-between font-medium text-left text-gray-600 text-sm">
+                            <span>Availability</span>
+                            <i class="ri-arrow-down-s-line text-xl transition-transform duration-200"></i>
+                        </button>
 
-                            <div class="flex items-center justify-between lg:justify-center text-sm lg:text-base w-full lg:max-w-[150px] text-left 
-                            sm:text-center pb-2 lg:pb-0">
-
-                                <span class="block lg:hidden">Price</span>
-
-                                <div class="flex flex-col gap-y-0.5 text-right font-inter">
-                                    <span class="font-semibold text-base lg:text-[16px]">$699.99</span>
-                                    <span class="text-[12px] line-through text-gray-600">$899.00</span>
-                                </div>
-
+                        <div data-accordion-content class="hidden py-4 px-1 space-y-3">
+                            <div class="flex items-center gap-2">
+                                <input id="filter-availability-1" type="checkbox" value="in-stock" class="size-4 appearance-none rounded-sm border 
+                                    border-gray-300 bg-white checked:border-brand checked:bg-brand" />
+                                <label for="filter-availability-1" class="text-gray-600 text-[13px] cursor-pointer">In
+                                    Stock</label>
                             </div>
-
-                            <div
-                                class="flex items-center justify-between w-full lg:justify-center text-sm lg:text-base pb-3 lg:pb-0">
-
-                                <span class="block lg:hidden">Quantity</span>
-
-                                <div class="flex items-center justify-center border border-gray-300 text-xs rounded-lg p-1"
-                                    data-cart>
-
-                                    <button data-cart-decrease class="cursor-pointer rounded-md py-0.5 px-2 disabled:opacity-50 disabled:cursor-not-allowed 
-                                    bg-gray-200 !text-gray-900">
-                                        <i class="ri-subtract-line"></i>
-                                    </button>
-
-                                    <span class="w-12 text-center bg-transparent outline-none font-semibold"
-                                        data-cart-value>0</span>
-
-                                    <button data-cart-increase
-                                        class="cursor-pointer rounded-md py-0.5 px-2 disabled:opacity-50 disabled:cursor-not-allowed text-white bg-red-500">
-                                        <i class="ri-add-line"></i>
-                                    </button>
-
-                                </div>
-
+                            <div class="flex items-center gap-2">
+                                <input id="filter-availability-2" type="checkbox" value="out-of-stock" class="size-4 appearance-none rounded-sm border 
+                                    border-gray-300 bg-white checked:border-brand checked:bg-brand" />
+                                <label for="filter-availability-2" class="text-gray-600 text-[13px] cursor-pointer">Out
+                                    of Stock</label>
                             </div>
-
-                            <div
-                                class="flex items-center justify-between lg:justify-center text-sm lg:text-base w-full lg:max-w-[200px] text-right pb-2 lg:pb-0">
-                                <span class="block lg:hidden">Total</span>
-                                <h3 class="font-semibold text-base lg:text-[16px] font-inter">$669.99</h3>
-                            </div>
-
-                            <div
-                                class="flex items-center justify-between lg:justify-center text-sm lg:text-base w-full lg:max-w-[200px] text-right">
-
-                                <span class="block lg:hidden">Action</span>
-
-                                <button type="button" class="cursor-pointer bg-[#FFD7D7] text-red-600 size-6 rounded-md 
-                                flex items-center justify-center gap-1">
-                                    <i class="ri-delete-bin-6-line text-sm"></i>
-                                </button>
-
-                            </div>
-
                         </div>
-
                     </div>
 
                 </div>
+
 
             </div>
 
         </div>
 
-        <!-- ================= ORDER SUMMARY / SHIPPING ================= -->
-        <div class="bg-white dark:bg-gray-800 rounded-xl p-5 space-y-8">
-
-            <!-- ==== SHIPPING MODE ==== -->
-            <div class="space-y-5 border-b border-gray-200 pb-3">
-
-                <h2 class="text-base md:text-lg font-semibold">Select Mode of shipping</h2>
-
-                <div class="mt-7 space-y-4">
-
-                    <div class="flex">
-                        <input type="checkbox" class="form-check size-4 !rounded-xl" id="pickup">
-                        <label for="pickup" class="text-xs text-gray-500 ms-2 dark:text-neutral-400">
-                            Store Pickup (less than 20 min) – Free
-                        </label>
-                    </div>
-
-                    <div class="flex">
-                        <input type="checkbox" class="form-check size-4 !rounded-xl" id="home-delivery">
-                        <label for="home-delivery" class="text-xs text-gray-500 ms-2 dark:text-neutral-400">
-                            Home Delivery (1–2 days) – 45 Glenridge Ave, Brooklyn, NY
-                        </label>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- ==== ORDER SUMMARY ==== -->
-            <div class="space-y-5">
-
-                <h2 class="text-base md:text-lg font-semibold">Order Summary</h2>
-
-                <div class="divide-y divide-gray-200 dark:divide-gray-600 mt-8 space-y-6">
-
-                    <div class="flex items-center justify-between pb-1">
-                        <span class="text-sm text-gray-500">Subtotal (5 items)</span>
-                        <span class="text-sm dark:text-gray-300">$1,729.96</span>
-                    </div>
-
-                    <div class="flex items-center justify-between pb-1">
-                        <span class="text-sm text-gray-500">Savings</span>
-                        <span class="text-sm dark:text-gray-300">-$340.00</span>
-                    </div>
-
-                    <div class="flex items-center justify-between pb-1">
-                        <span class="text-sm text-gray-500">Shipping</span>
-                        <span class="text-sm dark:text-gray-300">Free</span>
-                    </div>
-
-                    <div class="flex items-center justify-between pb-1">
-                        <span class="text-sm text-gray-500">Tax</span>
-                        <span class="text-sm dark:text-gray-300">$139.20</span>
-                    </div>
-
-                    <div class="flex items-center justify-between pb-1">
-                        <span class="text-sm text-gray-500">Total</span>
-                        <span class="text-sm dark:text-gray-300 font-bold">$1,529.16</span>
-                    </div>
-
-                </div>
-
-                <div class="flex justify-end">
-                    <a href="checkout.html"
-                        class="btn btn-brand !rounded-lg dark:!text-white w-full max-w-xs mt-8 lg:h-10">
-                        Checkout
-                    </a>
-                </div>
-
-            </div>
-
-        </div>
-
-    </main>
-    <!-- ================= MAIN END ================= -->
-
+    </div>
+    <!-- ================= MAIN ENDS ================= -->
 
     <!-- ================= FOOTER START ================= -->
     <footer class="bg-white dark:bg-gray-900 py-10 relative overflow-hidden border-t border-gray-300 dark:border-gray-700">
@@ -1153,8 +1378,10 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="/assets/js/tailwind-plus.js"></script>
+    <script src="/assets/js/carousel.js"></script>
     <script src="/assets/js/main.js"></script>
 
 </body>

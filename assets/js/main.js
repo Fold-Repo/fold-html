@@ -643,7 +643,7 @@ if (window.AOS) {
 
         updateDisplay() {
             this.$value.text(this.value);
-            this.$container.trigger('cart:change', [this.value]); 
+            this.$container.trigger('cart:change', [this.value]);
         }
 
         increment() {
@@ -691,3 +691,157 @@ if (window.AOS) {
 
 })(jQuery);
 
+// ================= ACCORDION =================
+(function ($) {
+    'use strict';
+
+    class Accordion {
+        constructor(container, options = {}) {
+            this.$container = $(container);
+            this.$toggles = this.$container.find('[data-accordion-toggle]');
+            this.$contents = this.$container.find('[data-accordion-content]');
+            this.activeClass = options.activeClass || 'rotate-180';
+            this.exclusive = this.$container.is('[data-accordion-exclusive]');
+
+            this.bindEvents();
+            this.initDefaults();
+        }
+
+        bindEvents() {
+            this.$toggles.on('click', (e) => {
+                const $toggle = $(e.currentTarget);
+                const $content = $toggle.next('[data-accordion-content]');
+                const $icon = $toggle.find('i');
+
+                if (this.exclusive) {
+                    // Close all others in THIS container only
+                    this.$contents.not($content).slideUp();
+                    this.$toggles.find('i').not($icon).removeClass(this.activeClass);
+                }
+
+                // Toggle this one
+                $content.slideToggle();
+                $icon.toggleClass(this.activeClass);
+            });
+        }
+
+        initDefaults() {
+            this.$toggles.each((_, el) => {
+                const $toggle = $(el);
+                if ($toggle.is('[data-accordion-default]')) {
+                    const $content = $toggle.next('[data-accordion-content]');
+                    const $icon = $toggle.find('i');
+                    $content.show();
+                    $icon.addClass(this.activeClass);
+                }
+            });
+        }
+    }
+
+    // jQuery plugin wrapper
+    $.fn.accordion = function (options) {
+        return this.each(function () {
+            if (!this._accordion) {
+                this._accordion = new Accordion(this, options);
+            }
+        });
+    };
+
+    $.fn.getAccordion = function () {
+        return this[0]?._accordion || null;
+    };
+
+    // Auto-init
+    $(function () {
+        $('[data-accordion]').accordion();
+    });
+
+})(jQuery);
+
+// ================= COLOR SWITCHER =================
+(function ($) {
+    'use strict';
+
+    class ColorSwitch {
+        constructor(container, options = {}) {
+            this.$container = $(container);
+            const dataTrigger = this.$container.data('trigger');
+            this.trigger = options.trigger || dataTrigger || 'click';
+
+            this.$target = this.$container.closest('.product_card').find('img.product-main-image').first();
+
+            this.bindEvents();
+            this.initDefault();
+        }
+
+        bindEvents() {
+            const self = this;
+            const $swatches = this.$container.find('[data-color]');
+
+            const handler = function () {
+                const $s = $(this);
+                const src = $s.data('color');
+                if (src) {
+                    self.$target.attr('src', src);
+                }
+                self._setActive($s);
+            };
+
+            if (this.trigger === 'click') {
+                $swatches.on('click', handler);
+            } else if (this.trigger === 'hover') {
+                $swatches.on('mouseenter', handler);
+            } else {
+                $swatches.on('click mouseenter', handler);
+            }
+        }
+
+        _setActive($swatch) {
+            const $all = this.$container.find('[data-color]');
+            // Remove any previous rings
+            $all.removeClass((_, cls) =>
+                (cls.match(/ring-\S+|ring-offset-\d+/g) || []).join(' ')
+            );
+
+            // Add ring to selected swatch
+            const ring = $swatch.data('ring');
+            if (ring) {
+                $swatch.addClass(`ring-1 ring-offset-2 ${ring}`);
+            }
+        }
+
+        initDefault() {
+            const $swatches = this.$container.find('[data-color]');
+            const currentSrc = this.$target.attr('src');
+
+            // Look for a swatch that matches the current product image
+            const $match = $swatches.filter(function () {
+                return $(this).data('color') === currentSrc;
+            });
+
+            if ($match.length) {
+                // If main image matches a swatch, activate that swatch
+                this._setActive($match.first());
+            } else {
+                // No match → keep main image as-is, no swatch forced active
+                $swatches.removeClass((_, cls) =>
+                    (cls.match(/ring-\S+|ring-offset-\d+/g) || []).join(' ')
+                );
+            }
+        }
+    }
+
+    $.fn.colorSwitch = function (options) {
+        return this.each(function () {
+            if (!this._colorSwitch) {
+                this._colorSwitch = new ColorSwitch(this, options);
+            }
+        });
+    };
+
+    $(function () {
+        $('[data-color-switch]').each(function () {
+            $(this).colorSwitch();
+        });
+    });
+})(jQuery);
