@@ -768,11 +768,7 @@ if (window.AOS) {
             const dataTrigger = this.$container.data('trigger');
             this.trigger = options.trigger || dataTrigger || 'click';
 
-            // Find related product image
-            this.$target = this.$container.closest('.flex').prevAll('img.product-main-image').first();
-            if (!this.$target.length) {
-                this.$target = $('.product-main-image').first(); 
-            }
+            this.$target = this.$container.closest('.product_card').find('img.product-main-image').first();
 
             this.bindEvents();
             this.initDefault();
@@ -818,23 +814,19 @@ if (window.AOS) {
             const $swatches = this.$container.find('[data-color]');
             const currentSrc = this.$target.attr('src');
 
-            // Find swatch matching the current image
+            // Look for a swatch that matches the current product image
             const $match = $swatches.filter(function () {
                 return $(this).data('color') === currentSrc;
             });
 
             if ($match.length) {
+                // If main image matches a swatch, activate that swatch
                 this._setActive($match.first());
             } else {
-                // fallback: make first swatch active
-                const $first = $swatches.first();
-                if ($first.length) {
-                    const src = $first.data('color');
-                    if (src) {
-                        this.$target.attr('src', src);
-                    }
-                    this._setActive($first);
-                }
+                // No match → keep main image as-is, no swatch forced active
+                $swatches.removeClass((_, cls) =>
+                    (cls.match(/ring-\S+|ring-offset-\d+/g) || []).join(' ')
+                );
             }
         }
     }
