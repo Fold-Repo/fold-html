@@ -798,15 +798,33 @@ if (window.AOS) {
 
         _setActive($swatch) {
             const $all = this.$container.find('[data-color]');
-            // Remove any previous rings
-            $all.removeClass((_, cls) =>
-                (cls.match(/ring-\S+|ring-offset-\d+/g) || []).join(' ')
-            );
 
-            // Add ring to selected swatch
+            // Remove previously applied "active" classes
+            $all.each(function () {
+                const $el = $(this);
+
+                // remove data-ring leftovers
+                $el.removeClass((_, cls) =>
+                    (cls.match(/ring-\S+|ring-offset-\d+/g) || []).join(' ')
+                );
+
+                // remove data-active leftovers
+                const activeClasses = $el.data('active');
+                if (activeClasses) {
+                    $el.removeClass(activeClasses);
+                }
+            });
+
+            // Apply "active" styles to the selected swatch
             const ring = $swatch.data('ring');
+            const active = $swatch.data('active');
+
             if (ring) {
                 $swatch.addClass(`ring-1 ring-offset-2 ${ring}`);
+            }
+
+            if (active) {
+                $swatch.addClass(active);
             }
         }
 
@@ -820,13 +838,21 @@ if (window.AOS) {
             });
 
             if ($match.length) {
-                // If main image matches a swatch, activate that swatch
                 this._setActive($match.first());
             } else {
-                // No match → keep main image as-is, no swatch forced active
-                $swatches.removeClass((_, cls) =>
-                    (cls.match(/ring-\S+|ring-offset-\d+/g) || []).join(' ')
-                );
+                // cleanup if no match
+                $swatches.each(function () {
+                    const $el = $(this);
+
+                    $el.removeClass((_, cls) =>
+                        (cls.match(/ring-\S+|ring-offset-\d+/g) || []).join(' ')
+                    );
+
+                    const activeClasses = $el.data('active');
+                    if (activeClasses) {
+                        $el.removeClass(activeClasses);
+                    }
+                });
             }
         }
     }
@@ -844,4 +870,167 @@ if (window.AOS) {
             $(this).colorSwitch();
         });
     });
+})(jQuery);
+
+// ================= THUMBNAIL SWITCHER =================
+(function ($) {
+    'use strict';
+
+    class ThumbnailSwitch {
+        constructor(container, options = {}) {
+            this.$container = $(container);
+            this.$target = this.$container.closest('.product_card').find('img.product-main-image').first();
+            this.trigger = options.trigger || 'click';
+
+            this.bindEvents();
+            this.initDefault();
+        }
+
+        bindEvents() {
+            const self = this;
+            const $thumbs = this.$container.find('[data-thumbnail]');
+
+            const handler = function () {
+                const $t = $(this);
+                const src = $t.attr('src');
+                if (src) {
+                    self.$target.attr('src', src);
+                }
+                self._setActive($t);
+            };
+
+            if (this.trigger === 'click') {
+                $thumbs.on('click', handler);
+            } else if (this.trigger === 'hover') {
+                $thumbs.on('mouseenter', handler);
+            } else {
+                $thumbs.on('click mouseenter', handler);
+            }
+        }
+
+        _setActive($thumb) {
+            const $all = this.$container.find('[data-thumbnail]');
+
+            $all.each(function () {
+                const $el = $(this);
+                const activeClasses = $el.data('active');
+                if (activeClasses) {
+                    $el.removeClass(activeClasses);
+                }
+            });
+
+            const active = $thumb.data('active');
+            if (active) {
+                $thumb.addClass(active);
+            }
+        }
+
+        initDefault() {
+            const $thumbs = this.$container.find('[data-thumbnail]');
+            const currentSrc = this.$target.attr('src');
+
+            const $match = $thumbs.filter(function () {
+                return $(this).attr('src') === currentSrc;
+            });
+
+            if ($match.length) {
+                this._setActive($match.first());
+            }
+        }
+    }
+
+    $.fn.thumbnailSwitch = function (options) {
+        return this.each(function () {
+            if (!this._thumbnailSwitch) {
+                this._thumbnailSwitch = new ThumbnailSwitch(this, options);
+            }
+        });
+    };
+
+    $(function () {
+        $('[data-thumbnail-switch]').each(function () {
+            $(this).thumbnailSwitch();
+        });
+    });
+})(jQuery);
+
+// ================= DROPDWN =================
+(function ($) {
+    'use strict';
+
+    class Dropdown {
+        constructor(container, options = {}) {
+            this.$container = $(container);
+            this.$toggle = this.$container.find('.dropdown-toggle');
+            this.$menu = this.$container.find('.dropdown-menu');
+            this.$label = this.$container.find('.dropdown-label');
+            this.$options = this.$container.find('.dropdown-option');
+            this.$icon = this.$toggle.find('i');
+
+            this.activeClass = options.activeClass || 'open';
+            this.rotateClass = options.rotateClass || 'rotate-180';
+            this.defaultLabel = this.$container.data('label') || options.defaultLabel || 'Select';
+            this.onChange = options.onChange || null;
+
+            this.initDefault();
+            this.bindEvents();
+        }
+
+        initDefault() {
+            this.$label.text(this.defaultLabel);
+        }
+
+        bindEvents() {
+            // Toggle menu
+            this.$toggle.on('click', (e) => {
+                e.stopPropagation();
+                this.$menu.toggleClass('hidden');
+                this.$container.toggleClass(this.activeClass);
+                this.$icon.toggleClass(this.rotateClass);
+            });
+
+            // Select option
+            this.$options.on('click', (e) => {
+                const $opt = $(e.currentTarget);
+                const html = $opt.html(); // capture option content (text or swatch+text)
+
+                this.$label.html(html); // update button label
+                this.$menu.addClass('hidden');
+                this.$container.removeClass(this.activeClass);
+                this.$icon.removeClass(this.rotateClass);
+
+                if (typeof this.onChange === 'function') {
+                    this.onChange($opt.text().trim(), $opt);
+                }
+            });
+
+            // Close on outside click
+            $(document).on('click', (e) => {
+                if (!this.$container.is(e.target) && this.$container.has(e.target).length === 0) {
+                    this.$menu.addClass('hidden');
+                    this.$container.removeClass(this.activeClass);
+                    this.$icon.removeClass(this.rotateClass);
+                }
+            });
+        }
+    }
+
+    // jQuery plugin wrapper
+    $.fn.dropdown = function (options) {
+        return this.each(function () {
+            if (!this._dropdown) {
+                this._dropdown = new Dropdown(this, options);
+            }
+        });
+    };
+
+    $.fn.getDropdown = function () {
+        return this[0]?._dropdown || null;
+    };
+
+    // Auto-init
+    $(function () {
+        $('[data-dropdown]').dropdown();
+    });
+
 })(jQuery);
