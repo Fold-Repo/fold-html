@@ -1,9 +1,6 @@
 /* ================= Google Fonts ================= */
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap'); */
 
 /* ================= Tailwind core ================= */
 @import "tailwindcss";
@@ -15,9 +12,6 @@
 
     --font-sans: "Cabin", sans-serif;
     --font-inter: "Inter", sans-serif;
-    /* --font-playfair: "Playfair Display", serif;
-    --font-merriweather: "Merriweather", serif;
-    --font-roboto: "Roboto", sans-serif; */
 
     --text-xs: 0.8rem;
     --text-sm: 0.875rem;
@@ -36,6 +30,7 @@
     --color-border: #D0D5DD;
     --color-default: #FFFFFF;
     --color-gray: #F8F8F8;
+    --color-red: #EA0000;
 
     --section-sm: 1.5rem;
     --section-md: 2.5rem;
@@ -298,4 +293,70 @@ textarea.form-control {
 /* ================= Shadow ================= */
 .shadow {
     @apply shadow dark:shadow-lg dark:shadow-black/20;
+}
+
+/* Base Swiper dot wrapper */
+.sw-dots {
+    @apply flex gap-2;
+}
+
+.sw-dots.type-circle .swiper-pagination-bullet {
+    @apply relative w-4 h-4 bg-transparent border border-transparent opacity-100;
+}
+
+.sw-dots.type-circle .swiper-pagination-bullet::after {
+    content: "";
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full border;
+}
+
+/* ===== Default (primary color) ===== */
+.sw-dots.type-circle .swiper-pagination-bullet::after {
+    @apply border-[var(--color-primary)];
+}
+
+.sw-dots.type-circle .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    @apply border-[var(--color-primary)];
+}
+
+.sw-dots.type-circle .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
+    @apply bg-[var(--color-primary)];
+}
+
+/* ===== Brand color variant ===== */
+.sw-dots.type-circle.brand .swiper-pagination-bullet::after {
+    @apply border-[var(--color-brand)];
+}
+
+.sw-dots.type-circle.brand .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    @apply border-[var(--color-brand)];
+}
+
+.sw-dots.type-circle.brand .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
+    @apply bg-[var(--color-brand)];
+}
+
+/* ===== White (Dark Mode) ===== */
+.sw-dots.type-circle.white .swiper-pagination-bullet::after {
+    @apply border-[var(--color-bg-white-smoke)];
+}
+
+.sw-dots.type-circle.white .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    @apply border-[var(--color-bg-white-smoke)];
+}
+
+.sw-dots.type-circle.white .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
+    @apply bg-[var(--color-bg-white-smoke)];
+}
+
+/* ===== Dark Mode Override ===== */
+.dark .sw-dots.type-circle .swiper-pagination-bullet::after {
+    @apply border-white;
+}
+
+.dark .sw-dots.type-circle .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    @apply border-white;
+}
+
+.dark .sw-dots.type-circle .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
+    @apply bg-white;
 }
