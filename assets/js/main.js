@@ -1034,3 +1034,77 @@ if (window.AOS) {
     });
 
 })(jQuery);
+
+// ================= COUNT DOWN =================
+(function ($) {
+    'use strict';
+
+    class Countdown {
+        constructor(container, options = {}) {
+            this.$container = $(container);
+            this.$days = this.$container.find('[data-countdown-days]');
+            this.$hours = this.$container.find('[data-countdown-hours]');
+            this.$minutes = this.$container.find('[data-countdown-minutes]');
+            this.$seconds = this.$container.find('[data-countdown-seconds]');
+            
+            this.endTime = new Date(this.$container.data('countdown-end') || options.endTime).getTime();
+            this.timer = null;
+
+            this.start();
+        }
+
+        start() {
+            this.update();
+            this.timer = setInterval(() => this.update(), 1000);
+        }
+
+        update() {
+            const now = new Date().getTime();
+            const distance = this.endTime - now;
+
+            if (distance <= 0) {
+                clearInterval(this.timer);
+                this.$days.text('00');
+                this.$hours.text('00');
+                this.$minutes.text('00');
+                this.$seconds.text('00');
+                this.$container.trigger('countdown:end');
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((distance / (1000 * 60)) % 60);
+            const seconds = Math.floor((distance / 1000) % 60);
+
+            this.$days.text(this.format(days));
+            this.$hours.text(this.format(hours));
+            this.$minutes.text(this.format(minutes));
+            this.$seconds.text(this.format(seconds));
+        }
+
+        format(num) {
+            return num < 10 ? '0' + num : num;
+        }
+    }
+
+    // jQuery plugin wrapper
+    $.fn.countdown = function (options) {
+        return this.each(function () {
+            if (!this._countdown) {
+                this._countdown = new Countdown(this, options);
+            }
+        });
+    };
+
+    // Helper to get instance
+    $.fn.getCountdown = function () {
+        return this[0]?._countdown || null;
+    };
+
+    // Auto-init
+    $(function () {
+        $('[data-countdown]').countdown();
+    });
+
+})(jQuery);

@@ -55,6 +55,10 @@ body {
     @apply bg-[#f8f8f8] text-gray-900 transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100;
 }
 
+.body_bg {
+    @apply bg-white text-gray-900 transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100
+}
+
 /* ================= Container ================= */
 .container {
     @apply w-full mx-auto px-5 lg:px-8 max-w-screen-sm sm:max-w-screen-md md:max-w-screen-lg lg:max-w-screen-xl xl:max-w-screen-2xl;
@@ -126,11 +130,11 @@ body {
 
 /* Sizes */
 .btn-sm {
-    @apply px-3 !py-1.5 text-[12px] rounded-lg;
+    @apply px-3 !py-2 text-[12px] rounded-lg;
 }
 
 .btn-lg {
-    @apply px-6 py-3 text-base rounded-xl;
+    @apply px-6 py-3 text-xs rounded-lg;
 }
 
 .btn-icon {
@@ -337,15 +341,15 @@ textarea.form-control {
 
 /* ===== White (Dark Mode) ===== */
 .sw-dots.type-circle.white .swiper-pagination-bullet::after {
-    @apply border-[var(--color-bg-white-smoke)];
+    @apply border-[#FFF];
 }
 
 .sw-dots.type-circle.white .swiper-pagination-bullet.swiper-pagination-bullet-active {
-    @apply border-[var(--color-bg-white-smoke)];
+    @apply border-[#FFF];
 }
 
 .sw-dots.type-circle.white .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
-    @apply bg-[var(--color-bg-white-smoke)];
+    @apply bg-[#FFF];
 }
 
 /* ===== Dark Mode Override ===== */
