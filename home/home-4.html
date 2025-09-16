@@ -203,6 +203,13 @@
 
                         <hr class="my-2 border-gray-200 dark:border-gray-700">
 
+                        <a href="/pages/wishlist.html"
+                            class="block rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5 text-gray-900 dark:text-white">
+                            Wishlist
+                        </a>
+
+                        <hr class="my-2 border-gray-200 dark:border-gray-700">
+
                         <a href="/pages/payment/payment.html"
                             class="block rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5 text-gray-900 dark:text-white">
                             Payment v1
@@ -509,12 +516,17 @@
                                         <el-disclosure id="mobile-pages" hidden
                                             class="flex flex-col text-xs mt-2 space-y-5 pt-3 border-l border-gray-500/10 dark:border-white/10 px-4">
 
-                                            <a href="/pages/cart/" class="dark:text-white dark:hover:bg-white/5">Cart
-                                                v1</a>
+                                            <a href="/pages/cart/" class="dark:text-white dark:hover:bg-white/5">
+                                                Cart v1</a>
                                             <a href="/pages/cart/cart-2.html"
                                                 class="dark:text-white dark:hover:bg-white/5">Cart v2</a>
                                             <a href="/pages/cart/checkout.html"
                                                 class="dark:text-white dark:hover:bg-white/5">Checkout</a>
+
+                                            <!-- Divider -->
+                                            <hr class="pb-1 border-gray-200 dark:border-gray-700">
+                                            <a href="/pages/wishlist.html"
+                                                class="dark:text-white dark:hover:bg-white/5">Wishlist</a>
 
                                             <!-- Divider -->
                                             <hr class="pb-1 border-gray-200 dark:border-gray-700">
@@ -716,10 +728,10 @@
     </div>
     <!-- ================= HERO BANNER  END ================= -->
 
-    <div class="container section-lg space-y-12">
+    <div class="section-lg space-y-12">
 
         <!-- ================= EXPERIENCE MAKING BEAUTY ================= -->
-        <div class="space-y-12">
+        <div class="container space-y-12">
 
             <div class="max-w-lg mx-auto text-center space-y-4">
                 <h2 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
@@ -730,38 +742,613 @@
                 </p>
             </div>
 
+            <!-- ================= STACKS ================= -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-2 rounded-lg overflow-hidden">
 
                 <!-- Left big image -->
                 <div class="col-span-1 flex">
-                    <div class="w-full aspect-7/9">
-                        <img src="https://placehold.co/600x800" alt="Big"
-                            class="w-full h-full object-cover rounded-lg" />
-                    </div>
+                    <img src="/assets/img/home/4/1.jpg" alt="Big"
+                        class="w-full h-full aspect-7/7 object-cover rounded-lg" />
                 </div>
 
                 <!-- Middle stacked -->
                 <div class="col-span-1 flex flex-col gap-2">
-                    <div class="w-ful aspect-[7/2]">
-                        <img src="https://placehold.co/600x400" alt="Middle Top"
-                            class="w-full h-full object-cover rounded-lg" />
-                    </div>
-                    <div class="w-ful aspect-[7/2]">
-                        <img src="https://placehold.co/600x400" alt="Middle Bottom"
-                            class="w-full h-full object-cover rounded-lg" />
-                    </div>
+
+                    <img src="/assets/img/home/4/2.jpg" alt="Middle Top"
+                        class="w-full h-full aspect-[7/2] object-cover rounded-lg" />
+
+                    <img src="/assets/img/home/4/3.jpg" alt="Middle Top"
+                        class="w-full h-full aspect-[7/2] object-cover rounded-lg" />
+
                 </div>
 
                 <!-- Right stacked -->
                 <div class="col-span-1 flex flex-col gap-2">
-                    <div class="w-ful aspect-[7/2]">
-                        <img src="https://placehold.co/600x400" alt="Right Top"
-                            class="w-full object-cover rounded-lg" />
+
+                    <img src="/assets/img/home/4/4.png" alt="Middle Top"
+                        class="w-full h-full aspect-[7/2] object-cover rounded-lg" />
+
+                    <img src="/assets/img/home/4/5.png" alt="Middle Top"
+                        class="w-full h-full aspect-[7/2] object-cover rounded-lg" />
+
+                </div>
+
+            </div>
+
+            <!-- ================= SERVICES ================= -->
+            <div class="space-y-10">
+
+                <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+
+                    <div class="flex flex-col justify-center bg-gray-100 dark:bg-gray-800 
+                    rounded-xl overflow-hidden py-3 pl-5 pr-3">
+
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-violet-300 rounded-lg -translate-x-2 translate-y-2"></div>
+                            <img src="/assets/img/home/4/services/1.png" alt="Massage"
+                                class="relative w-full aspect-9/6 object-cover rounded-lg" />
+                        </div>
+
+                        <div class="flex flex-col gap-2 pt-6">
+
+                            <a href="#"
+                                class="text-base font-semibold text-gray-900 dark:text-white hover:!text-brand hover:underline">
+                                Swedish Deep Tissue Massage
+                            </a>
+
+                            <p class="text-sm md:text-base font-medium text-gray-700 
+                                dark:text-gray-400 font-inter">
+                                $30.00
+                            </p>
+
+                        </div>
+
+                        <div class="border-t border-gray-300 pt-3 mt-3">
+                            <button class="btn btn-sm btn-outline-brand !px-4">
+                                Order now
+                                <i class="ri-arrow-right-up-line"></i>
+                            </button>
+                        </div>
+
                     </div>
-                    <div class="w-ful aspect-[7/2]">
-                        <img src="https://placehold.co/600x400" alt="Right Bottom"
-                            class="w-full object-cover rounded-lg" />
+
+                    <div class="flex flex-col justify-center bg-gray-100 dark:bg-gray-800 
+                    rounded-xl overflow-hidden py-3 pl-5 pr-3">
+
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-violet-300 rounded-lg -translate-x-2 translate-y-2"></div>
+                            <img src="/assets/img/home/4/services/2.png" alt="Massage"
+                                class="relative w-full aspect-9/6 object-cover rounded-lg" />
+                        </div>
+
+                        <div class="flex flex-col gap-2 pt-6">
+
+                            <a href="#"
+                                class="text-base font-semibold text-gray-900 dark:text-white hover:!text-brand hover:underline">
+                                Facials Massage with Scrubs
+                            </a>
+
+                            <p class="text-sm md:text-base font-medium text-gray-700 
+                                dark:text-gray-400 font-inter">
+                                $30.00
+                            </p>
+
+                        </div>
+
+                        <div class="border-t border-gray-300 pt-3 mt-3">
+                            <button class="btn btn-sm btn-outline-brand !px-4">
+                                Order now
+                                <i class="ri-arrow-right-up-line"></i>
+                            </button>
+                        </div>
+
                     </div>
+
+                    <div class="flex flex-col justify-center bg-gray-100 dark:bg-gray-800 
+                    rounded-xl overflow-hidden py-3 pl-5 pr-3">
+
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-violet-300 rounded-lg -translate-x-2 translate-y-2"></div>
+                            <img src="/assets/img/home/4/services/3.png" alt="Massage"
+                                class="relative w-full aspect-9/6 object-cover rounded-lg" />
+                        </div>
+
+                        <div class="flex flex-col gap-2 pt-6">
+
+                            <a href="#"
+                                class="text-base font-semibold text-gray-900 dark:text-white hover:!text-brand hover:underline">
+                                Facials Massage with Scrubs
+                            </a>
+
+                            <p class="text-sm md:text-base font-medium text-gray-700 
+                                dark:text-gray-400 font-inter">
+                                $30.00
+                            </p>
+
+                        </div>
+
+                        <div class="border-t border-gray-300 pt-3 mt-3">
+                            <button class="btn btn-sm btn-outline-brand !px-4">
+                                Order now
+                                <i class="ri-arrow-right-up-line"></i>
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <div class="flex flex-col justify-center bg-gray-100 dark:bg-gray-800 
+                    rounded-xl overflow-hidden py-3 pl-5 pr-3">
+
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-violet-300 rounded-lg -translate-x-2 translate-y-2"></div>
+                            <img src="/assets/img/home/4/services/1.png" alt="Massage"
+                                class="relative w-full aspect-9/6 object-cover rounded-lg" />
+                        </div>
+
+                        <div class="flex flex-col gap-2 pt-6">
+
+                            <a href="#"
+                                class="text-base font-semibold text-gray-900 dark:text-white hover:!text-brand hover:underline">
+                                Swedish Deep Tissue Massage
+                            </a>
+
+                            <p class="text-sm md:text-base font-medium text-gray-700 
+                                dark:text-gray-400 font-inter">
+                                $30.00
+                            </p>
+
+                        </div>
+
+                        <div class="border-t border-gray-300 pt-3 mt-3">
+                            <button class="btn btn-sm btn-outline-brand !px-4">
+                                Order now
+                                <i class="ri-arrow-right-up-line"></i>
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="flex items-center justify-center">
+
+                    <button class="btn btn-brand !px-6">More Services</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ================= RECOMMENDED SERVICES================= -->
+        <div class="container space-y-12">
+
+            <div class="max-w-lg mx-auto text-center space-y-2">
+                <p class="text-xs text-[#BA7894] dark:text-white uppercase">
+                    Our Services
+                </p>
+                <h2 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
+                    Recommended
+                </h2>
+                <p class="text-sm leading-6 text-gray-700 dark:text-gray-300">
+                    Lorem ipsum dolor sit amet consectetur. Eu quis enim tempor et proin neque.
+                </p>
+            </div>
+
+            <div class="relative">
+
+                <div dir="ltr" class="swiper" data-swiper data-preview="4" data-tablet="3" data-mobile="1"
+                    data-space-lg="10" data-space-md="10" data-space="10" data-loop="false" data-autoplay="false"
+                    data-pagination-el=".pagination" data-pagination-md="2" data-pagination-lg="2"
+                    data-next-el=".nav-next" data-prev-el=".nav-prev">
+
+                    <div class="swiper-wrapper">
+
+                        <div
+                            class="swiper-slide relative p-1.5 md:p-3 bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden flex flex-col">
+
+                            <img class="w-full aspect-9/8 object-cover object-top rounded-lg"
+                                src="/assets/img/home/4/services/4.jpg" alt="Product" />
+
+                            <div class="space-y-2 pt-3">
+
+                                <div class="flex items-center flex-wrap justify-between gap-2">
+
+                                    <a href="#" class="text-gray-700 dark:text-gray-200 
+                                        text-base font-bold hover:text-brand !line-clamp-1 md:!line-clamp-2">
+                                        Salon Name
+                                    </a>
+
+                                    <div class="flex items-center gap-2">
+                                        <i class="ri-star-fill text-yellow-400 text-base"></i>
+                                        <span class="text-gray-800 dark:text-gray-300 text-xs">4.7 Ratings (165)</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="flex items-center gap-2 text-gray-600 dark:text-gray-300">
+                                    <i class="ri-map-pin-line text-lg"></i>
+                                    <span class="text-sm">
+                                        Brookpark Ext, 27085, North Olmsted, 44070
+                                    </span>
+                                </div>
+
+                                <button class="w-full btn btn-sm btn-outline-brand mt-3">
+                                    Book Now
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <div
+                            class="swiper-slide relative p-1.5 md:p-3 bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden flex flex-col">
+
+                            <img class="w-full aspect-9/8 object-cover object-top rounded-lg"
+                                src="/assets/img/home/4/services/5.jpg" alt="Product" />
+
+                            <div class="space-y-2 pt-3">
+
+                                <div class="flex items-center flex-wrap justify-between gap-2">
+
+                                    <a href="#" class="text-gray-700 dark:text-gray-200 
+                                        text-base font-bold hover:text-brand !line-clamp-1 md:!line-clamp-2">
+                                        Salon Name
+                                    </a>
+
+                                    <div class="flex items-center gap-2">
+                                        <i class="ri-star-fill text-yellow-400 text-base"></i>
+                                        <span class="text-gray-800 dark:text-gray-300 text-xs">4.7 Ratings (165)</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="flex items-center gap-2 text-gray-600 dark:text-gray-300">
+                                    <i class="ri-map-pin-line text-lg"></i>
+                                    <span class="text-sm">
+                                        Brookpark Ext, 27085, North Olmsted, 44070
+                                    </span>
+                                </div>
+
+                                <button class="w-full btn btn-sm btn-outline-brand mt-3">
+                                    Book Now
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <div
+                            class="swiper-slide relative p-1.5 md:p-3 bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden flex flex-col">
+
+                            <img class="w-full aspect-9/8 object-cover object-top rounded-lg"
+                                src="/assets/img/home/4/services/6.jpg" alt="Product" />
+
+                            <div class="space-y-2 pt-3">
+
+                                <div class="flex items-center flex-wrap justify-between gap-2">
+
+                                    <a href="#" class="text-gray-700 dark:text-gray-200 
+                                        text-base font-bold hover:text-brand !line-clamp-1 md:!line-clamp-2">
+                                        Salon Name
+                                    </a>
+
+                                    <div class="flex items-center gap-2">
+                                        <i class="ri-star-fill text-yellow-400 text-base"></i>
+                                        <span class="text-gray-800 dark:text-gray-300 text-xs">4.7 Ratings (165)</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="flex items-center gap-2 text-gray-600 dark:text-gray-300">
+                                    <i class="ri-map-pin-line text-lg"></i>
+                                    <span class="text-sm">
+                                        Brookpark Ext, 27085, North Olmsted, 44070
+                                    </span>
+                                </div>
+
+                                <button class="w-full btn btn-sm btn-outline-brand mt-3">
+                                    Book Now
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <div
+                            class="swiper-slide relative p-1.5 md:p-3 bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden flex flex-col">
+
+                            <img class="w-full aspect-9/8 object-cover object-top rounded-lg"
+                                src="/assets/img/home/4/services/7.jpg" alt="Product" />
+
+                            <div class="space-y-2 pt-3">
+
+                                <div class="flex items-center flex-wrap justify-between gap-2">
+
+                                    <a href="#" class="text-gray-700 dark:text-gray-200 
+                                        text-base font-bold hover:text-brand !line-clamp-1 md:!line-clamp-2">
+                                        Salon Name
+                                    </a>
+
+                                    <div class="flex items-center gap-2">
+                                        <i class="ri-star-fill text-yellow-400 text-base"></i>
+                                        <span class="text-gray-800 dark:text-gray-300 text-xs">4.7 Ratings (165)</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="flex items-center gap-2 text-gray-600 dark:text-gray-300">
+                                    <i class="ri-map-pin-line text-lg"></i>
+                                    <span class="text-sm">
+                                        Brookpark Ext, 27085, North Olmsted, 44070
+                                    </span>
+                                </div>
+
+                                <button class="w-full btn btn-sm btn-outline-brand mt-3">
+                                    Book Now
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <div
+                            class="swiper-slide relative p-1.5 md:p-3 bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden flex flex-col">
+
+                            <img class="w-full aspect-9/8 object-cover object-top rounded-lg"
+                                src="/assets/img/home/4/services/6.jpg" alt="Product" />
+
+                            <div class="space-y-2 pt-3">
+
+                                <div class="flex items-center flex-wrap justify-between gap-2">
+
+                                    <a href="#" class="text-gray-700 dark:text-gray-200 
+                                        text-base font-bold hover:text-brand !line-clamp-1 md:!line-clamp-2">
+                                        Salon Name
+                                    </a>
+
+                                    <div class="flex items-center gap-2">
+                                        <i class="ri-star-fill text-yellow-400 text-base"></i>
+                                        <span class="text-gray-800 dark:text-gray-300 text-xs">4.7 Ratings (165)</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="flex items-center gap-2 text-gray-600 dark:text-gray-300">
+                                    <i class="ri-map-pin-line text-lg"></i>
+                                    <span class="text-sm">
+                                        Brookpark Ext, 27085, North Olmsted, 44070
+                                    </span>
+                                </div>
+
+                                <button class="w-full btn btn-sm btn-outline-brand mt-3">
+                                    Book Now
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <div
+                            class="swiper-slide relative p-1.5 md:p-3 bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden flex flex-col">
+
+                            <img class="w-full aspect-9/8 object-cover object-top rounded-lg"
+                                src="/assets/img/home/4/services/7.jpg" alt="Product" />
+
+                            <div class="space-y-2 pt-3">
+
+                                <div class="flex items-center flex-wrap justify-between gap-2">
+
+                                    <a href="#" class="text-gray-700 dark:text-gray-200 
+                                        text-base font-bold hover:text-brand !line-clamp-1 md:!line-clamp-2">
+                                        Salon Name
+                                    </a>
+
+                                    <div class="flex items-center gap-2">
+                                        <i class="ri-star-fill text-yellow-400 text-base"></i>
+                                        <span class="text-gray-800 dark:text-gray-300 text-xs">4.7 Ratings (165)</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="flex items-center gap-2 text-gray-600 dark:text-gray-300">
+                                    <i class="ri-map-pin-line text-lg"></i>
+                                    <span class="text-sm">
+                                        Brookpark Ext, 27085, North Olmsted, 44070
+                                    </span>
+                                </div>
+
+                                <button class="w-full btn btn-sm btn-outline-brand mt-3">
+                                    Book Now
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="nav-prev absolute top-1/2 -translate-y-1/2 -left-3 z-10 
+                    size-8 flex items-center justify-center rounded-full bg-white dark:bg-gray-700 cursor-pointer">
+                    <i class="ri-arrow-left-s-line text-lg text-gray-800 dark:text-gray-200"></i>
+                </div>
+
+                <div class="nav-next absolute top-1/2 -translate-y-1/2 -right-3 z-10 
+                    size-8 flex items-center justify-center rounded-full bg-white dark:bg-gray-700 cursor-pointer">
+                    <i class="ri-arrow-right-s-line text-lg text-gray-800 dark:text-gray-200"></i>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ================= EXCLUSIVE PRODUCTS ================= -->
+        <div class="relative overflow-hidden">
+
+            <section class="container relative grid grid-cols-1 md:grid-cols-2 items-center gap-6">
+
+                <div class="bg-gray-100 dark:bg-gray-700 p-8 rounded-lg space-y-5 relative z-10">
+
+                    <span class="inline-block bg-brand text-white text-xs px-3 py-1.5 rounded-lg">
+                        Exclusive product
+                    </span>
+
+                    <h2 class="text-xl md:text-2xl font-bold text-brand">
+                        Moisturizer Sugar Scrubs
+                    </h2>
+
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Sugar scrubs brighten tired, dull-looking skin to promote healthy, smooth, and flawless skin.
+                        Sugar scrubs also fight skin aging in a natural way.
+                    </p>
+
+                    <p class="text-gray-700 dark:text-gray-400">
+                        <span class="font-semibold text-gray-900 dark:text-gray-100">Ingredients:</span>
+                        <span class="text-blue-600">brown sugar, coconut, jojoba, olive, almond, or grapeseed.</span>
+                    </p>
+
+                    <button class="btn btn-outline-brand">
+                        Learn more
+                    </button>
+                </div>
+
+                <img src="/assets/img/home/4/6.png" alt="Moisturizer Product"
+                    class="relative z-10 w-full h-auto object-cover" />
+
+
+            </section>
+
+            <div
+                class="bg-brand absolute right-0 left-0 md:left-1/2 top-1/2 -translate-y-1/2 h-[300px] md:h-[380px] lg:h-[420px] rounded-md">
+            </div>
+
+        </div>
+
+        <!-- ================= WHAT OUT CUSTOMERS SAYS ================= -->
+        <div class="container space-y-12">
+
+            <div class="max-w-lg mx-auto text-center space-y-2">
+                <p class="text-xs text-[#BA7894] dark:text-white uppercase">
+                    Testimonials
+                </p>
+                <h2 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
+                    What our Customers says...
+                </h2>
+            </div>
+
+            <div class="bg-brand dark:bg-gray-800 rounded-3xl min-h-[400px] py-20 px-5 overflow-hidden relative">
+
+                <div dir="ltr" class="test_swiper pb-10" data-swiper data-preview="1" data-tablet="1" data-mobile="1"
+                    data-space-lg="10" data-space-md="10" data-space="10" data-loop="false" data-autoplay="true"
+                    data-pagination-el=".pagination" data-pagination-md="2" data-pagination-lg="2"
+                    data-next-el=".nav-next" data-prev-el=".nav-prev">
+
+                    <div class="swiper-wrapper">
+
+                        <!-- ====== TESTIMONIAL CARD ====== -->
+                        <div class="swiper-slide">
+                            <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+
+                                <div class="relative flex-shrink-0">
+
+                                    <div
+                                        class="absolute top-1/2 -translate-y-1/2 -left-10 md:-left-14 flex items-start gap-3">
+                                        <div class="w-8 h-24 bg-white rounded-full"></div>
+                                        <div class="w-8 h-52 bg-white rounded-full"></div>
+                                    </div>
+
+                                    <img class="size-36 md:size-48 rounded-full border-4 border-white 
+                                            object-cover relative z-10" src="/assets/img/users/3.png" alt="Profile" />
+
+                                </div>
+
+                                <div class="relative flex-1 flex gap-6">
+
+                                    <i class="ri-double-quotes-l text-white text-5xl absolute -top-16 -left-5 md:-left-10"></i>
+
+                                    <div class="'w-full">
+
+                                        <div class="mb-5">
+                                            <h3 class="text-emerald-50 text-lg font-semibold">Leslie Alexander</h3>
+                                            <p class="text-white text-sm">Customer</p>
+                                        </div>
+
+                                        <p class="text-white text-sm leading-relaxed mt-2">
+                                            “It is a long established fact that a reader will be distracted by
+                                            the readable content of a page when looking at its layout. The point
+                                            of using Lorem Ipsum is that it looks like readable English.“
+                                        </p>
+
+                                    </div>
+
+                                    <i class="ri-double-quotes-r text-white text-5xl absolute -bottom-8 right-0"></i>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- ====== TESTIMONIAL CARD ====== -->
+                        <div class="swiper-slide">
+                            <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+
+                                <div class="relative flex-shrink-0">
+
+                                    <div
+                                        class="absolute top-1/2 -translate-y-1/2 -left-10 md:-left-14 flex items-start gap-3">
+                                        <div class="w-8 h-24 bg-white rounded-full"></div>
+                                        <div class="w-8 h-52 bg-white rounded-full"></div>
+                                    </div>
+
+                                    <img class="size-36 md:size-48 rounded-full border-4 border-white 
+                                            object-cover relative z-10" src="/assets/img/users/3.png" alt="Profile" />
+
+                                </div>
+
+                                <div class="relative flex-1 flex gap-6">
+
+                                    <i class="ri-double-quotes-l text-white text-5xl absolute -top-16 -left-5 md:-left-10"></i>
+
+                                    <div class="'w-full">
+
+                                        <div class="mb-5">
+                                            <h3 class="text-emerald-50 text-lg font-semibold">Leslie Alexander</h3>
+                                            <p class="text-white text-sm">Customer</p>
+                                        </div>
+
+                                        <p class="text-white text-sm leading-relaxed mt-2">
+                                            “It is a long established fact that a reader will be distracted by
+                                            the readable content of a page when looking at its layout. The point
+                                            of using Lorem Ipsum is that it looks like readable English.“
+                                        </p>
+
+                                    </div>
+
+                                    <i class="ri-double-quotes-r text-white text-5xl absolute -bottom-8 right-0"></i>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="flex items-center justify-center gap-5 absolute bottom-8 md:bottom-10 left-1/2 -translate-x-1/2">
+
+                    <div class="nav-prev
+                        size-8 flex items-center justify-center rounded-full bg-white dark:bg-gray-700 cursor-pointer">
+                        <i class="ri-arrow-left-s-line text-lg text-gray-800 dark:text-gray-200"></i>
+                    </div>
+
+                    <div class="nav-next
+                        size-8 flex items-center justify-center rounded-full bg-white dark:bg-gray-700 cursor-pointer">
+                        <i class="ri-arrow-right-s-line text-lg text-gray-800 dark:text-gray-200"></i>
+                    </div>
+
                 </div>
 
             </div>
