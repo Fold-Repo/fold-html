@@ -1,0 +1,1653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <script src="/assets/js/theme.js"></script>
+    <title>Fold E-Commerce</title>
+</head>
+
+<body class="body_bg">
+
+    <!-- ================= HEADER START ================= -->
+    <nav class="bg-brand p-2">
+
+        <div class="container flex items-center flex-wrap gap-y-2 gap-x-3 justify-center">
+
+            <img class="w-5 md:w-6" src="/assets/img/gift.svg" alt="Gift Box" loading="lazy">
+            <p class="text-white text-[12px] md:text-xs">Special Offer: 50% off - limited time only</p>
+
+            <button class="btn btn-outline !border-border btn-sm !text-[12px] !py-1.5">
+                Buy Now
+            </button>
+
+        </div>
+
+    </nav>
+
+    <header class="bg-white dark:bg-gray-900 py-4">
+
+        <nav class="container flex items-center justify-between">
+
+            <!-- ================= LOGO ================= -->
+            <a href="/" class="-m-1.5 p-1.5 flex">
+                <img src="/assets/img/logo/logo.svg" alt="" class="h-8 md:h-9 w-auto" />
+            </a>
+
+            <!-- ================= MENUS ================= -->
+            <div class="hidden lg:flex lg:gap-x-7">
+
+                <!-- ================= HOME PAGES ================= -->
+                <div class="relative">
+
+                    <button popovertarget="desktop-menu-home"
+                        class="cursor-pointer flex items-center gap-x-1 text-sm text-gray-600 dark:text-white">
+                        Home
+                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
+                            <path
+                                d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                                clip-rule="evenodd" fill-rule="evenodd" />
+                        </svg>
+                    </button>
+
+                    <el-popover id="desktop-menu-home" anchor="bottom" popover
+                        class="min-w-[8rem] overflow-hidden rounded-xl bg-white shadow-lg outline-1 outline-gray-900/5 transition transition-discrete [--anchor-gap:--spacing(3)] backdrop:bg-transparent open:block data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in dark:bg-gray-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10 px-1 py-2 text-xs space-y-0.5">
+
+                        <a href="/home" class="relative rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5
+                            block text-gray-900 dark:text-white">
+                            Home 1
+                        </a>
+
+                        <a href="/home/home-2.html" class="relative rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5
+                            block text-gray-900 dark:text-white">
+                            Home 2
+                        </a>
+
+                        <a href="/home/home-3.html" class="relative rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5
+                            block text-gray-900 dark:text-white">
+                            Home 3
+                        </a>
+
+                        <a href="/home/home-4.html" class="relative rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5
+                            block text-gray-900 dark:text-white">
+                            Home 4
+                        </a>
+
+                        <a href="/home/home-5.html" class="relative rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5
+                            block text-gray-900 dark:text-white">
+                            Home 5
+                        </a>
+
+                        <a href="/home/home-6.html" class="relative rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5
+                            block text-gray-900 dark:text-white">
+                            Home 6
+                        </a>
+
+                        <a href="/home/home-7.html" class="relative rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5
+                            block text-gray-900 dark:text-white">
+                            Home 7
+                        </a>
+
+                    </el-popover>
+
+                </div>
+
+                <!-- ================= ABOUT PAGES ================= -->
+                <a href="/about.html" class="text-sm text-gray-600 dark:text-white">About</a>
+
+                <!-- ================= PRODUCTS PAGES ================= -->
+                <div class="relative">
+
+                    <button popovertarget="desktop-menu-products"
+                        class="cursor-pointer flex items-center gap-x-1 text-sm font-semibold text-gray-600 dark:text-white">
+                        Products
+                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
+                            <path
+                                d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                                clip-rule="evenodd" fill-rule="evenodd" />
+                        </svg>
+                    </button>
+
+                    <el-popover id="desktop-menu-products" anchor="bottom" popover
+                        class="min-w-[10rem] overflow-hidden rounded-xl bg-white shadow-lg outline-1 outline-gray-900/5 transition transition-discrete [--anchor-gap:--spacing(3)] backdrop:bg-transparent open:block data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in dark:bg-gray-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10 px-1 py-2 text-xs space-y-0.5">
+
+                        <!-- ================= PRODUCTS LISTS =================  -->
+                        <a href="/products/style-1" class="block rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5 
+                        text-gray-900 dark:text-white">
+                            Products List 1
+                        </a>
+
+                        <a href="/products/style-2" class="block rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5 
+                        text-gray-900 dark:text-white">
+                            Products List 2
+                        </a>
+
+                        <hr class="my-2 border-gray-200 dark:border-gray-700">
+
+                        <!-- ================= PRODUCTS DETAILS =================  -->
+                        <a href="/products/detail/product-1.html" class="block rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5 
+                            text-gray-900 dark:text-white">
+                            Product Details 1
+                        </a>
+
+                        <a href="/products/detail/product-2.html" class="block rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5 
+                            text-gray-900 dark:text-white">
+                            Product Details 2
+                        </a>
+
+                        <a href="/products/detail/product-3.html" class="block rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5 
+                            text-gray-900 dark:text-white">
+                            Product Details 3
+                        </a>
+
+                        <a href="/products/detail/product-4.html" class="block rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5 
+                            text-gray-900 dark:text-white">
+                            Product Details 4
+                        </a>
+
+                        <a href="/products/detail/product-5.html" class="block rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5 
+                            text-gray-900 dark:text-white">
+                            Product Details 5
+                        </a>
+
+                        <a href="/products/detail/product-6.html" class="block rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5 
+                            text-gray-900 dark:text-white">
+                            Product Details 6
+                        </a>
+
+                        <a href="/products/detail/product-7" class="block rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5 
+                            text-gray-900 dark:text-white">
+                            Product Details 7
+                        </a>
+
+                    </el-popover>
+
+                </div>
+
+                <!-- ================= OTHER PAGES PAGES ================= -->
+                <div class="relative">
+
+                    <button popovertarget="desktop-menu-page"
+                        class="cursor-pointer flex items-center gap-x-1 text-sm font-semibold text-gray-600 dark:text-white">
+                        Pages
+                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
+                            <path
+                                d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                                clip-rule="evenodd" fill-rule="evenodd" />
+                        </svg>
+                    </button>
+
+                    <el-popover id="desktop-menu-page" anchor="bottom" popover
+                        class="min-w-[10rem] overflow-hidden rounded-xl bg-white shadow-lg outline-1 outline-gray-900/5 transition transition-discrete [--anchor-gap:--spacing(3)] backdrop:bg-transparent open:block data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in dark:bg-gray-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10 px-1 py-2 text-xs space-y-0.5">
+
+                        <a href="/pages/cart/"
+                            class="block rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5 text-gray-900 dark:text-white">
+                            Cart v1
+                        </a>
+
+                        <a href="/pages/cart/cart-2.html"
+                            class="block rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5 text-gray-900 dark:text-white">
+                            Cart v2
+                        </a>
+
+                        <a href="/pages/cart/checkout.html"
+                            class="block rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5 text-gray-900 dark:text-white">
+                            Checkout
+                        </a>
+
+                        <hr class="my-2 border-gray-200 dark:border-gray-700">
+
+                        <a href="/pages/wishlist.html"
+                            class="block rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5 text-gray-900 dark:text-white">
+                            Wishlist
+                        </a>
+
+                        <hr class="my-2 border-gray-200 dark:border-gray-700">
+
+                        <a href="/pages/payment/payment.html"
+                            class="block rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5 text-gray-900 dark:text-white">
+                            Payment v1
+                        </a>
+
+                        <a href="/pages/payment/payment-otp.html"
+                            class="block rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5 text-gray-900 dark:text-white">
+                            Payment OTP
+                        </a>
+
+                        <a href="/pages/payment/payment-success.html"
+                            class="block rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5 text-gray-900 dark:text-white">
+                            Payment Success
+                        </a>
+
+                        <hr class="my-2 border-gray-200 dark:border-gray-700">
+
+                        <a href="/pages/payment-2/payment.html"
+                            class="block rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5 text-gray-900 dark:text-white">
+                            Payment v2
+                        </a>
+
+                        <hr class="my-2 border-gray-200 dark:border-gray-700">
+
+                        <a href="/auth/register.html"
+                            class="block rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5 text-gray-900 dark:text-white">
+                            Register
+                        </a>
+
+                        <a href="/auth/login.html"
+                            class="block rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5 text-gray-900 dark:text-white">
+                            Login
+                        </a>
+
+                        <a href="/auth/forgot-password.html"
+                            class="block rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5 text-gray-900 dark:text-white">
+                            Forgot Password
+                        </a>
+
+                        <a href="/auth/forgot-password-otp.html"
+                            class="block rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5 text-gray-900 dark:text-white">
+                            Forgot Password OTP
+                        </a>
+
+                        <a href="/auth/forgot-password-new.html"
+                            class="block rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5 text-gray-900 dark:text-white">
+                            New Password
+                        </a>
+
+                    </el-popover>
+
+                </div>
+
+                <!-- ================= BLOG PAGES ================= -->
+                <div class="relative">
+
+                    <button popovertarget="desktop-menu-blog"
+                        class="cursor-pointer flex items-center gap-x-1 text-sm font-semibold text-gray-600 dark:text-white">
+                        Blog
+                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
+                            <path
+                                d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                                clip-rule="evenodd" fill-rule="evenodd" />
+                        </svg>
+                    </button>
+
+                    <el-popover id="desktop-menu-blog" anchor="bottom" popover
+                        class="min-w-[8rem] overflow-hidden rounded-xl bg-white shadow-lg outline-1 outline-gray-900/5 transition transition-discrete [--anchor-gap:--spacing(3)] backdrop:bg-transparent open:block data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in dark:bg-gray-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10 px-1 py-2 text-xs space-y-0.5">
+
+                        <a href="/blog" class="block rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5 
+                            text-gray-900 dark:text-white">
+                            Blog List 1
+                        </a>
+                        <a href="/blog/blog-list-2.html" class="block rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5 
+                            text-gray-900 dark:text-white">
+                            Blog List 2
+                        </a>
+                        <a href="/blog//blog/blog-details-1.html" class="block rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5 
+                            text-gray-900 dark:text-white">
+                            Blog Details 1
+                        </a>
+                        <a href="/blog/blog-details-2.html" class="block rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5 
+                            text-gray-900 dark:text-white">
+                            Blog Details 2
+                        </a>
+                        <a href="/blog/blog-details-3.html" class="block rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5 
+                            text-gray-900 dark:text-white">
+                            Blog Details 3
+                        </a>
+                        <a href="/blog/blog-details-4.html" class="block rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5 
+                            text-gray-900 dark:text-white">
+                            Blog Details 4
+                        </a>
+
+                    </el-popover>
+
+                </div>
+
+                <!-- ================= CONTACTS PAGES ================= -->
+                <div class="relative">
+
+                    <button popovertarget="desktop-menu-contact"
+                        class="cursor-pointer flex items-center gap-x-1 text-sm font-semibold text-gray-600 dark:text-white">
+                        Contact
+                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
+                            <path
+                                d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                                clip-rule="evenodd" fill-rule="evenodd" />
+                        </svg>
+                    </button>
+
+                    <el-popover id="desktop-menu-contact" anchor="bottom" popover
+                        class="min-w-[8rem] overflow-hidden rounded-xl bg-white shadow-lg outline-1 outline-gray-900/5 transition transition-discrete [--anchor-gap:--spacing(3)] backdrop:bg-transparent open:block data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in dark:bg-gray-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10 px-1 py-2 text-xs space-y-0.5">
+
+                        <a href="/contact" class="block rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5 
+                            text-gray-900 dark:text-white">
+                            Contact 1
+                        </a>
+                        <a href="/contact/contact-2.html" class="block rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5 
+                            text-gray-900 dark:text-white">
+                            Contact 2
+                        </a>
+                        <a href="/contact/contact-3.html" class="block rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5 
+                            text-gray-900 dark:text-white">
+                            Contact 3
+                        </a>
+                    </el-popover>
+
+                </div>
+
+            </div>
+
+            <!-- ================= RIGHT NAVS ================= -->
+            <div class="flex items-center gap-x-5 justify-end">
+
+                <form class="hidden xl:block relative">
+                    <input type="text" class="form-control !pr-8 !py-2 !text-xs text-gray-700 
+                        w-full min-w-[15rem]" placeholder="Search for your product">
+                    <button class="absolute right-1 top-1/2 -translate-y-1/2 btn btn-sm btn-brand !size-7">
+                        <i class="ri-search-line text-base"></i>
+                    </button>
+                </form>
+
+                <a href="/auth/login.html"
+                    class="hidden lg:inline-flex items-center gap-x-1.5 text-sm text-gray-900 dark:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    </svg>
+                    <span>Login/Register</span>
+                </a>
+
+                <a href="/pages/cart" class="text-gray-900 dark:text-white flex items-center">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon"
+                        aria-hidden="true" class="size-5 shrink-0 ">
+                        <path
+                            d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span class="ml-1 text-sm font-medium">0</span>
+                </a>
+
+                <!-- ================= MOBILE OPEN MENU ================= -->
+                <div class="flex lg:hidden justify-end">
+                    <button type="button" command="show-modal" commandfor="mobile-menu"
+                        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-gray-400">
+                        <i class="ri-menu-line text-lg"></i>
+                    </button>
+                </div>
+
+            </div>
+
+        </nav>
+
+        <!-- ================= MOBILE NAV ================= -->
+        <el-dialog>
+
+            <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+
+                <div tabindex="0" class="fixed inset-0 focus:outline-none">
+
+                    <el-dialog-panel
+                        class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 dark:bg-gray-900 dark:sm:ring-gray-100/10">
+
+                        <div class="flex items-center justify-between">
+
+                            <a href="/" class="-m-1.5 p-1.5">
+                                <img src="/assets/img/logo/logo.svg" alt="" class="h-8 w-auto" />
+                            </a>
+
+                            <button type="button" command="close" commandfor="mobile-menu"
+                                class="-m-2.5 rounded-md p-2.5 text-gray-700 dark:text-gray-400">
+                                <span class="sr-only">Close menu</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                    data-slot="icon" aria-hidden="true" class="size-6">
+                                    <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+
+                        </div>
+
+                        <div class="mt-6 flow-root">
+
+                            <div class="-my-6 divide-y divide-gray-500/10 dark:divide-white/10">
+
+                                <!-- ================= SEARCH ================= -->
+                                <form class="py-6 relative">
+                                    <input type="text" class="form-control !pr-8 !py-2 !text-sm text-gray-700 w-full"
+                                        placeholder="Search for your product">
+                                    <button
+                                        class="absolute right-1 top-1/2 -translate-y-1/2 btn btn-sm btn-brand !size-7">
+                                        <i class="ri-search-line text-base"></i>
+                                    </button>
+                                </form>
+
+                                <!-- ================= MENU LINKS ================= -->
+                                <div class="space-y-5 py-5">
+
+                                    <!-- ================ HOME ================ -->
+                                    <div class="-mx-3 px-3">
+
+                                        <button type="button" command="--toggle" commandfor="mobile-home"
+                                            class="flex w-full items-center justify-between rounded-lg py-2 text-xs font-semibold text-gray-900 dark:text-white">
+                                            Home
+                                            <svg viewBox="0 0 20 20" fill="currentColor"
+                                                class="size-5 flex-none in-aria-expanded:rotate-180">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" />
+                                            </svg>
+                                        </button>
+
+                                        <el-disclosure id="mobile-home" hidden
+                                            class="flex flex-col text-xs mt-2 space-y-5 pt-3 border-l border-gray-500/10 dark:border-white/10 px-4">
+                                            <a href="/home" class="dark:text-white dark:hover:bg-white/5">Home 1</a>
+                                            <a href="/home/home-2.html"
+                                                class="dark:text-white dark:hover:bg-white/5">Home 2</a>
+                                            <a href="/home/home-3.html"
+                                                class="dark:text-white dark:hover:bg-white/5">Home 3</a>
+                                            <a href="/home/home-4.html"
+                                                class="dark:text-white dark:hover:bg-white/5">Home 4</a>
+                                            <a href="/home/home-5.html"
+                                                class="dark:text-white dark:hover:bg-white/5">Home 5</a>
+                                            <a href="/home/home-6.html"
+                                                class="dark:text-white dark:hover:bg-white/5">Home 6</a>
+                                            <a href="/home/home-7.html"
+                                                class="dark:text-white dark:hover:bg-white/5">Home 7</a>
+                                        </el-disclosure>
+                                    </div>
+
+                                    <!-- ================ PRODUCTS ================ -->
+                                    <div class="-mx-3 px-3">
+                                        <button type="button" command="--toggle" commandfor="mobile-products"
+                                            class="flex w-full items-center justify-between rounded-lg py-2 text-xs font-semibold text-gray-900 dark:text-white">
+                                            Products
+                                            <svg viewBox="0 0 20 20" fill="currentColor"
+                                                class="size-5 flex-none in-aria-expanded:rotate-180">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" />
+                                            </svg>
+                                        </button>
+
+                                        <el-disclosure id="mobile-products" hidden
+                                            class="flex flex-col text-xs mt-2 space-y-5 pt-3 border-l border-gray-500/10 dark:border-white/10 px-4">
+                                            <!-- Lists -->
+                                            <a href="/products/style-1"
+                                                class="dark:text-white dark:hover:bg-white/5">Products List 1</a>
+                                            <a href="/products/style-2"
+                                                class="dark:text-white dark:hover:bg-white/5">Products List 2</a>
+
+                                            <!-- Divider -->
+                                            <hr class="pb-1 border-gray-200 dark:border-gray-700">
+
+                                            <a href="/products/detail/product-1.html"
+                                                class="dark:text-white dark:hover:bg-white/5">Product Details 1</a>
+                                            <a href="/products/detail/product-2.html"
+                                                class="dark:text-white dark:hover:bg-white/5">Product Details 2</a>
+                                            <a href="/products/detail/product-3.html"
+                                                class="dark:text-white dark:hover:bg-white/5">Product Details 3</a>
+                                            <a href="/products/detail/product-4.html"
+                                                class="dark:text-white dark:hover:bg-white/5">Product Details 4</a>
+                                            <a href="/products/detail/product-5.html"
+                                                class="dark:text-white dark:hover:bg-white/5">Product Details 5</a>
+                                            <a href="/products/detail/product-6.html"
+                                                class="dark:text-white dark:hover:bg-white/5">Product Details 6</a>
+                                            <a href="/products/detail/product-7"
+                                                class="dark:text-white dark:hover:bg-white/5">Product Details 7</a>
+                                        </el-disclosure>
+                                    </div>
+
+                                    <!-- ================ PAGES ================ -->
+                                    <div class="-mx-3 px-3">
+
+                                        <button type="button" command="--toggle" commandfor="mobile-pages"
+                                            class="flex w-full items-center justify-between rounded-lg py-2 text-xs font-semibold text-gray-900 dark:text-white">
+                                            Pages
+                                            <svg viewBox="0 0 20 20" fill="currentColor"
+                                                class="size-5 flex-none in-aria-expanded:rotate-180">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" />
+                                            </svg>
+                                        </button>
+
+                                        <el-disclosure id="mobile-pages" hidden
+                                            class="flex flex-col text-xs mt-2 space-y-5 pt-3 border-l border-gray-500/10 dark:border-white/10 px-4">
+
+                                            <a href="/pages/cart/" class="dark:text-white dark:hover:bg-white/5">
+                                                Cart v1</a>
+                                            <a href="/pages/cart/cart-2.html"
+                                                class="dark:text-white dark:hover:bg-white/5">Cart v2</a>
+                                            <a href="/pages/cart/checkout.html"
+                                                class="dark:text-white dark:hover:bg-white/5">Checkout</a>
+
+                                            <!-- Divider -->
+                                            <hr class="pb-1 border-gray-200 dark:border-gray-700">
+                                            <a href="/pages/wishlist.html"
+                                                class="dark:text-white dark:hover:bg-white/5">Wishlist</a>
+
+                                            <!-- Divider -->
+                                            <hr class="pb-1 border-gray-200 dark:border-gray-700">
+
+                                            <a href="/pages/payment/payment.html"
+                                                class="dark:text-white dark:hover:bg-white/5">Payment v1</a>
+                                            <a href="/pages/payment/payment-otp.html"
+                                                class="dark:text-white dark:hover:bg-white/5">Payment OTP</a>
+                                            <a href="/pages/payment/payment-success.html"
+                                                class="dark:text-white dark:hover:bg-white/5">Payment Success</a>
+
+                                            <!-- Divider -->
+                                            <hr class="pb-1 border-gray-200 dark:border-gray-700">
+
+                                            <a href="/pages/payment-2/payment.html"
+                                                class="dark:text-white dark:hover:bg-white/5">Payment v2</a>
+
+                                            <!-- Divider -->
+                                            <hr class="pb-1 border-gray-200 dark:border-gray-700">
+
+                                            <a href="/auth/register.html"
+                                                class="dark:text-white dark:hover:bg-white/5">Register</a>
+                                            <a href="/auth/login.html"
+                                                class="dark:text-white dark:hover:bg-white/5">Login</a>
+                                            <a href="/auth/forgot-password.html"
+                                                class="dark:text-white dark:hover:bg-white/5">Forgot Password</a>
+                                            <a href="/auth/forgot-password-otp.html"
+                                                class="dark:text-white dark:hover:bg-white/5">Forgot Password OTP</a>
+                                            <a href="/auth/forgot-password-new.html"
+                                                class="dark:text-white dark:hover:bg-white/5">New Password</a>
+                                        </el-disclosure>
+
+                                    </div>
+
+                                    <!-- ================ BLOG ================ -->
+                                    <div class="-mx-3 px-3">
+
+                                        <button type="button" command="--toggle" commandfor="mobile-blog"
+                                            class="flex w-full items-center justify-between rounded-lg py-2 text-xs font-semibold text-gray-900 dark:text-white">
+                                            Blog
+                                            <svg viewBox="0 0 20 20" fill="currentColor"
+                                                class="size-5 flex-none in-aria-expanded:rotate-180">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" />
+                                            </svg>
+                                        </button>
+
+                                        <el-disclosure id="mobile-blog" hidden
+                                            class="flex flex-col text-xs mt-2 space-y-5 pt-3 border-l border-gray-500/10 dark:border-white/10 px-4">
+                                            <a href="/blog" class="dark:text-white dark:hover:bg-white/5">Blog List
+                                                1</a>
+                                            <a href="/blog/blog-list-2.html"
+                                                class="dark:text-white dark:hover:bg-white/5">Blog List 2</a>
+                                            <a href="/blog//blog/blog-details-1.html"
+                                                class="dark:text-white dark:hover:bg-white/5">Blog Details 1</a>
+                                            <a href="/blog/blog-details-2.html"
+                                                class="dark:text-white dark:hover:bg-white/5">Blog Details 2</a>
+                                            <a href="/blog/blog-details-3.html"
+                                                class="dark:text-white dark:hover:bg-white/5">Blog Details 3</a>
+                                            <a href="/blog/blog-details-4.html"
+                                                class="dark:text-white dark:hover:bg-white/5">Blog Details 4</a>
+                                        </el-disclosure>
+
+                                    </div>
+
+                                    <!-- ================ CONTACTS ================ -->
+                                    <div class="-mx-3 px-3">
+
+                                        <button type="button" command="--toggle" commandfor="mobile-contacts"
+                                            class="flex w-full items-center justify-between rounded-lg py-2 text-xs font-semibold text-gray-900 dark:text-white">
+                                            Contact
+                                            <svg viewBox="0 0 20 20" fill="currentColor"
+                                                class="size-5 flex-none in-aria-expanded:rotate-180">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" />
+                                            </svg>
+                                        </button>
+
+                                        <el-disclosure id="mobile-contacts" hidden
+                                            class="flex flex-col text-xs mt-2 space-y-5 pt-3 border-l border-gray-500/10 dark:border-white/10 px-4">
+                                            <a href="/contact" class="dark:text-white dark:hover:bg-white/5">Contact
+                                                1</a>
+                                            <a href="/contact/contact-2.html"
+                                                class="dark:text-white dark:hover:bg-white/5">Contact 2</a>
+                                            <a href="/contact/contact-3.html"
+                                                class="dark:text-white dark:hover:bg-white/5">Contact 3</a>
+                                        </el-disclosure>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="pt-24 space-y-4">
+                            <a href="/auth/login.html"
+                                class="inline-flex items-center gap-x-1.5 text-sm text-gray-900 dark:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                </svg>
+                                <span>Login/Register</span>
+                            </a>
+                        </div>
+
+                    </el-dialog-panel>
+
+                </div>
+
+            </dialog>
+
+        </el-dialog>
+
+    </header>
+    <!-- ================= HEADER ENDS ================= -->
+
+    <!-- ================= HERO BANNER START ================= -->
+    <div class="container mt-6">
+
+        <div class="container relative min-h-[65vh] sm:min-h-[70vh] lg:min-h-screen bg-white rounded-2xl bg-[url('/assets/img/banner/4.jpg')] 
+            bg-cover bg-center overflow-hidden flex items-center justify-center">
+
+            <div class="flex flex-col items-center justify-center text-center relative z-5 space-y-6">
+
+                <h2 class="text-3xl lg:text-5xl text-white font-semibold">Modern
+                    <span class="bg-brand px-2 py-1 rounded-md">Furniture</span>
+                    for inspired Living
+                </h2>
+
+                <p class="max-w-xl mx-auto text-base text-white">
+                    Customize the layout, colors and styles within only a few minutes. Start creating an amazing website
+                    right now!
+                </p>
+
+                <a href="/products/style-1/">
+                    <button class="btn btn-outline !border-white !px-10">Shop Now</button>
+                </a>
+
+            </div>
+
+            <div class="absolute inset-0 bg-black/40"></div>
+
+            <!-- ===== LEFT =====  -->
+            <div class="absolute top-0 left-0 bg-white rounded-tl-2xl rounded-e-full py-1.5 px-8 space-y-2">
+
+                <div class="flex -space-x-1 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc" alt="Avatar"
+                        class="inline-block size-6 object-cover rounded-full border border-brand" />
+                    <img src="https://images.unsplash.com/photo-1550525811-e5869dd03032" alt="Avatar"
+                        class="inline-block size-6 object-cover rounded-full border border-brand" />
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" alt="Avatar"
+                        class="inline-block size-6 object-cover rounded-full border border-brand" />
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e" alt="Avatar"
+                        class="inline-block size-6 object-cover rounded-full border border-brand" />
+                </div>
+
+                <div class="space-y-0 5">
+                    <h2 class="text-xs font-semibold text-black">+150 Happy Client</h2>
+                    <div class="inline-flex items-center gap-1 text-[11px] text-gray-400">
+                        <i class="ri-star-fill text-base text-black"></i>
+                        <span>4.5</span>
+                        <span>(+3000 Review)</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ===== RIGHT =====  -->
+            <div class="absolute bottom-0 right-0 bg-white rounded-br-2xl rounded-s-full py-3 px-8 space-y-2">
+
+                <h2 class="text-xs font-semibold text-black">Unlimited Furniture</h2>
+
+                <div class="flex -space-x-1 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc" alt="Avatar"
+                        class="inline-block size-6 object-cover rounded-full border border-brand" />
+                    <img src="https://images.unsplash.com/photo-1550525811-e5869dd03032" alt="Avatar"
+                        class="inline-block size-6 object-cover rounded-full border border-brand" />
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" alt="Avatar"
+                        class="inline-block size-6 object-cover rounded-full border border-brand" />
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e" alt="Avatar"
+                        class="inline-block size-6 object-cover rounded-full border border-brand" />
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- ================= HERO BANNER  END ================= -->
+
+
+    <div class="section-md space-y-12">
+
+        <!-- ================= STATS ================= -->
+        <div class="bg-gray-100 dark:bg-gray-800 py-10">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+
+                    <div class="flex flex-col items-center gap-y-5 max-w-xs mx-auto">
+                        <h3 class="text-3xl md:text-4xl font-semibold text-gray-900 dark:text-gray-100">
+                            10K+
+                        </h3>
+                        <p class="text-sm md:text-base text-gray-600 dark:text-gray-300">
+                            Each place we sell is crafted with care, quality, and timeless design making over.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col items-center gap-y-5 max-w-xs mx-auto">
+                        <h3 class="text-3xl md:text-4xl font-semibold text-gray-900 dark:text-gray-100">
+                            10K+
+                        </h3>
+                        <p class="text-sm md:text-base text-gray-600 dark:text-gray-300">
+                            We don’t just sell furniture — we help bring your vision to life.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col items-center gap-y-5 max-w-xs mx-auto">
+                        <h3 class="text-3xl md:text-4xl font-semibold text-gray-900 dark:text-gray-100">
+                            10K+
+                        </h3>
+                        <p class="text-sm md:text-base text-gray-600 dark:text-gray-300">
+                            With a decade of experience in modern furniture.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= COLLECTIONS ================= -->
+        <div class="container">
+
+            <div class="grid md:grid-cols-12 gap-3 items-stretch">
+
+                <div class="md:col-span-5">
+
+                    <div
+                        class="bg-stone-50 dark:bg-gray-800 rounded-xl overflow-hidden p-5 space-y-6 h-full flex flex-col justify-between">
+
+                        <div class="flex flex-col md:flex-row items-center gap-6">
+
+                            <div class="flex flex-col gap-6 w-full">
+
+                                <div class="flex flex-col gap-4">
+
+                                    <h3 class="text-base font-bold text-stone-900 dark:text-stone-100">
+                                        Single Sofa
+                                    </h3>
+
+                                    <ul class="space-y-2 text-stone-900 dark:text-stone-300 text-xs">
+                                        <li>Modular Sofa</li>
+                                        <li>Sleeper Sofa</li>
+                                        <li>Tuxedo Sofa</li>
+                                        <li>Sectional Sofa</li>
+                                    </ul>
+
+                                </div>
+
+                                <a href="#"
+                                    class="text-blue-600 dark:text-blue-400 text-xs underline hover:text-blue-700 dark:hover:text-blue-300">
+                                    View All
+                                </a>
+
+                            </div>
+
+                            <div class="w-full flex justify-center">
+                                <img src="/assets/img/home/3/1.jpg" alt="Sofa"
+                                    class="rounded-lg w-full aspect-7/5 md:aspect-[7/8] object-cover shadow" />
+                            </div>
+
+                        </div>
+
+                        <div
+                            class="relative flex items-end justify-center bg-brand dark:bg-blue-700 text-white text-xs w-full h-[64px] rounded-lg pb-2">
+                            <div
+                                class="absolute top-0 bg-white dark:bg-gray-800 text-[11px] uppercase text-black dark:text-white flex items-center justify-center py-2 px-4 rounded-b-lg shadow">
+                                NEW COLLECTION
+                            </div>
+                            <span>20% OFFER</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="md:col-span-7 flex flex-col space-y-3">
+
+                    <div class="bg-stone-50 dark:bg-gray-800 rounded-xl overflow-hidden flex flex-col md:flex-row">
+
+                        <div class="flex flex-col gap-6 p-5 w-full md:w-1/2">
+
+                            <div class="flex flex-col gap-4">
+
+                                <h3 class="text-base font-bold text-stone-900 dark:text-stone-100">
+                                    Lighting Lamp
+                                </h3>
+
+                                <ul class="space-y-2 text-stone-900 dark:text-stone-300 text-xs">
+                                    <li>Modular Sofa</li>
+                                    <li>Sleeper Sofa</li>
+                                    <li>Tuxedo Sofa</li>
+                                    <li>Sectional Sofa</li>
+                                </ul>
+
+                            </div>
+
+                            <a href="#"
+                                class="text-blue-600 dark:text-blue-400 text-xs underline hover:text-blue-700 dark:hover:text-blue-300">
+                                View All
+                            </a>
+
+                        </div>
+
+                        <div class="w-full md:w-1/2 flex justify-center relative">
+
+                            <img src="/assets/img/home/3/2.jpg" alt="Lighting Lamp"
+                                class="rounded-e-lg w-full h-full object-cover aspect-[7/3]" />
+
+                            <div
+                                class="absolute top-3 left-3 bg-white dark:bg-gray-900 text-[10px] uppercase text-black dark:text-white px-3 py-1.5 rounded-full">
+                                NEW COLLECTION
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="bg-stone-50 dark:bg-gray-800 rounded-xl overflow-hidden flex flex-col md:flex-row">
+                        <div class="w-full md:w-1/2 flex justify-center relative">
+                            <img src="/assets/img/home/3/3.jpg" alt="Lighting Lamp"
+                                class="rounded-e-lg w-full h-full object-cover aspect-[7/3]" />
+                            <div
+                                class="absolute top-3 left-3 bg-white dark:bg-gray-900 text-[10px] uppercase text-black dark:text-white px-3 py-1.5 rounded-full">
+                                NEW COLLECTION
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-6 p-5 w-full md:w-1/2">
+                            <div class="flex flex-col gap-4">
+                                <h3 class="text-base font-bold text-stone-900 dark:text-stone-100">
+                                    Lighting Lamp
+                                </h3>
+                                <ul class="space-y-2 text-stone-900 dark:text-stone-300 text-xs">
+                                    <li>Modular Sofa</li>
+                                    <li>Sleeper Sofa</li>
+                                    <li>Tuxedo Sofa</li>
+                                    <li>Sectional Sofa</li>
+                                </ul>
+                            </div>
+                            <a href="#"
+                                class="text-blue-600 dark:text-blue-400 text-xs underline hover:text-blue-700 dark:hover:text-blue-300">
+                                View All
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ================= FLASH SALES ================= -->
+        <div class="flash-countdown bg-[linear-gradient(91.38deg,rgba(255,136,9,0.95)_0.82%,rgba(255,88,47,0.95)_100%)]"
+            data-countdown data-countdown-end="2026-09-20T23:59:59">
+
+            <div class="container mx-auto py-12 flex flex-col md:flex-row items-center justify-between gap-8">
+
+                <div class="flex flex-col items-start text-white space-y-1">
+                    <h2 class="text-xl md:text-2xl font-bold leading-tight">FLASH</h2>
+                    <p class="text-base">SALE</p>
+                </div>
+
+                <div class="flex items-center gap-6 md:gap-10 text-white text-center">
+
+                    <div>
+                        <p data-countdown-days class="text-2xl md:text-3xl font-semibold">00</p>
+                        <span class="text-[10px] uppercase tracking-wide">Days</span>
+                    </div>
+
+                    <div>
+                        <p data-countdown-hours class="text-2xl md:text-3xl font-semibold">00</p>
+                        <span class="text-[10px] uppercase tracking-wide">Hours</span>
+                    </div>
+
+                    <span class="text-lg md:text-xl font-medium">:</span>
+
+                    <div>
+                        <p data-countdown-minutes class="text-2xl md:text-3xl font-semibold">00</p>
+                        <span class="text-[10px] uppercase tracking-wide">Minutes</span>
+                    </div>
+
+                    <span class="text-lg md:text-xl font-medium">:</span>
+
+                    <div>
+                        <p data-countdown-seconds class="text-2xl md:text-3xl font-semibold">00</p>
+                        <span class="text-[10px] uppercase tracking-wide">Seconds</span>
+                    </div>
+                </div>
+
+
+                <div class="flex flex-col items-center md:items-end space-y-3 text-white">
+
+                    <p class="text-lg md:text-2xl font-semibold">Up to 70% off</p>
+
+                    <button class="btn btn-ghost !text-white">
+                        View All <span><i class="ri-arrow-right-up-line"></i></span>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= DEALS YOU CAN'T MISS ================= -->
+        <div class="container space-y-8">
+
+            <h2 class="text-gray-900 dark:text-gray-100 text-lg font-semibold">
+                Deals You Can't Miss!
+            </h2>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2">
+
+                <div class="relative p-1.5 md:p-3 bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden flex flex-col">
+
+                    <img class="w-full aspect-square object-cover object-top rounded-lg"
+                        src="/assets/img/products/home_3/1.jpg" alt="Product" />
+
+                    <span class="absolute top-5 left-5 inline-flex items-center py-1.5 px-3 rounded-full
+                            text-[11px] font-medium bg-[#FF8919] text-white">
+                        Flash Sale
+                    </span>
+
+                    <div class="space-y-1 md:space-y-1.5 pt-3">
+
+                        <a href="/products/detail/product-1.html" class="text-gray-700 dark:text-gray-200 
+                            text-sm font-semibold hover:text-brand !line-clamp-1">
+                            KLEPPSTAD Wardrobe with 3 doors 117 - 176 cm
+                        </a>
+
+                        <div class="flex items-center gap-2">
+                            <i class="ri-star-fill text-yellow-400 text-base"></i>
+                            <span class="text-gray-600 dark:text-gray-300 text-xs">95 ratings</span>
+                        </div>
+
+                        <div class="flex items-end gap-2 font-inter">
+                            <span class="text-gray-600 dark:text-gray-400 text-sm line-through">$120.23</span>
+                            <span class="text-[#4BAF47] text-sm font-semibold">$120.23</span>
+                        </div>
+
+                        <button class="w-full btn !h-10 btn-brand mt-3">
+                            Add to Cart
+                            <i class="ri-shopping-cart-line text-base"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="relative p-1.5 md:p-3 bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden flex flex-col">
+
+                    <img class="w-full aspect-square object-cover object-top rounded-lg"
+                        src="/assets/img/products/home_3/2.jpg" alt="Product" />
+
+                    <span class="absolute top-5 left-5 inline-flex items-center py-1.5 px-3 rounded-full
+                            text-[11px] font-medium bg-[#FF8919] text-white">
+                        Flash Sale
+                    </span>
+
+                    <div class="space-y-1 md:space-y-1.5 pt-3">
+
+                        <a href="/products/detail/product-1.html" class="text-gray-700 dark:text-gray-200 
+                            text-sm font-semibold hover:text-brand !line-clamp-1">
+                            KLEPPSTAD Wardrobe with 3 doors 117 - 176 cm
+                        </a>
+
+                        <div class="flex items-center gap-2">
+                            <i class="ri-star-fill text-yellow-400 text-base"></i>
+                            <span class="text-gray-600 dark:text-gray-300 text-xs">95 ratings</span>
+                        </div>
+
+                        <div class="flex items-end gap-2 font-inter">
+                            <span class="text-gray-600 dark:text-gray-400 text-sm line-through">$120.23</span>
+                            <span class="text-[#4BAF47] text-sm font-semibold">$120.23</span>
+                        </div>
+
+                        <button class="w-full btn !h-10 btn-brand mt-3">
+                            Add to Cart
+                            <i class="ri-shopping-cart-line text-base"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="relative p-1.5 md:p-3 bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden flex flex-col">
+
+                    <img class="w-full aspect-square object-cover object-top rounded-lg"
+                        src="/assets/img/products/home_3/1.jpg" alt="Product" />
+
+                    <span class="absolute top-5 left-5 inline-flex items-center py-1.5 px-3 rounded-full
+                            text-[11px] font-medium bg-[#FF8919] text-white">
+                        Flash Sale
+                    </span>
+
+                    <div class="space-y-1 md:space-y-1.5 pt-3">
+
+                        <a href="/products/detail/product-1.html" class="text-gray-700 dark:text-gray-200 
+                            text-sm font-semibold hover:text-brand !line-clamp-1">
+                            KLEPPSTAD Wardrobe with 3 doors 117 - 176 cm
+                        </a>
+
+                        <div class="flex items-center gap-2">
+                            <i class="ri-star-fill text-yellow-400 text-base"></i>
+                            <span class="text-gray-600 dark:text-gray-300 text-xs">95 ratings</span>
+                        </div>
+
+                        <div class="flex items-end gap-2 font-inter">
+                            <span class="text-gray-600 dark:text-gray-400 text-sm line-through">$120.23</span>
+                            <span class="text-[#4BAF47] text-sm font-semibold">$120.23</span>
+                        </div>
+
+                        <button class="w-full btn !h-10 btn-brand mt-3">
+                            Add to Cart
+                            <i class="ri-shopping-cart-line text-base"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="relative p-1.5 md:p-3 bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden flex flex-col">
+
+                    <img class="w-full aspect-square object-cover object-top rounded-lg"
+                        src="/assets/img/products/home_3/2.jpg" alt="Product" />
+
+                    <span class="absolute top-5 left-5 inline-flex items-center py-1.5 px-3 rounded-full
+                            text-[11px] font-medium bg-[#FF8919] text-white">
+                        Flash Sale
+                    </span>
+
+                    <div class="space-y-1 md:space-y-1.5 pt-3">
+
+                        <a href="/products/detail/product-1.html" class="text-gray-700 dark:text-gray-200 
+                            text-sm font-semibold hover:text-brand !line-clamp-1">
+                            KLEPPSTAD Wardrobe with 3 doors 117 - 176 cm
+                        </a>
+
+                        <div class="flex items-center gap-2">
+                            <i class="ri-star-fill text-yellow-400 text-base"></i>
+                            <span class="text-gray-600 dark:text-gray-300 text-xs">95 ratings</span>
+                        </div>
+
+                        <div class="flex items-end gap-2 font-inter">
+                            <span class="text-gray-600 dark:text-gray-400 text-sm line-through">$120.23</span>
+                            <span class="text-[#4BAF47] text-sm font-semibold">$120.23</span>
+                        </div>
+
+                        <button class="w-full btn !h-10 btn-brand mt-3">
+                            Add to Cart
+                            <i class="ri-shopping-cart-line text-base"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="relative p-1.5 md:p-3 bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden flex flex-col">
+
+                    <img class="w-full aspect-square object-cover object-top rounded-lg"
+                        src="/assets/img/products/home_3/1.jpg" alt="Product" />
+
+                    <span class="absolute top-5 left-5 inline-flex items-center py-1.5 px-3 rounded-full
+                            text-[11px] font-medium bg-[#FF8919] text-white">
+                        Flash Sale
+                    </span>
+
+                    <div class="space-y-1 md:space-y-1.5 pt-3">
+
+                        <a href="/products/detail/product-1.html" class="text-gray-700 dark:text-gray-200 
+                            text-sm font-semibold hover:text-brand !line-clamp-1">
+                            KLEPPSTAD Wardrobe with 3 doors 117 - 176 cm
+                        </a>
+
+                        <div class="flex items-center gap-2">
+                            <i class="ri-star-fill text-yellow-400 text-base"></i>
+                            <span class="text-gray-600 dark:text-gray-300 text-xs">95 ratings</span>
+                        </div>
+
+                        <div class="flex items-end gap-2 font-inter">
+                            <span class="text-gray-600 dark:text-gray-400 text-sm line-through">$120.23</span>
+                            <span class="text-[#4BAF47] text-sm font-semibold">$120.23</span>
+                        </div>
+
+                        <button class="w-full btn !h-10 btn-brand mt-3">
+                            Add to Cart
+                            <i class="ri-shopping-cart-line text-base"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= SPECIAL PRODUCTS ================= -->
+        <div class="container space-y-8">
+
+            <h2 class="text-gray-900 dark:text-gray-100 text-lg font-semibold">
+                Special Products
+            </h2>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2">
+
+                <div class="relative p-2 bg-gray-100 dark:bg-gray-800 rounded-lg flex flex-col">
+
+                    <img src="/assets/img/products/home_3/2.jpg" alt="Product"
+                        class="w-full aspect-square object-cover object-top rounded-lg">
+
+                    <span class="absolute top-4 left-4 inline-flex items-center py-1.5 px-3 rounded-full
+                            text-[11px] font-medium bg-[#FF8919] text-white">
+                        Flash Sale
+                    </span>
+
+                    <button class="absolute top-4 right-4 flex items-center justify-center size-7 cursor-pointer 
+                            bg-gray-50 dark:bg-gray-500 rounded-full">
+                        <i class="ri-heart-3-line"></i>
+                    </button>
+
+                    <div class="p-0.5 flex flex-col space-y-2 flex-grow pt-3">
+
+                        <div class="inline-flex flex-wrap items-center justify-between gap-2">
+
+                            <p class="text-[12px] underline text-gray-700 dark:text-gray-400">
+                                Sofa-bed
+                            </p>
+
+                            <div class="flex items-center gap-1 text-[12px]">
+                                <i class="ri-star-fill text-yellow-400 text-xs"></i>
+                                <span class="text-gray-600 dark:text-gray-400">4.7 (165)</span>
+                            </div>
+
+                        </div>
+
+                        <a href="/products/detail/product-1.html"
+                            class="text-sm font-semibold text-gray-800 dark:text-gray-200 hover:text-brand line-clamp-1">
+                            FRIDHULT
+                        </a>
+
+                        <div class="flex items-end gap-2 font-inter">
+                            <span class="text-gray-600 dark:text-gray-400 text-sm line-through">$120.23</span>
+                            <span class="text-[#4BAF47] text-sm font-semibold">$120.23</span>
+                        </div>
+
+                    </div>
+
+                    <div class="px-1 flex flex-wrap lg:flex-nowrap items-center justify-between gap-1 py-2 mt-3">
+
+                        <button class="w-full btn btn-sm btn-outline-brand">
+                            Buy Now
+                        </button>
+
+                        <button class="w-full btn !h-10 btn-brand">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="relative p-2 bg-gray-100 dark:bg-gray-800 rounded-lg flex flex-col">
+
+                    <img src="/assets/img/products/home_3/2.jpg" alt="Product"
+                        class="w-full aspect-square object-cover object-top rounded-lg">
+
+                    <span class="absolute top-4 left-4 inline-flex items-center py-1.5 px-3 rounded-full
+                            text-[11px] font-medium bg-[#FF8919] text-white">
+                        Flash Sale
+                    </span>
+
+                    <button class="absolute top-4 right-4 flex items-center justify-center size-7 cursor-pointer 
+                            bg-gray-50 dark:bg-gray-500 rounded-full">
+                        <i class="ri-heart-3-line"></i>
+                    </button>
+
+                    <div class="p-0.5 flex flex-col space-y-2 flex-grow pt-3">
+
+                        <div class="inline-flex flex-wrap items-center justify-between gap-2">
+
+                            <p class="text-[12px] underline text-gray-700 dark:text-gray-400">
+                                Sofa-bed
+                            </p>
+
+                            <div class="flex items-center gap-1 text-[12px]">
+                                <i class="ri-star-fill text-yellow-400 text-xs"></i>
+                                <span class="text-gray-600 dark:text-gray-400">4.7 (165)</span>
+                            </div>
+
+                        </div>
+
+                        <a href="/products/detail/product-1.html"
+                            class="text-sm font-semibold text-gray-800 dark:text-gray-200 hover:text-brand line-clamp-1">
+                            FRIDHULT
+                        </a>
+
+                        <div class="flex items-end gap-2 font-inter">
+                            <span class="text-gray-600 dark:text-gray-400 text-sm line-through">$120.23</span>
+                            <span class="text-[#4BAF47] text-sm font-semibold">$120.23</span>
+                        </div>
+
+                    </div>
+
+                    <div class="px-1 flex flex-wrap lg:flex-nowrap items-center justify-between gap-1 py-2 mt-3">
+
+                        <button class="w-full btn btn-sm btn-outline-brand">
+                            Buy Now
+                        </button>
+
+                        <button class="w-full btn !h-10 btn-brand">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="relative p-2 bg-gray-100 dark:bg-gray-800 rounded-lg flex flex-col">
+
+                    <img src="/assets/img/products/home_3/2.jpg" alt="Product"
+                        class="w-full aspect-square object-cover object-top rounded-lg">
+
+                    <span class="absolute top-4 left-4 inline-flex items-center py-1.5 px-3 rounded-full
+                            text-[11px] font-medium bg-[#FF8919] text-white">
+                        Flash Sale
+                    </span>
+
+                    <button class="absolute top-4 right-4 flex items-center justify-center size-7 cursor-pointer 
+                            bg-gray-50 dark:bg-gray-500 rounded-full">
+                        <i class="ri-heart-3-line"></i>
+                    </button>
+
+                    <div class="p-0.5 flex flex-col space-y-2 flex-grow pt-3">
+
+                        <div class="inline-flex flex-wrap items-center justify-between gap-2">
+
+                            <p class="text-[12px] underline text-gray-700 dark:text-gray-400">
+                                Sofa-bed
+                            </p>
+
+                            <div class="flex items-center gap-1 text-[12px]">
+                                <i class="ri-star-fill text-yellow-400 text-xs"></i>
+                                <span class="text-gray-600 dark:text-gray-400">4.7 (165)</span>
+                            </div>
+
+                        </div>
+
+                        <a href="/products/detail/product-1.html"
+                            class="text-sm font-semibold text-gray-800 dark:text-gray-200 hover:text-brand line-clamp-1">
+                            FRIDHULT
+                        </a>
+
+                        <div class="flex items-end gap-2 font-inter">
+                            <span class="text-gray-600 dark:text-gray-400 text-sm line-through">$120.23</span>
+                            <span class="text-[#4BAF47] text-sm font-semibold">$120.23</span>
+                        </div>
+
+                    </div>
+
+                    <div class="px-1 flex flex-wrap lg:flex-nowrap items-center justify-between gap-1 py-2 mt-3">
+
+                        <button class="w-full btn btn-sm btn-outline-brand">
+                            Buy Now
+                        </button>
+
+                        <button class="w-full btn !h-10 btn-brand">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="relative p-2 bg-gray-100 dark:bg-gray-800 rounded-lg flex flex-col">
+
+                    <img src="/assets/img/products/home_3/2.jpg" alt="Product"
+                        class="w-full aspect-square object-cover object-top rounded-lg">
+
+                    <span class="absolute top-4 left-4 inline-flex items-center py-1.5 px-3 rounded-full
+                            text-[11px] font-medium bg-[#FF8919] text-white">
+                        Flash Sale
+                    </span>
+
+                    <button class="absolute top-4 right-4 flex items-center justify-center size-7 cursor-pointer 
+                            bg-gray-50 dark:bg-gray-500 rounded-full">
+                        <i class="ri-heart-3-line"></i>
+                    </button>
+
+                    <div class="p-0.5 flex flex-col space-y-2 flex-grow pt-3">
+
+                        <div class="inline-flex flex-wrap items-center justify-between gap-2">
+
+                            <p class="text-[12px] underline text-gray-700 dark:text-gray-400">
+                                Sofa-bed
+                            </p>
+
+                            <div class="flex items-center gap-1 text-[12px]">
+                                <i class="ri-star-fill text-yellow-400 text-xs"></i>
+                                <span class="text-gray-600 dark:text-gray-400">4.7 (165)</span>
+                            </div>
+
+                        </div>
+
+                        <a href="/products/detail/product-1.html"
+                            class="text-sm font-semibold text-gray-800 dark:text-gray-200 hover:text-brand line-clamp-1">
+                            FRIDHULT
+                        </a>
+
+                        <div class="flex items-end gap-2 font-inter">
+                            <span class="text-gray-600 dark:text-gray-400 text-sm line-through">$120.23</span>
+                            <span class="text-[#4BAF47] text-sm font-semibold">$120.23</span>
+                        </div>
+
+                    </div>
+
+                    <div class="px-1 flex flex-wrap lg:flex-nowrap items-center justify-between gap-1 py-2 mt-3">
+
+                        <button class="w-full btn btn-sm btn-outline-brand">
+                            Buy Now
+                        </button>
+
+                        <button class="w-full btn !h-10 btn-brand">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="relative p-2 bg-gray-100 dark:bg-gray-800 rounded-lg flex flex-col">
+
+                    <img src="/assets/img/products/home_3/2.jpg" alt="Product"
+                        class="w-full aspect-square object-cover object-top rounded-lg">
+
+                    <span class="absolute top-4 left-4 inline-flex items-center py-1.5 px-3 rounded-full
+                            text-[11px] font-medium bg-[#FF8919] text-white">
+                        Flash Sale
+                    </span>
+
+                    <button class="absolute top-4 right-4 flex items-center justify-center size-7 cursor-pointer 
+                            bg-gray-50 dark:bg-gray-500 rounded-full">
+                        <i class="ri-heart-3-line"></i>
+                    </button>
+
+                    <div class="p-0.5 flex flex-col space-y-2 flex-grow pt-3">
+
+                        <div class="inline-flex flex-wrap items-center justify-between gap-2">
+
+                            <p class="text-[12px] underline text-gray-700 dark:text-gray-400">
+                                Sofa-bed
+                            </p>
+
+                            <div class="flex items-center gap-1 text-[12px]">
+                                <i class="ri-star-fill text-yellow-400 text-xs"></i>
+                                <span class="text-gray-600 dark:text-gray-400">4.7 (165)</span>
+                            </div>
+
+                        </div>
+
+                        <a href="/products/detail/product-1.html"
+                            class="text-sm font-semibold text-gray-800 dark:text-gray-200 hover:text-brand line-clamp-1">
+                            FRIDHULT
+                        </a>
+
+                        <div class="flex items-end gap-2 font-inter">
+                            <span class="text-gray-600 dark:text-gray-400 text-sm line-through">$120.23</span>
+                            <span class="text-[#4BAF47] text-sm font-semibold">$120.23</span>
+                        </div>
+
+                    </div>
+
+                    <div class="px-1 flex flex-wrap lg:flex-nowrap items-center justify-between gap-1 py-2 mt-3">
+
+                        <button class="w-full btn btn-sm btn-outline-brand">
+                            Buy Now
+                        </button>
+
+                        <button class="w-full btn !h-10 btn-brand">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= SPECIAL BY ROOM ================= -->
+        <div class="container space-y-8">
+
+            <h2 class="text-gray-900 dark:text-gray-100 text-lg font-semibold">
+                Shop by Room
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
+
+                <div class="relative p-2 bg-gray-100 dark:bg-gray-800 rounded-lg flex flex-col">
+
+                    <img src="/assets/img/home/3/4.jpg" alt="Product"
+                        class="w-full aspect-9/8 object-cover object-top rounded-lg">
+
+                    <div class="flex items-center justify-center py-5 mt-3">
+
+                        <a href="#" class="flex items-center justify-center border border-brand text-brand 
+                            rounded-lg text-lbaseg font-medium py-2 px-12 max-w-max">
+                            Bedroom
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="relative p-2 bg-gray-100 dark:bg-gray-800 rounded-lg flex flex-col">
+
+                    <img src="/assets/img/home/3/5.jpg" alt="Product"
+                        class="w-full aspect-9/8 object-cover object-top rounded-lg">
+
+                    <div class="flex items-center justify-center py-5 mt-3">
+
+                        <a href="#" class="flex items-center justify-center border border-brand text-brand 
+                            rounded-lg text-lbaseg font-medium py-2 px-12 max-w-max">
+                            Living Room
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="relative p-2 bg-gray-100 dark:bg-gray-800 rounded-lg flex flex-col">
+
+                    <img src="/assets/img/home/3/6.jpg" alt="Product"
+                        class="w-full aspect-9/8 object-cover object-top rounded-lg">
+
+                    <div class="flex items-center justify-center py-5 mt-3">
+
+                        <a href="#" class="flex items-center justify-center border border-brand text-brand 
+                            rounded-lg text-lbaseg font-medium py-2 px-12 max-w-max">
+                            Children’s room
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="relative p-2 bg-gray-100 dark:bg-gray-800 rounded-lg flex flex-col">
+
+                    <img src="/assets/img/home/3/7.jpg" alt="Product"
+                        class="w-full aspect-9/8 object-cover object-top rounded-lg">
+
+                    <div class="flex items-center justify-center py-5 mt-3">
+
+                        <a href="#" class="flex items-center justify-center border border-brand text-brand 
+                            rounded-lg text-lbaseg font-medium py-2 px-12 max-w-max">
+                            Dining
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= READY TO REDECORATE  ================= -->
+    <div class="bg-brand dark:bg-gray-800 py-10">
+
+        <div class="container">
+
+            <div class="flex flex-col items-center justify-center max-w-lg mx-auto 
+                text-white dark:text-gray-100 text-center gap-y-6">
+
+                <h2 class="text-lg sm:text-xl md:text-2xl font-semibold">Ready to Redecorate?</h2>
+
+                <p class="font-light text-sm sm:text-base leading-6">
+                    Browse our extensive collection of furniture and décor items to turn your inspiration into reality.
+                </p>
+
+                <button class="btn btn-light max-w-max mx-auto !px-8 sm:!px-10">
+                    Shop Now
+                    <span><i class="ri-arrow-right-up-line"></i></span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FOOTER START ================= -->
+    <footer class="bg-white dark:bg-gray-900 py-10 relative overflow-hidden border-t border-gray-300 dark:border-gray-700">
+
+        <div class="container">
+
+            <!-- ================= GRID SECTIONS ================= -->
+            <div class="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-5  gap-y-8 sm:gap-y-12">
+
+                <!-- ================= LEFT SECTION ================= -->
+                <div class="sm:col-span-3 lg:col-span-2 space-y-8 sm:w-[70%]">
+
+                    <div class="flex items-center gap-2">
+                        <img src="/assets/img/logo/logo.svg" alt="Logo" class="w-9">
+                        <span class="font-medium tracking-wide italic text-sm text-gray-900 dark:text-white">Full Logo
+                            Goes Here</span>
+                    </div>
+
+                    <p class="text-xs sm:text-sm leading-6 text-gray-700 dark:text-gray-300">
+                        Be the first to receive all the recent updates, articles, and valuable materials.
+                    </p>
+
+                    <form class="flex items-center">
+                        <input type="text"
+                            class="form-control h-12 !rounded-s-none !rounded-e-none dark:bg-gray-800 dark:text-white dark:border-gray-700"
+                            placeholder="Enter email" required>
+                        <button type="submit" class="btn btn-sm !px-4 btn-brand h-12 !rounded-s-none !rounded-e-full">
+                            <i class="ri-arrow-right-up-line text-lg"></i>
+                        </button>
+                    </form>
+
+                </div>
+                <!-- ================= END LEFT SECTION ================= -->
+
+                <!-- ================= COMPANY LINKS ================= -->
+                <div>
+                    <h4 class="text-sm md:text-base font-semibold text-gray-900 dark:text-white">Company</h4>
+                    <div class="mt-5 sm:mt-7 grid space-y-3 text-xs sm:text-sm text-gray-700 dark:text-gray-300">
+                        <a href="#" class="hover:underline">About</a>
+                        <a href="#" class="hover:underline">Security</a>
+                        <a href="#" class="hover:underline">Blog</a>
+                        <a href="#" class="hover:underline">Career</a>
+                        <a href="#" class="hover:underline">Service Status</a>
+                        <a href="#" class="hover:underline">Partnerships</a>
+                        <a href="#" class="hover:underline">Mission roadmap</a>
+                        <a href="#" class="hover:underline">Community</a>
+                    </div>
+                </div>
+                <!-- ================= END COMPANY LINKS ================= -->
+
+                <!-- ================= ECOMMERCE LINKS ================= -->
+                <div>
+                    <h4 class="text-sm md:text-base font-semibold text-gray-900 dark:text-white">More from E-Commerce
+                    </h4>
+                    <div class="mt-5 sm:mt-7 grid space-y-3 text-xs sm:text-sm text-gray-700 dark:text-gray-300">
+                        <a href="#" class="hover:underline">Mass Payments</a>
+                        <a href="#" class="hover:underline">Debit card</a>
+                        <a href="#" class="hover:underline">Rayna for Startups</a>
+                        <a href="#" class="hover:underline">Rayna for Developers</a>
+                        <a href="#" class="hover:underline">Rayna for No-code</a>
+                        <a href="#" class="hover:underline">Assets</a>
+                    </div>
+                </div>
+                <!-- ================= END PRODUCTS LINKS ================= -->
+
+                <!-- ================= VARIOUS LINKS ================= -->
+                <div>
+                    <h4 class="text-sm md:text-base font-semibold text-gray-900 dark:text-white">Various Templates</h4>
+                    <div class="mt-5 sm:mt-7 grid space-y-3 text-xs sm:text-sm text-gray-700 dark:text-gray-300">
+                        <a href="#" class="hover:underline">Financial Templates</a>
+                        <a href="#" class="hover:underline">Fashion & Beauty Templates</a>
+                        <a href="#" class="hover:underline">Agriculture Templates</a>
+                        <a href="#" class="hover:underline">Manufacturing Templates</a>
+                    </div>
+                </div>
+                <!-- ================= END USEFUL LINKS ================= -->
+
+            </div>
+            <!-- ================= END GRID SECTIONS ================= -->
+
+            <!-- ================= FOOTER BOTTOM ================= -->
+            <div
+                class="relative mt-12 pt-5 border-t border-gray-300 dark:border-gray-700 flex items-center justify-between flex-wrap gap-5 text-xs md:text-sm text-gray-600 dark:text-gray-400">
+
+                <div class="flex items gap-3 flex-wrap">
+                    <a href="#" class="inline-flex hover:underline">Terms of Service</a>
+                    <a href="#" class="inline-flex hover:underline">Privacy Policy</a>
+                    <a href="#" class="inline-flex hover:underline">Manage Cookies</a>
+                </div>
+
+                <p>©
+                    <script>document.write(new Date().getFullYear())</script> Fold. All rights reserved.
+                </p>
+
+            </div>
+            <!-- ================= END FOOTER BOTTOM ================= -->
+
+        </div>
+
+    </footer>
+    <!-- ================= FOOTER END ================= -->
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="/assets/js/tailwind-plus.js"></script>
+    <script src="/assets/js/carousel.js"></script>
+    <script src="/assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1034,3 +1034,164 @@ if (window.AOS) {
     });
 
 })(jQuery);
+
+// ================= COUNT DOWN =================
+(function ($) {
+    'use strict';
+
+    class Countdown {
+        constructor(container, options = {}) {
+            this.$container = $(container);
+            this.$days = this.$container.find('[data-countdown-days]');
+            this.$hours = this.$container.find('[data-countdown-hours]');
+            this.$minutes = this.$container.find('[data-countdown-minutes]');
+            this.$seconds = this.$container.find('[data-countdown-seconds]');
+
+            this.endTime = new Date(this.$container.data('countdown-end') || options.endTime).getTime();
+            this.timer = null;
+
+            this.start();
+        }
+
+        start() {
+            this.update();
+            this.timer = setInterval(() => this.update(), 1000);
+        }
+
+        update() {
+            const now = new Date().getTime();
+            const distance = this.endTime - now;
+
+            if (distance <= 0) {
+                clearInterval(this.timer);
+                this.$days.text('00');
+                this.$hours.text('00');
+                this.$minutes.text('00');
+                this.$seconds.text('00');
+                this.$container.trigger('countdown:end');
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((distance / (1000 * 60)) % 60);
+            const seconds = Math.floor((distance / 1000) % 60);
+
+            this.$days.text(this.format(days));
+            this.$hours.text(this.format(hours));
+            this.$minutes.text(this.format(minutes));
+            this.$seconds.text(this.format(seconds));
+        }
+
+        format(num) {
+            return num < 10 ? '0' + num : num;
+        }
+    }
+
+    // jQuery plugin wrapper
+    $.fn.countdown = function (options) {
+        return this.each(function () {
+            if (!this._countdown) {
+                this._countdown = new Countdown(this, options);
+            }
+        });
+    };
+
+    // Helper to get instance
+    $.fn.getCountdown = function () {
+        return this[0]?._countdown || null;
+    };
+
+    // Auto-init
+    $(function () {
+        $('[data-countdown]').countdown();
+    });
+
+})(jQuery);
+
+// ================= TAB SWITCH =================
+(function ($) {
+    'use strict';
+
+    class TabSwitch {
+        constructor(container, options = {}) {
+            this.$container = $(container);
+            this.trigger = options.trigger || 'click';
+
+            this.groupId = this.$container.data('tab-switch-group') || Math.random().toString(36).substr(2, 9);
+
+            this.bindEvents();
+            this.initDefault();
+        }
+
+        bindEvents() {
+            const self = this;
+            const $tabs = this.$container.find('[data-tab]');
+
+            const handler = function () {
+                const $tab = $(this);
+                self._setActive($tab);
+            };
+
+            if (this.trigger === 'click') {
+                $tabs.on('click', handler);
+            } else if (this.trigger === 'hover') {
+                $tabs.on('mouseenter', handler);
+            } else {
+                $tabs.on('click mouseenter', handler);
+            }
+        }
+
+        _setActive($tab) {
+            const $all = this.$container.find('[data-tab]');
+            const activeClasses = $tab.data('active') || '';
+            const inactiveClasses = $tab.data('inactive') || '';
+
+            // Reset all tabs
+            $all.each(function () {
+                const $el = $(this);
+                $el.removeClass($el.data('active') || '')
+                    .addClass($el.data('inactive') || '');
+            });
+
+            // Set active tab
+            $tab.removeClass(inactiveClasses).addClass(activeClasses);
+
+            // Content switching (scoped to group)
+            const target = $tab.data('target');
+            if (target) {
+                $(`[data-tab-content][data-group="${this.groupId}"]`).addClass('hidden');
+                $(target).removeClass('hidden');
+            }
+        }
+
+        initDefault() {
+            const $tabs = this.$container.find('[data-tab]');
+            const $active = $tabs.filter(function () {
+                return $(this).hasClass($(this).data('active'));
+            });
+
+            if ($active.length) {
+                this._setActive($active.first());
+            } else {
+                this._setActive($tabs.first());
+            }
+        }
+    }
+
+    $.fn.tabSwitch = function (options) {
+        return this.each(function () {
+            if (!this._tabSwitch) {
+                this._tabSwitch = new TabSwitch(this, options);
+            }
+        });
+    };
+
+    $(function () {
+        $('[data-tab-switch]').each(function () {
+            $(this).tabSwitch();
+        });
+    });
+
+})(jQuery);
+
