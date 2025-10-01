@@ -573,7 +573,7 @@
                                             </svg>
                                         </button>
 
-                                       <el-disclosure id="mobile-blog" hidden
+                                        <el-disclosure id="mobile-blog" hidden
                                             class="flex flex-col text-xs mt-2 space-y-5 pt-3 border-l border-gray-500/10 dark:border-white/10 px-4">
                                             <a href="/blog" class="dark:text-white dark:hover:bg-white/5">Blog List
                                                 1</a>
@@ -646,313 +646,124 @@
     <!-- ================= HEADER ENDS ================= -->
 
     <!-- ================= BRRADCRUMBS START ================= -->
-    <div class="bg-gray-200/80 dark:bg-gray-800  py-8 md:py-12">
+    <div class="relative w-full bg-brand">
 
-        <nav class="container flex min-w-0 items-center justify-center gap-2 text-sm/6 whitespace-nowrap">
+        <div class="container flex items-center justify-between h-[150px] lg:h-[200px] overflow-hidden">
 
-            <div class="group flex items-center gap-2">
-                <a class="text-brand dark:text-blue-500 font-medium" href="/">Home</a>
+            <div class="space-y-1 text-white">
+                <h2 class="relative text-2xl font-semibold  z-10">About Fold</h2>
+                <p class="text-xs max-w-md leading-6">Revolutionizing online shopping with passion, innovation, and an
+                    unwavering
+                    commitment to customer satisfaction</p>
             </div>
 
-            <div class="group flex items-center gap-2">
-                <i class="ri-arrow-right-s-line text-gray-600 dark:text-gray-400 text-lg"></i>
-                <a class="text-brand dark:text-blue-500 font-medium" href="javascript:void(0)">Pages</a>
-            </div>
+            <img class="hidden sm:block w-auto h-[150px] lg:h-[200px]" src="/assets/img/about/1.png" alt="Contact">
 
-            <div class="group flex items-center gap-2">
-                <i class="ri-arrow-right-s-line text-gray-600 dark:text-gray-400 text-lg"></i>
-                <a class="text-gray-500 dark:text-gray-400" href="javascript:void(0)">Payment</a>
-            </div>
-
-        </nav>
-
-
+        </div>
 
     </div>
     <!-- ================= BRRADCRUMBS END ================= -->
 
-
     <!-- ================= MAIN START ================= -->
-    <main class="container section-md space-y-10">
+    <div class="section-md space-y-12">
 
-        <div class="flex flex-col lg:flex-row gap-8">
+        <!-- ================= OUR STORY ================= -->
+        <div class="w-full container grid lg:grid-cols-2 gap-10 items-center">
 
-            <!-- ================= ORDER SUMMARY ================= -->
-            <div class="w-full lg:w-[40%] 2xl:w-[40%] bg-white dark:bg-gray-800 rounded-xl p-5 sm:p-5"
-                data-aos="fade-right" data-aos-delay="150">
+            <div>
 
-                <h2 class="text-base md:text-lg font-semibold mb-5">Order Summary</h2>
+                <h2 class="text-2xl font-semibold mb-6">
+                    <span class="text-blue-600">Our</span>
+                    <span class="text-gray-900"> Story</span>
+                </h2>
 
-                <div class="space-y-2">
+                <p class="text-gray-600 leading-7">
+                    Founded in 2018, ShopNext began as a small startup with a big vision: to create an
+                    e-commerce platform that puts customers first. What started in a garage with just
+                    three passionate entrepreneurs has grown into a thriving marketplace serving millions
+                    of customers worldwide.
+                </p>
 
-                    <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between border border-gray-200 dark:border-gray-700 rounded-lg p-2 bg-white dark:bg-gray-900 w-full">
+                <p class="text-gray-600 leading-7 mt-4">
+                    We recognized that online shopping could be more than just transactions – it could be
+                    experiences. Every feature we build, every partnership we form, and every decision we
+                    make is guided by our commitment to making shopping online as enjoyable and seamless
+                    as possible.
+                </p>
 
-                        <div class="flex gap-3 flex-1">
-
-                            <img class="w-24 h-20 object-cover rounded-md" src="/assets/img/cart/1.png"
-                                alt="Product Image">
-
-                            <div class="flex flex-col justify-between flex-1">
-
-                                <div class="space-y-0.5">
-                                    <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-300">
-                                        Professional Camera
-                                    </h2>
-                                    <p class="text-[12px] text-gray-500 dark:text-gray-400">
-                                        24MP, 4K Recording
-                                    </p>
-                                </div>
-
-                                <div class="flex items-center gap-2 justify-between">
-
-                                    <h4 class="text-xs font-light text-gray-600 dark:text-gray-400">
-                                        Qty: 2
-                                    </h4>
-
-                                    <h2
-                                        class="text-base font-semibold text-gray-900 dark:text-gray-100 block sm:hidden">
-                                        $699.99
-                                    </h2>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <h2 class="text-base font-semibold text-gray-900 dark:text-gray-100 hidden sm:block">
-                            $699.99
-                        </h2>
-
-                    </div>
-
-                    <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between border border-gray-200 dark:border-gray-700 rounded-lg p-2 bg-white dark:bg-gray-900 w-full">
-
-                        <div class="flex gap-3 flex-1">
-
-                            <img class="w-24 h-20 object-cover rounded-md" src="/assets/img/cart/1.png"
-                                alt="Product Image">
-
-                            <div class="flex flex-col justify-between flex-1">
-
-                                <div class="space-y-0.5">
-                                    <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-300">
-                                        Professional Camera
-                                    </h2>
-                                    <p class="text-[12px] text-gray-500 dark:text-gray-400">
-                                        24MP, 4K Recording
-                                    </p>
-                                </div>
-
-                                <div class="flex items-center gap-2 justify-between">
-
-                                    <h4 class="text-xs font-light text-gray-600 dark:text-gray-400">
-                                        Qty: 2
-                                    </h4>
-
-                                    <h2
-                                        class="text-base font-semibold text-gray-900 dark:text-gray-100 block sm:hidden">
-                                        $699.99
-                                    </h2>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <h2 class="text-base font-semibold text-gray-900 dark:text-gray-100 hidden sm:block">
-                            $699.99
-                        </h2>
-
-                    </div>
-
-                    <div
-                        class="flex flex-col sm:flex-row sm:items-start sm:justify-between border border-gray-200 dark:border-gray-700 rounded-lg p-2 bg-white dark:bg-gray-900 w-full">
-
-                        <div class="flex gap-3 flex-1">
-
-                            <img class="w-24 h-20 object-cover rounded-md" src="/assets/img/cart/1.png"
-                                alt="Product Image">
-
-                            <div class="flex flex-col justify-between flex-1">
-
-                                <div class="space-y-0.5">
-                                    <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-300">
-                                        Professional Camera
-                                    </h2>
-                                    <p class="text-[12px] text-gray-500 dark:text-gray-400">
-                                        24MP, 4K Recording
-                                    </p>
-                                </div>
-
-                                <div class="flex items-center gap-2 justify-between">
-
-                                    <h4 class="text-xs font-light text-gray-600 dark:text-gray-400">
-                                        Qty: 2
-                                    </h4>
-
-                                    <h2
-                                        class="text-base font-semibold text-gray-900 dark:text-gray-100 block sm:hidden">
-                                        $699.99
-                                    </h2>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <h2 class="text-base font-semibold text-gray-900 dark:text-gray-100 hidden sm:block">
-                            $699.99
-                        </h2>
-
-                    </div>
-
-
-                </div>
-
-                <div class="divide-y divide-gray-200 dark:divide-gray-600 mt-7 space-y-6">
-
-                    <div class="flex items-center justify-between pb-1">
-                        <span class="text-sm text-gray-500">Subtotal (5 items)</span>
-                        <span class="text-sm dark:text-gray-300">$1,729.96</span>
-                    </div>
-
-                    <div class="flex items-center justify-between pb-1">
-                        <span class="text-sm text-gray-500">Savings</span>
-                        <span class="text-sm dark:text-gray-300">-$340.00</span>
-                    </div>
-
-                    <div class="flex items-center justify-between pb-1">
-                        <span class="text-sm text-gray-500">Shipping</span>
-                        <span class="text-sm dark:text-gray-300">Free</span>
-                    </div>
-
-                    <div class="flex items-center justify-between pb-1">
-                        <span class="text-sm text-gray-500">Tax</span>
-                        <span class="text-sm dark:text-gray-300">$139.20</span>
-                    </div>
-
-                    <div class="flex items-center justify-between pb-1">
-                        <span class="text-sm text-gray-500">Total</span>
-                        <span class="text-sm dark:text-gray-300 font-bold">$1,529.16</span>
-                    </div>
-
-                </div>
+                <p class="text-gray-600 leading-7 mt-4">
+                    Today, we're proud to be a trusted destination for quality products, exceptional
+                    service, and innovative shopping experiences that connect people with the things they
+                    love.
+                </p>
 
             </div>
 
-            <!-- ================= PAYMENT METHOD ================= -->
-            <div class="w-full lg:w-[60%] 2xl:w-[60%] bg-white dark:bg-gray-800 rounded-xl px-5 sm:px-6 py-10 space-y-10"
-                data-aos="fade-left" data-aos-delay="200">
-
-                <h2 class="text-center text-base md:text-lg font-semibold">Payment Method</h2>
-
-                <div class="flex items-center flex-wrap justify-between gap-4">
-
-                    <p class="text-base font-medium"> Pay With </p>
-
-                    <div class="flex items-center flex-wrap gap-x-3 md:gap-x-8 gap-y-4">
-
-                        <div class="flex">
-                            <input type="radio" name="payment" class="size-[17px] shrink-0 mt-0 border-gray-200 rounded-full 
-                                text-brand checked:border-brand  bg-transparent" id="payment-card" checked>
-                            <label for="payment-card" class="text-xs text-gray-900 ms-2 dark:text-neutral-400">Debit
-                                or
-                                Credit Card</label>
-                        </div>
-
-                        <div class="flex">
-                            <input type="radio" name="payment" class="size-[17px] shrink-0 mt-0 border-gray-200 rounded-full 
-                                text-brand checked:border-brand  bg-transparent" id="payment-delivery">
-                            <label for="payment-delivery" class="text-xs text-gray-900 ms-2 dark:text-neutral-400">Pay
-                                on Delivery</label>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!-- ================= CARD PAYMENT METHOD LISTS ================= -->
-                <div class="flex flex-wrap items-center justify-center gap-4">
-
-                    <button
-                        class="px-4 h-12 bg-[#EDF6FF] dark:bg-gray-700 border border-brand rounded-lg flex items-center justify-center gap-2 cursor-pointer transition hover:scale-105">
-                        <img class="w-8 h-8 object-contain" src="/assets/img/icon/payment/credit-card.png"
-                            alt="Credit card">
-                        <span class="text-sm font-medium text-gray-900 dark:text-gray-100">Credit Card</span>
-                    </button>
-
-                    <button
-                        class="px-4 h-12 bg-gray-100 dark:bg-gray-700 rounded-lg flex items-center justify-center gap-2 cursor-pointer transition hover:scale-105">
-                        <img class="w-6 h-6 object-contain" src="/assets/img/icon/payment/paypal.png" alt="Paypal">
-                        <span class="text-sm font-medium text-gray-900 dark:text-gray-100">Paypal</span>
-                    </button>
-
-                    <button
-                        class="px-4 h-12 bg-gray-100 dark:bg-gray-700 rounded-lg flex items-center justify-center gap-2 cursor-pointer transition hover:scale-105">
-                        <img class="w-8 h-8 object-contain" src="/assets/img/icon/payment/apple-pay.png"
-                            alt="Apple Pay">
-                        <span class="text-sm font-medium text-gray-900 dark:text-gray-100">Apple Pay</span>
-                    </button>
-
-                    <button
-                        class="px-4 h-12 bg-gray-100 dark:bg-gray-700 rounded-lg flex items-center justify-center gap-2 cursor-pointer transition hover:scale-105">
-                        <img class="w-10 h-10 object-contain" src="/assets/img/icon/payment/google-pay.png"
-                            alt="Google Pay">
-                        <span class="text-sm font-medium text-gray-900 dark:text-gray-100">Google Pay</span>
-                    </button>
-
-
-                </div>
-
-                <!-- ================= PAYMENT METHOD CARD ================= -->
-                <form class="space-y-4 md:space-y-6 mt-12" action="payment-otp.html" method="get" data-validate-form>
-
-                    <div>
-                        <label class="form-label !text-gray-700 dark:!text-gray-400">Card Number</label>
-                        <input type="text" class="form-control" placeholder="4242 4242 4242 42424"
-                            data-validate="required number" data-min-length="2" data-max-length="50">
-                    </div>
-
-                    <div>
-                        <label class="form-label !text-gray-700 dark:!text-gray-400">Cardholder</label>
-                        <input type="text" class="form-control" placeholder="John Doe" data-validate="required name">
-                    </div>
-
-                    <div class="grid grid-cols-2 gap-4 md:gap-6">
-
-                        <div>
-                            <label class="form-label !text-gray-700 dark:!text-gray-400">Expiry Date </label>
-                            <input type="text" class="form-control" placeholder="12/32" data-validate="required date">
-                        </div>
-
-                        <div>
-                            <label class="form-label !text-gray-700 dark:!text-gray-400">CVV </label>
-                            <input type="password" class="form-control" placeholder="***" data-validate="required cvv">
-                        </div>
-
-                    </div>
-
-                    <!-- Submit -->
-                    <button type="submit" class="btn btn-brand !rounded-lg dark:!text-white w-full mt-8">
-                        Pay Now
-                    </button>
-
-                </form>
-
+            <!-- Image Section -->
+            <div class="flex justify-center lg:justify-end">
+                <img src="/assets/img/about/2.png" alt="Our Story" class="w-full max-w-2xl" />
             </div>
-
         </div>
 
-    </main>
+        <!-- ================= ABOUT STATS ================= -->
+        <div class="w-full bg-slate-700 py-14">
+            <div class="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-center">
+
+                <!-- Happy Customers -->
+                <div>
+                    <div class="text-[#667EEA] text-xl font-semibold">2,500,000</div>
+                    <div class="text-white text-lg pt-3 font-semibold">Happy Customers</div>
+                </div>
+
+                <!-- Products Available -->
+                <div>
+                    <div class="text-[#667EEA] text-xl font-semibold">50,000</div>
+                    <div class="text-white text-lg pt-3 font-semibold">Products Available</div>
+                </div>
+
+                <!-- Customer Satisfaction -->
+                <div>
+                    <div class="text-[#667EEA] text-xl font-semibold">95%</div>
+                    <div class="text-white text-lg pt-3 font-semibold">Customer Satisfaction</div>
+                </div>
+
+                <!-- Countries Served -->
+                <div>
+                    <div class="text-[#667EEA] text-xl font-semibold">100</div>
+                    <div class="text-white text-lg pt-3 font-semibold">Countries Served</div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ================= READ TO JOIN  ================= -->
+        <div class="w-full bg-zinc-100 dark:bg-gray-800 py-16 px-6 md:px-16">
+            <div class="max-w-4xl mx-auto flex flex-col items-center text-center gap-8">
+
+                <div class="max-w-lg flex flex-col gap-4">
+                    <h2 class="text-2xl font-semibold text-black dark:text-gray-300">
+                        Ready to Join Our Community?
+                    </h2>
+                    <p class="text-gray-600 text-base leading-6">
+                        Discover amazing products, enjoy seamless shopping, and experience customer service that truly
+                        cares about you.
+                    </p>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button class="btn btn-brand !px-12">Start Shopping</button>
+                    <button class="btn btn-outline-brand !px-12">Contact Us</button>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
     <!-- ================= MAIN END ================= -->
 
-
     <!-- ================= FOOTER START ================= -->
-    <footer
-        class="bg-white dark:bg-gray-900 py-10 relative overflow-hidden border-t border-gray-300 dark:border-gray-700">
+    <footer class="bg-white dark:bg-gray-900 py-10 relative overflow-hidden border-t border-gray-300 dark:border-gray-700">
 
         <div class="container">
 
