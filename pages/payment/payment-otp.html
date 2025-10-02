@@ -99,7 +99,44 @@
                 </div>
 
                 <!-- ================= ABOUT PAGES ================= -->
-                <a href="/about" class="text-sm text-gray-600 dark:text-white">About</a>
+                <div class="relative">
+
+                    <button popovertarget="desktop-menu-about"
+                        class="cursor-pointer flex items-center gap-x-1 text-sm text-gray-600 dark:text-white">
+                        About
+                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
+                            <path
+                                d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                                clip-rule="evenodd" fill-rule="evenodd" />
+                        </svg>
+                    </button>
+
+                    <el-popover id="desktop-menu-about" anchor="bottom" popover
+                        class="min-w-[8rem] overflow-hidden rounded-xl bg-white shadow-lg outline-1 outline-gray-900/5 transition transition-discrete [--anchor-gap:--spacing(3)] backdrop:bg-transparent open:block data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in dark:bg-gray-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10 px-1 py-2 text-xs space-y-0.5">
+
+                        <a href="/about" class="relative rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5
+                            block text-gray-900 dark:text-white">
+                            About 1
+                        </a>
+
+                        <a href="/about/about-2.html" class="relative rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5
+                            block text-gray-900 dark:text-white">
+                            About 2
+                        </a>
+
+                        <a href="/about/about-3.html" class="relative rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5
+                            block text-gray-900 dark:text-white">
+                            About 3
+                        </a>
+
+                        <a href="/about/about-4.html" class="relative rounded-lg py-1.5 px-3 hover:bg-gray-50 dark:hover:bg-white/5
+                            block text-gray-900 dark:text-white">
+                            About 4
+                        </a>
+
+                    </el-popover>
+
+                </div>
 
                 <!-- ================= PRODUCTS PAGES ================= -->
                 <div class="relative">
@@ -457,6 +494,31 @@
                                                 class="dark:text-white dark:hover:bg-white/5">Home 6</a>
                                             <a href="/home/home-7.html"
                                                 class="dark:text-white dark:hover:bg-white/5">Home 7</a>
+                                        </el-disclosure>
+                                    </div>
+
+                                    <!-- ================ ABOUT ================ -->
+                                    <div class="-mx-3 px-3">
+
+                                        <button type="button" command="--toggle" commandfor="mobile-about"
+                                            class="flex w-full items-center justify-between rounded-lg py-2 text-xs font-semibold text-gray-900 dark:text-white">
+                                            About
+                                            <svg viewBox="0 0 20 20" fill="currentColor"
+                                                class="size-5 flex-none in-aria-expanded:rotate-180">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" />
+                                            </svg>
+                                        </button>
+
+                                        <el-disclosure id="mobile-about" hidden
+                                            class="flex flex-col text-xs mt-2 space-y-5 pt-3 border-l border-gray-500/10 dark:border-white/10 px-4">
+                                            <a href="/about" class="dark:text-white dark:hover:bg-white/5">About 1</a>
+                                            <a href="/about/about-2.html"
+                                                class="dark:text-white dark:hover:bg-white/5">About 2</a>
+                                            <a href="/about/about-3.html"
+                                                class="dark:text-white dark:hover:bg-white/5">About 3</a>
+                                            <a href="/about/about-4.html"
+                                                class="dark:text-white dark:hover:bg-white/5">About 4</a>
                                         </el-disclosure>
                                     </div>
 
