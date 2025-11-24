@@ -12,3 +12,9 @@ assets/css/global.css
 .vscode/
 .idea/
 *.code-workspace
+
+# Git
+.git/
+
+# Python files
+*.py
